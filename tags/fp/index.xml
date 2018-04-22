@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wang Junjie</title>
-    <link>https://ijunjie.github.io/</link>
-    <description>Recent content on Wang Junjie</description>
+    <title>Fp on Wang Junjie</title>
+    <link>https://ijunjie.github.io/tags/fp/</link>
+    <description>Recent content in Fp on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 22 Apr 2018 14:25:02 +0800</lastBuildDate>
     
-        <atom:link href="https://ijunjie.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ijunjie.github.io/tags/fp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,9 +17,7 @@
       <pubDate>Sun, 22 Apr 2018 14:25:02 +0800</pubDate>
       
       <guid>https://ijunjie.github.io/post/fp/ramda/</guid>
-      
-        <description>Ramda是什么 Ramda的官方文档中文版：Ramda 简介 阮一峰也曾以他一贯的通俗易懂的风格写过一篇介绍：Ramda 函数库参考教程 柯里化 关于</description>
-      
+      <description>Ramda是什么 Ramda的官方文档中文版：Ramda 简介 阮一峰也曾以他一贯的通俗易懂的风格写过一篇介绍：Ramda 函数库参考教程 柯里化 关于</description>
     </item>
     
   </channel>

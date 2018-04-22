@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Test</title>
-      <link>https://ijunjie.github.io/post/test/</link>
+      <title>Ramda：一个精致的Javascript函数式编程库</title>
+      <link>https://ijunjie.github.io/post/fp/ramda/</link>
       <pubDate>Sun, 22 Apr 2018 14:25:02 +0800</pubDate>
       
-      <guid>https://ijunjie.github.io/post/test/</guid>
-      <description>诗歌 镜中 张枣 只要想起一生中后悔的事 梅花便落了下来 比如看她游泳到河的另一岸 比如登上一株松木梯子 危险的事固然美丽 不如看她骑马归来 面颊温暖 羞涩。低</description>
+      <guid>https://ijunjie.github.io/post/fp/ramda/</guid>
+      <description>Ramda是什么 Ramda的官方文档中文版：Ramda 简介 阮一峰也曾以他一贯的通俗易懂的风格写过一篇介绍：Ramda 函数库参考教程 柯里化 关于</description>
     </item>
     
   </channel>
