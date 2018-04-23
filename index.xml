@@ -6,10 +6,21 @@
     <description>Recent content on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 22 Apr 2018 14:25:02 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Apr 2018 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://ijunjie.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>openstack4j 中的 IoC 设计</title>
+      <link>https://ijunjie.github.io/post/dp/openstack4j-%E4%B8%AD%E7%9A%84-ioc-%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/dp/openstack4j-%E4%B8%AD%E7%9A%84-ioc-%E8%AE%BE%E8%AE%A1/</guid>
+      
+        <description>openstack4j 简介 openstack4j 是一个开源的 Java OpenStack SDK. 更多信息请了解其 官网. 源码地址：https://github.com/ContainX/openstack4j.g</description>
+      
+    </item>
     
     <item>
       <title>Ramda：一个精致的Javascript函数式编程库</title>
