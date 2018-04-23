@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>编程范式和函数式编程</title>
+      <link>https://ijunjie.github.io/post/fp/prog-paradigms-fp/</link>
+      <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/fp/prog-paradigms-fp/</guid>
+      <description>这篇长文是改编自我在公司内部的一次培训PPT. 编程范式部分主要参考了郑晖的《冒号课堂：编程范式与OOP思想》，电子工业出版社。这本书气象宏大</description>
+    </item>
+    
+    <item>
       <title>Ramda：一个精致的Javascript函数式编程库</title>
       <link>https://ijunjie.github.io/post/fp/ramda/</link>
       <pubDate>Sun, 22 Apr 2018 14:25:02 +0800</pubDate>
