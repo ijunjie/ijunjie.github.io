@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>浅谈函数式编程—下篇：函数式编程基础 - Wang Junjie</title>
+  <link rel="alternate" hreflang="zh-cn" href="https://ijunjie.github.io/" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Wang Junjie" />
+  <meta name="description" content="本篇是《浅谈函数式编程》的下篇，讲解一些重要的函数式编程概念。作为背景知识，阅读本篇前建议先了解 [浅谈函数式编程-上篇：编程范式]() 本篇选" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.39" />
+
+
+<link rel="canonical" href="https://ijunjie.github.io/post/fp/fp-basic/" />
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<link href="/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+
+
+
+
+
+<meta property="og:title" content="浅谈函数式编程—下篇：函数式编程基础" />
+<meta property="og:description" content="本篇是《浅谈函数式编程》的下篇，讲解一些重要的函数式编程概念。作为背景知识，阅读本篇前建议先了解 [浅谈函数式编程-上篇：编程范式]() 本篇选" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ijunjie.github.io/post/fp/fp-basic/" />
+
+
+
+<meta property="article:published_time" content="2018-04-21T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-04-21T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="浅谈函数式编程—下篇：函数式编程基础">
+<meta itemprop="description" content="本篇是《浅谈函数式编程》的下篇，讲解一些重要的函数式编程概念。作为背景知识，阅读本篇前建议先了解 [浅谈函数式编程-上篇：编程范式]() 本篇选">
+
+
+<meta itemprop="datePublished" content="2018-04-21T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-04-21T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="2506">
+
+
+
+<meta itemprop="keywords" content="fp," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="浅谈函数式编程—下篇：函数式编程基础"/>
+<meta name="twitter:description" content="本篇是《浅谈函数式编程》的下篇，讲解一些重要的函数式编程概念。作为背景知识，阅读本篇前建议先了解 [浅谈函数式编程-上篇：编程范式]() 本篇选"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wang Junjie</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Wang Junjie
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/">Home</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+  </ul>
+</nav>
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">浅谈函数式编程—下篇：函数式编程基础</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 2018-04-21 </span>
+        <div class="post-category">
+            
+              <a href="/categories/fp/"> fp </a>
+            
+          </div>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#函数式编程">函数式编程</a></li>
+<li><a href="#三板斧">三板斧</a>
+<ul>
+<li><a href="#collector">Collector</a></li>
+</ul></li>
+<li><a href="#一等公民">一等公民</a></li>
+<li><a href="#lambda">lambda</a></li>
+<li><a href="#高阶函数和柯里化">高阶函数和柯里化</a></li>
+<li><a href="#纯函数">纯函数</a></li>
+<li><a href="#副作用">副作用</a></li>
+<li><a href="#闭包">闭包</a></li>
+<li><a href="#flatmap和monad">flatmap和monad</a></li>
+<li><a href="#fp不是银弹">FP不是银弹</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<p>本篇是《浅谈函数式编程》的下篇，讲解一些重要的函数式编程概念。作为背景知识，阅读本篇前建议先了解 [浅谈函数式编程-上篇：编程范式]()</p>
+
+<p>本篇选取了一些常见的函数式编程概念，使用多种语言的代码做示例。读者可从这些示例中体会函数式编程的核心思想和常用技巧。</p>
+
+<p>导读：阅读本篇前，可以先思考如下问题：</p>
+
+<ol>
+<li>函数式编程中如何从形式上消除结构化编程所强调的选择和循环？</li>
+<li>map, filter, reduce 如何实现整洁代码？</li>
+<li>为什么说在函数式编程中，代码和数据之间没有明确的界限？</li>
+<li>什么是lambda？不同的具有函数式编程特征的语言是如何支持lambda的？</li>
+<li>什么是纯函数？什么是副作用？</li>
+<li>什么是高阶函数，什么是柯里化？柯里化有什么意义？</li>
+<li>什么是闭包？</li>
+<li>flatmap和monad有什么联系？</li>
+<li>为什么说函数式编程不是银弹？</li>
+</ol>
+
+<h2 id="函数式编程">函数式编程</h2>
+
+<p>函数式编程可以看做声明式编程的一个子集。近年来，命令式编程语言越来越多地引入函数式（声明式）编程特性。函数式编程已然成为主流编程语言的标配。</p>
+
+<p>实际上很多人已经在不同程度上使用函数式编程了，如很多场合常见的map, filter，reduce,. 其中体现的是与命令式截然不同的思想：不使用选择和循环（看不到if和for），而选择和循环是结构化编程的两个核心。</p>
+
+<p>不同语言的函数式能力可能有很大差别。一门语言是不是函数式语言，其标准是有争议的，往往会陷入无休止的争论。我们可以简单理解为一种程度上的差别。重要的是要领会和理解函数式思维方式。</p>
+
+<p>函数式编程的概念纷繁复杂，但核心思想只有一点：不变、无副作用、无状态。各种概念都是围绕着这个核心思想的，而且各个概念之间互相有着深刻的联系。函数式的观点认为，一个函数的返回值是表达计算结果的唯一形式（而不是把结果写入参数或借助副作用输出）。当然这是理论上的，实际上计算机必须与人交互，计算机总是需要IO与人类交互。正因如此，一些函数式编程语言费劲各种心机处理函数式编程并不擅长的IO. 某种意义上讲其带来的麻烦远远多于便利。从实用主义角度看，能解决问题就是价值。</p>
+
+<p>下面我们开始了解一些经典的函数式编程概念。</p>
+
+<h2 id="三板斧">三板斧</h2>
+
+<p>上面提到的map, filter, reduce可以说是函数式编程的三板斧。也是很多初学函数式编程最先认识的三个函数。即使仅仅学会这三个函数，就足以是代码整洁度提高一个档次。</p>
+
+<p>实际上，在Android开发或者响应式编程，如RxJava/RxJS中，这三个函数式很常见的。</p>
+
+<p>Javascript也是支持这三个函数的。</p>
+
+<p>map 和 filter:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">r1</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">e</span> <span class="p">=&gt;</span> <span class="nx">e</span> <span class="o">*</span> <span class="nx">e</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">r1</span><span class="p">);</span> <span class="c1">// [1, 4, 9, 16]
+</span><span class="c1"></span>
+<span class="kd">let</span> <span class="nx">r2</span> <span class="o">=</span> <span class="nx">r1</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">e</span> <span class="p">=&gt;</span> <span class="nx">e</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">r2</span><span class="p">);</span> <span class="c1">// [4, 16]
+</span><span class="c1"></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>reduce:</p>
+
+<p>在对一个集合中的元素按顺序两两操作时，根据某种策略得到一个结果，得到的结果参与下一次操作，最终被归约为一个结果，即reduce的返回值。</p>
+
+<p>有时需要提供一个初始值，同第一个元素进行运算，返回的值同第二个元素进行运算，以此类推。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">r3</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">s</span><span class="p">,</span> <span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">s</span> <span class="o">+</span> <span class="nx">e</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">r3</span><span class="p">);</span> <span class="c1">// 10
+</span><span class="c1"></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>返回值可以是与几何元素不同的类型：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">r3</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">s</span><span class="p">,</span> <span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">s</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">e</span><span class="p">),</span> <span class="s2">&#34;&#34;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">r3</span><span class="p">);</span> <span class="c1">// 1234
+</span><span class="c1"></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>reduce在很多语言中都有支持。掌握其原理就会一通百通。</p>
+
+<p>Java 8:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">names</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">&#34;hello&#34;</span><span class="o">,</span> <span class="s">&#34;world&#34;</span><span class="o">,</span> <span class="s">&#34;functional&#34;</span><span class="o">);</span>
+<span class="n">String</span> <span class="n">longestName</span> <span class="o">=</span> <span class="n">names</span><span class="o">.</span><span class="na">stream</span>
+        <span class="o">.</span><span class="na">reduce</span><span class="o">(</span><span class="s">&#34;program&#34;</span><span class="o">,</span> <span class="o">(</span><span class="n">u</span><span class="o">,</span> <span class="n">e</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">u</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">&gt;=</span> <span class="n">e</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">?</span> <span class="nl">u:</span> <span class="n">e</span><span class="o">);</span>
+<span class="n">Assert</span><span class="o">.</span><span class="na">assertTrue</span><span class="o">(</span><span class="n">longestName</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">&#34;functional&#34;</span><span class="o">));</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>reduce是Java 8的Stream的方法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span> <span class="n">U</span> <span class="nf">reduce</span><span class="o">(</span><span class="n">U</span> <span class="n">identity</span><span class="o">,</span> <span class="n">BiFunction</span><span class="o">&lt;</span><span class="n">U</span><span class="o">,</span> <span class="n">T</span><span class="o">,</span> <span class="n">U</span><span class="o">&gt;</span> <span class="n">accumulator</span><span class="o">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="collector">Collector</h3>
+
+<p>实际上在Java 8不会经常用直接用到reduce. 更常用的是Java 8提供的工具类Collectors.</p>
+
+<p>下面的方法将一个Map翻转：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">static</span> <span class="o">&lt;</span><span class="n">K</span><span class="o">,</span> <span class="n">V</span><span class="o">&gt;</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">V</span><span class="o">,</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">K</span><span class="o">&gt;&gt;</span> <span class="nf">reverse</span><span class="o">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">K</span><span class="o">,</span> <span class="n">V</span><span class="o">&gt;</span> <span class="n">map</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">map</span><span class="o">.</span><span class="na">values</span><span class="o">().</span><span class="na">contains</span><span class="o">(</span><span class="kc">null</span><span class="o">))</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="n">IllegalArgumentException</span><span class="o">(</span><span class="s">&#34;Null value contained.&#34;</span><span class="o">);</span>
+
+    <span class="k">return</span> <span class="n">map</span><span class="o">.</span><span class="na">entrySet</span><span class="o">().</span><span class="na">stream</span><span class="o">()</span>
+            <span class="o">.</span><span class="na">collect</span><span class="o">(</span><span class="n">Collectors</span><span class="o">.</span><span class="na">groupingBy</span><span class="o">(</span><span class="n">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">::</span><span class="n">getValue</span><span class="o">,</span>
+                <span class="n">Collectors</span><span class="o">.</span><span class="na">mapping</span><span class="o">(</span><span class="n">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">::</span><span class="n">getKey</span><span class="o">,</span> <span class="n">Collectors</span><span class="o">.</span><span class="na">toSet</span><span class="o">())));</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>下面看一个词频统计的例子：</p>
+
+<p>传统命令式风格：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Long</span><span class="o">&gt;</span> <span class="nf">frequency1</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Long</span><span class="o">&gt;</span> <span class="n">wordMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeMap</span><span class="o">&lt;&gt;();</span>
+    <span class="n">Matcher</span> <span class="n">m</span> <span class="o">=</span> <span class="n">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="s">&#34;\\w+&#34;</span><span class="o">).</span><span class="na">matcher</span><span class="o">(</span><span class="n">words</span><span class="o">);</span>
+    <span class="k">while</span> <span class="o">(</span><span class="n">m</span><span class="o">.</span><span class="na">find</span><span class="o">())</span> <span class="o">{</span>
+        <span class="n">String</span> <span class="n">word</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="na">group</span><span class="o">().</span><span class="na">toLowerCase</span><span class="o">();</span>
+        <span class="k">if</span> <span class="o">(!</span><span class="n">NON_WORDS</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">word</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">Long</span> <span class="n">count</span> <span class="o">=</span> <span class="n">wordMap</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">word</span><span class="o">);</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">count</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">wordMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">word</span><span class="o">,</span> <span class="n">1L</span><span class="o">);</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                <span class="n">wordMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">word</span><span class="o">,</span> <span class="n">count</span> <span class="o">+</span> <span class="n">1L</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">wordMap</span><span class="o">;</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>这段代码的特点：</p>
+
+<ul>
+<li>不同任务<strong>交织（complect）</strong>在一起，用一次循环完成多个任务</li>
+<li>每次迭代中有三项操作：转换为小写，滤除虚词，计算词频</li>
+<li>牺牲了代码的清晰，换取执行性能</li>
+<li>包含大量if判断，使用循环————遵循了结构化编程原则。</li>
+</ul>
+
+<p>下面我们使用函数式编程风格重构。</p>
+
+<p>实际上计算词频的几行代码可以使用<code>wordMap.merge(word, 1L, (a, b) -&gt; a + b)</code>代替。但仅仅是这一点不够彻底。完全的函数式风格要像下面这样：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Long</span><span class="o">&gt;</span> <span class="nf">frequency2</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">reurn</span> <span class="nf">wordStream</span><span class="o">(</span><span class="n">words</span><span class="o">,</span> <span class="s">&#34;\\w+&#34;</span><span class="o">)</span>
+            <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="nl">String:</span><span class="o">:</span><span class="n">toLowerCase</span><span class="o">)</span>
+            <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">w</span> <span class="o">-&gt;!</span><span class="n">NON_WORDS</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">w</span><span class="o">))</span>
+            <span class="o">.</span><span class="na">collect</span><span class="o">(</span>
+                <span class="n">Collectors</span><span class="o">.</span><span class="na">groupingBy</span><span class="o">(</span>
+                    <span class="n">Function</span><span class="o">.</span><span class="na">identity</span><span class="o">,</span><span class="nl">
+</span><span class="nl">                    TreeMap:</span><span class="o">:</span><span class="k">new</span><span class="o">,</span>
+                    <span class="n">Collectors</span><span class="o">.</span><span class="na">counting</span><span class="o">()));</span>
+<span class="o">}</span>
+
+<span class="kd">private</span> <span class="kd">static</span> <span class="n">Stream</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">wordStream</span><span class="o">(</span><span class="n">String</span> <span class="n">words</span><span class="o">,</span> <span class="n">String</span> <span class="n">regex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">Stream</span><span class="o">.</span><span class="na">Builder</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">builder</span> <span class="o">=</span> <span class="n">String</span><span class="o">.</span><span class="na">builder</span><span class="o">();</span>
+    <span class="n">Matcher</span> <span class="n">matcher</span> <span class="o">=</span> <span class="n">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="n">regex</span><span class="o">).</span><span class="na">matcher</span><span class="o">(</span><span class="n">words</span><span class="o">);</span>
+    <span class="k">while</span> <span class="o">(</span><span class="n">matcher</span><span class="o">.</span><span class="na">find</span><span class="o">())</span> <span class="o">{</span>
+        <span class="n">builder</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">matcher</span><span class="o">.</span><span class="na">group</span><span class="o">());</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">builder</span><span class="o">.</span><span class="na">build</span><span class="o">();</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>抽取出滤除虚词的函数wordStream. 由于Matcher和Pattern本身的原因，wordStream的实现无法重构成函数式风格。</p>
+
+<p>可以看到，重构后的frequency2方法有以下特点：</p>
+
+<ul>
+<li>使用map完成转换小写</li>
+<li>使用filter完成虚词过滤</li>
+<li>使用groupingBy完成词频统计</li>
+<li>代码清晰</li>
+<li>消除了显示的判断和循环</li>
+<li>抽象层次得到提高</li>
+</ul>
+
+<h2 id="一等公民">一等公民</h2>
+
+<p>函数式编程语言中，函数通常作为一等公民（first-class member）. 其含义是，函数跟其他数据类型处于平等的位置。</p>
+
+<ul>
+<li>函数可以赋值给变量</li>
+<li>函数可以作为参数</li>
+<li>函数可以作为返回值</li>
+</ul>
+
+<p>有些OOP语言中，函数并不是一等公民（如Ruby），但仍然支持函数式编程风格。这跟基于对象有很大关系。如Java的Function，Ruby的method可以提取方法作为对象。</p>
+
+<h2 id="lambda">lambda</h2>
+
+<p>lambda是函数式编程的核心。简单讲，lambda就是<strong>匿名函数</strong>。</p>
+
+<p>不同语言对lambda的支持形式不同，约束也不同。关于函数、lambda和闭包的区别，请参考闭包一节。</p>
+
+<p>下面是一些语言中的lambda形式：</p>
+
+<p>Javascript:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">f</span> <span class="o">=</span> <span class="nx">i</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>Java:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Consumer</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Scala:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-scala" data-lang="scala"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-scala" data-lang="scala"><span class="k">val</span> <span class="n">f</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=&gt;</span> <span class="nc">Unit</span> <span class="k">=</span> <span class="n">i</span> <span class="k">=&gt;</span> <span class="n">println</span><span class="o">(</span><span class="n">i</span><span class="o">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Ruby:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">f</span> <span class="o">=</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+  <span class="n">put</span> <span class="n">i</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Groovy:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="kt">def</span> <span class="n">f1</span> <span class="o">=</span> <span class="o">{</span> <span class="n">i</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="o">(</span><span class="n">i</span><span class="o">)}</span>
+<span class="kt">def</span> <span class="n">f2</span> <span class="o">=</span> <span class="o">{</span> <span class="n">println</span> <span class="n">it</span><span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Python:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="高阶函数和柯里化">高阶函数和柯里化</h2>
+
+<p>高阶函数简单来讲就是<strong>接受函数作为参数</strong>或<strong>返回函数</strong>的函数。</p>
+
+<p>柯里化的函数具有多个参数列表。</p>
+
+<p>“柯里”来自于著名数学家<strong>Haskell B. Curry</strong>. 没错，就是编程语言Haskell的Haskell。他的名字和姓氏分别成为了一门编程语言的名字和一个函数式概念的名字。</p>
+
+<p>来看一下柯里化：</p>
+
+<p>Javascript正常写法，调用时传递多个参数：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">f1</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">r1</span> <span class="o">=</span> <span class="nx">f1</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="err">；</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>柯里化：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">f2</span> <span class="o">=</span> <span class="nx">a</span> <span class="p">=&gt;</span> <span class="nx">b</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">r2</span> <span class="o">=</span> <span class="nx">f2</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>可以看到，通过高阶函数可以实现拆分参数列表。实际上每个参数列表对应返回的是一个Partial Application.</p>
+
+<p>柯里化是一种常用的函数式编程技巧。在一些语言中也可以用于辅助类型推断。</p>
+
+<h2 id="纯函数">纯函数</h2>
+
+<h2 id="副作用">副作用</h2>
+
+<h2 id="闭包">闭包</h2>
+
+<h2 id="flatmap和monad">flatmap和monad</h2>
+
+<h2 id="fp不是银弹">FP不是银弹</h2>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Wang Junjie</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-04-21</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/reward/wechat-qr-code.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div>
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/fp/">fp</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/fp/ramda/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Ramda：一个精致的Javascript函数式编程库</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/fp/fp-paradigm/">
+            <span class="next-text nav-default">浅谈函数式编程—上篇：编程范式</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+    
+
+  
+
+  
+
+  
+  </article>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wang-junjie@outlook.com" rel="me noopener" class="iconfont icon-email"
+        title="email" target="_blank">
+      </a>
+      <a href="https://github.com/ijunjie" rel="me noopener" class="iconfont icon-github"
+        title="github" target="_blank">
+      </a>
+  <a href="https://ijunjie.github.io/index.xml" rel="noopener" type="application/rss+xml" class="iconfont icon-rss"
+    title="rss" target="_blank">
+  </a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span><span class="author">Wang Junjie</span></span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+<script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
+
+
+
+
+
+
+</body>
+</html>
