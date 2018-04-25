@@ -30,12 +30,12 @@
     </item>
     
     <item>
-      <title>浅谈函数式编程—下篇：函数式编程基础</title>
+      <title>浅谈函数式编程—下篇：核心概念</title>
       <link>https://ijunjie.github.io/post/fp/fp-basic/</link>
       <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/fp/fp-basic/</guid>
-      <description>本篇是《浅谈函数式编程》的下篇，讲解一些重要的函数式编程概念。作为背景知识，阅读本篇前建议先了解 [浅谈函数式编程-上篇：编程范式]() 本篇选</description>
+      <description>本篇是《浅谈函数式编程》的下篇，讲解一些重要的函数式编程概念。作为背景知识，阅读本篇前建议先了解 浅谈函数式编程-上篇：编程范式 本篇选取了一些</description>
     </item>
     
     <item>
