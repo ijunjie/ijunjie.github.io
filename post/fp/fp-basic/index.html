@@ -83,7 +83,7 @@
 
 <meta itemprop="datePublished" content="2018-04-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-04-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="6583">
+<meta itemprop="wordCount" content="6577">
 
 
 
@@ -230,14 +230,7 @@
 <li><a href="#lambda">lambda</a></li>
 <li><a href="#高阶函数和柯里化">高阶函数和柯里化</a>
 <ul>
-<li><a href="#综合示例">综合示例</a>
-<ul>
-<li><a href="#1-函数自调">1 函数自调：</a></li>
-<li><a href="#2-带参数的函数自调">2 带参数的函数自调</a></li>
-<li><a href="#3-柯里化">3 柯里化</a></li>
-<li><a href="#4-iife">4 IIFE</a></li>
-<li><a href="#5-最大公约数示例">5 最大公约数示例</a></li>
-</ul></li>
+<li><a href="#综合示例">综合示例</a></li>
 </ul></li>
 <li><a href="#纯函数和副作用">纯函数和副作用</a>
 <ul>
@@ -662,7 +655,7 @@
 
 <p>下面我们通过一个javascript例子，一步步完成匿名函数的递归调用，充分展现高阶函数、递归、柯里化、IIFE的使用。</p>
 
-<h4 id="1-函数自调">1 函数自调：</h4>
+<p><strong>函数自调</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
@@ -731,7 +724,7 @@
 
 <p>接下来我们对a进行一些改造，使a接收的函数可以附带参数。</p>
 
-<h4 id="2-带参数的函数自调">2 带参数的函数自调</h4>
+<p><strong>带参数的函数自调</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
@@ -756,7 +749,7 @@
 
 <p>接下来进行柯里化改造：</p>
 
-<h4 id="3-柯里化">3 柯里化</h4>
+<p><strong>柯里化</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
@@ -777,7 +770,7 @@
 </div>
 <p>可以看到，通过高阶函数将a和f都拆分成多个参数列表。</p>
 
-<h4 id="4-iife">4 IIFE</h4>
+<p><strong>IIFE</strong></p>
 
 <p>IIFE是 <code>Immediately Invoked Function Expression</code> 的缩写。用于一次性匿名函数的调用。</p>
 
@@ -792,7 +785,7 @@
 </code></pre></td></tr></table>
 </div>
 </div>
-<h4 id="5-最大公约数示例">5 最大公约数示例</h4>
+<p><strong>最大公约数示例</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
