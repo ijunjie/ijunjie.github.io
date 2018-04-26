@@ -6,24 +6,15 @@
     <description>Recent content in Fp on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 22 Apr 2018 14:25:02 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 26 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ijunjie.github.io/tags/fp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Ramda：一个精致的Javascript函数式编程库</title>
-      <link>https://ijunjie.github.io/post/fp/ramda/</link>
-      <pubDate>Sun, 22 Apr 2018 14:25:02 +0800</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/fp/ramda/</guid>
-      <description>Ramda是什么 Ramda的官方文档中文版：Ramda 简介 阮一峰也曾以他一贯的通俗易懂的风格写过一篇介绍： Ramda 函数库参考教程 柯里化 关于什么是柯</description>
-    </item>
-    
-    <item>
       <title>浅谈函数式编程—下篇：核心概念</title>
       <link>https://ijunjie.github.io/post/fp/fp-basic/</link>
-      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 26 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/fp/fp-basic/</guid>
       <description>本篇是《浅谈函数式编程》的下篇，主要讲解一些重要的函数式编程概念。上篇主要介绍编程范式： 浅谈函数式编程-上篇：编程范式 导读：阅读本篇前，请思</description>
@@ -32,10 +23,19 @@
     <item>
       <title>浅谈函数式编程—上篇：编程范式</title>
       <link>https://ijunjie.github.io/post/fp/fp-paradigm/</link>
-      <pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 24 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/fp/fp-paradigm/</guid>
       <description>当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&amp;hellip; (请自动脑补标签云图&amp;hellip;) 几年前我在在部门内部做了一次函数式编程</description>
+    </item>
+    
+    <item>
+      <title>Ramda：一个精致的Javascript函数式编程库</title>
+      <link>https://ijunjie.github.io/post/fp/ramda/</link>
+      <pubDate>Sun, 22 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/fp/ramda/</guid>
+      <description>Ramda是什么 Ramda的官方文档中文版：Ramda 简介 阮一峰也曾以他一贯的通俗易懂的风格写过一篇介绍： Ramda 函数库参考教程 柯里化 关于什么是柯</description>
     </item>
     
   </channel>

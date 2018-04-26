@@ -3,6 +3,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ijunjie.github.io/post/myworks/%E6%98%94%E6%97%A5%E9%BE%8C%E9%BE%8A%E4%B8%8D%E8%B6%B3%E5%A4%B8/</loc>
+    <lastmod>2018-04-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/post/fp/fp-basic/</loc>
+    <lastmod>2018-04-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/post/fp/fp-paradigm/</loc>
+    <lastmod>2018-04-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/post/dp/openstack4j-%E4%B8%AD%E7%9A%84-ioc-%E8%AE%BE%E8%AE%A1/</loc>
     <lastmod>2018-04-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -11,21 +32,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/post/fp/ramda/</loc>
-    <lastmod>2018-04-22T14:25:02+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/post/fp/fp-basic/</loc>
-    <lastmod>2018-04-21T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/post/fp/fp-paradigm/</loc>
-    <lastmod>2018-04-20T00:00:00+00:00</lastmod>
+    <lastmod>2018-04-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -52,21 +59,35 @@
   
   <url>
     <loc>https://ijunjie.github.io/tags/fp/</loc>
-    <lastmod>2018-04-22T14:25:02+08:00</lastmod>
+    <lastmod>2018-04-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ijunjie.github.io/categories/fp/</loc>
-    <lastmod>2018-04-22T14:25:02+08:00</lastmod>
+    <lastmod>2018-04-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/categories/myworks/</loc>
+    <lastmod>2018-04-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/tags/painting/</loc>
+    <lastmod>2018-04-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ijunjie.github.io/post/</loc>
-    <lastmod>2018-04-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-04-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -80,7 +101,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/</loc>
-    <lastmod>2018-04-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-04-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
