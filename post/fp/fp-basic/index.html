@@ -85,7 +85,7 @@
 
 <meta itemprop="datePublished" content="2018-04-26T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-04-26T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="6592">
+<meta itemprop="wordCount" content="6577">
 
 
 
@@ -655,7 +655,7 @@
 
 <h3 id="综合示例">综合示例</h3>
 
-<p>下面我们通过一个javascript例子，一步步完成匿名函数的递归调用，充分展现高阶函数、递归、柯里化、IIFE的使用。</p>
+<p>下面我们通过一个javascript例子，一步步完成匿名函数的递归调用，展示高阶函数、递归、柯里化、IIFE的使用技巧。</p>
 
 <p><strong>函数自调</strong></p>
 <div class="highlight"><div class="chroma">
@@ -1164,13 +1164,13 @@
 <p>从类型角度来看：</p>
 
 <blockquote>
-<p><code>Stream&lt;List&lt;Integer&gt;&gt;</code> 转换为 <code>Stream&lt;String&gt;</code>, flatMap的参数是 从<code>List&lt;Integer&gt;</code> 到 <code>Stream&lt;String&gt;</code> 的函数</p>
+<p>Stream<List<Integer>&gt; 转换为 Stream<String>, flatMap的参数是 从List<Integer> 到 Stream<String> 的函数</p>
 </blockquote>
 
 <p>从<code>List&lt;Integer&gt;</code>的流变成<code>Integer的流</code>体现了flat，但从类型上看<code>List&lt;Integer&gt;</code>和<code>String</code>是两个毫无关系的类型。我们把<code>Stream</code>抽象成Type，把<code>List&lt;Integer&gt;</code>抽象成T，把<code>String</code>抽象成U，可以得到</p>
 
 <blockquote>
-<p><code>Type&lt;T&gt;</code> 转换为 <code>Type&lt;U&gt;</code>, flatMap的参数是 从 <code>T</code> 到 <code>Type&lt;U&gt;</code> 的函数</p>
+<p>Type<T> 转换为 <code>Type&lt;U&gt;</code>, flatMap的参数是 从 T 到 <code>Type&lt;U&gt;</code> 的函数</p>
 </blockquote>
 
 <p>是的，这就是flatmap的本质。如果转换的方式不是从 <code>T</code> 到 <code>Type&lt;U&gt;</code>, 而是从 <code>T</code> 到 <code>U</code>， 就成了 map.</p>
@@ -1382,7 +1382,7 @@
   <span class="copyright-year">
     &copy;
     
-      2017-2018 -
+      2017 -
     2018
     <span class="heart">
       <i class="iconfont icon-heart"></i>
