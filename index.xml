@@ -6,10 +6,21 @@
     <description>Recent content on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 26 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Apr 2018 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://ijunjie.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>匿名函数的递归调用</title>
+      <link>https://ijunjie.github.io/post/fp/factorial/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/fp/factorial/</guid>
+      
+        <description>一般的递归或者尾递归都要显式地调用递归函数，那么匿名函数如何实现递归调用？ 这里用Javascript写了一个求阶乘的例子： 1 2 3 4 5 6 7 8 9</description>
+      
+    </item>
     
     <item>
       <title>昔日龌龊不足夸</title>
