@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>一个完整的 Kubernetes 微服务应用示例 - Wang Junjie</title>
+  <link rel="alternate" hreflang="zh-cn" href="https://ijunjie.github.io/" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Wang Junjie" />
+  <meta name="description" content="这是一个比较完整的基于 Kubernetes 的微服务开发、构建、部署和编排示例。 TL; DR 如果已有 Kubernetes 环境，想快速部署并访问应用，可以按如下步骤，使用我做好的部署配置和" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.39" />
+
+
+<link rel="canonical" href="https://ijunjie.github.io/post/arch/kubernetes-practice/" />
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<link href="/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="一个完整的 Kubernetes 微服务应用示例" />
+<meta property="og:description" content="这是一个比较完整的基于 Kubernetes 的微服务开发、构建、部署和编排示例。 TL; DR 如果已有 Kubernetes 环境，想快速部署并访问应用，可以按如下步骤，使用我做好的部署配置和" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ijunjie.github.io/post/arch/kubernetes-practice/" />
+
+
+
+<meta property="article:published_time" content="2018-04-30T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-04-30T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="一个完整的 Kubernetes 微服务应用示例">
+<meta itemprop="description" content="这是一个比较完整的基于 Kubernetes 的微服务开发、构建、部署和编排示例。 TL; DR 如果已有 Kubernetes 环境，想快速部署并访问应用，可以按如下步骤，使用我做好的部署配置和">
+
+
+<meta itemprop="datePublished" content="2018-04-30T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-04-30T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="869">
+
+
+
+<meta itemprop="keywords" content="kubernetes," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="一个完整的 Kubernetes 微服务应用示例"/>
+<meta name="twitter:description" content="这是一个比较完整的基于 Kubernetes 的微服务开发、构建、部署和编排示例。 TL; DR 如果已有 Kubernetes 环境，想快速部署并访问应用，可以按如下步骤，使用我做好的部署配置和"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wang Junjie</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Wang Junjie
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/">Home</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+  </ul>
+</nav>
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">一个完整的 Kubernetes 微服务应用示例</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 2018-04-30 </span>
+        <div class="post-category">
+            
+              <a href="/categories/arch/"> arch </a>
+            
+          </div>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#tl-dr">TL; DR</a></li>
+<li><a href="#参考资料">参考资料</a></li>
+<li><a href="#应用简介">应用简介</a></li>
+<li><a href="#kubernetes-环境搭建">Kubernetes 环境搭建</a></li>
+<li><a href="#服务发现">服务发现</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<p>这是一个比较完整的基于 Kubernetes 的微服务开发、构建、部署和编排示例。</p>
+
+<h2 id="tl-dr">TL; DR</h2>
+
+<p>如果已有 Kubernetes 环境，想快速部署并访问应用，可以按如下步骤，使用我做好的部署配置和容器镜像。</p>
+
+<p><strong>下载代码库</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">git clone https://github.com/ijunjie/sentiment-analyse.git
+<span class="nb">cd</span> resource-manifests</code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>部署到 Kubernetes 环境</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">kubectl create -f sa-logic-deployment.yaml
+kubectl create -f service-sa-logic.yaml
+
+kubectl create -f sa-web-app-deployment.yaml
+kubectl create -f service-sa-web-app-lb.yaml
+
+kubectl create -f sa-frontend-deployment-green.yaml
+kubectl create -f service-sa-frontend-lb.yaml</code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>访问应用</strong></p>
+
+<p>通过集群节点的 nodePort 访问 frontend service.</p>
+
+<h2 id="参考资料">参考资料</h2>
+
+<p>本文主要的参考了 <a href="https://rinormaloku.com/kubernetes-everything-else-practice/">Kubernetes and everything else in Practice</a>，但在一些细节方面根据实际情况做了调整。修改后的源码 <a href="https://github.com/ijunjie/sentiment-analyse">sentiment-analyse</a>  和 <a href="https://hub.docker.com/u/wangjunjie/">容器镜像</a> . 主要不同之处：</p>
+
+<ul>
+<li>没有使用 minikube, 而是使用 kubekit 部署的多节点集群环境。</li>
+<li>编排时的 Service 类型使用 NodePort 代替 LoadBalance.</li>
+<li>原文中前端代码调用 web app 的 URL 是写死的，最后还要改成  LoadBalancer 地址并重新构建，<code>fetch('http://192.168.99.100:31691/sentiment'...</code>, 在代码中仍然硬编码 URL. 本文中尝试使用 nginx 配置来解决这个服务发现问题。</li>
+<li>副本数量和部署策略做了调整。</li>
+</ul>
+
+<h2 id="应用简介">应用简介</h2>
+
+<p>该应用提供 UI 界面，以一个句子作为输入，可以分析计算出句子的情感值。</p>
+
+<p>这个应用程序由三个微服务组成：</p>
+
+<ul>
+<li>SA-Frontend：前端应用，使用ReactJS构建，部署在Nginx；</li>
+<li>SA-WebApp：Java Web 应用，处理来自前端的请求，使用 Spring boot 构建，使用内嵌tomcat的jar包部署。</li>
+<li>SA-Logic：Python应用， 使用 Flask 构建，处理分析逻辑。</li>
+</ul>
+
+<h2 id="kubernetes-环境搭建">Kubernetes 环境搭建</h2>
+
+<p><a href="https://github.com/Orientsoft/kubekit">kubekit</a>， 一个离线环境搭建 Kubernetes 集群环境的利器，可以说是良心之作。按照说明可以快速搭建一个小型的 Kubernetes 集群环境。</p>
+
+<p>注意事项：三个节点要关闭 firewalld, selinux 以避免一些不必要的麻烦。</p>
+
+<h2 id="服务发现">服务发现</h2>
+
+<p>前端 sentiment-analyse/blob/master/sa-frontend/src/App.js 中，访问 webapp 的URL不带域且增加了/api前缀： <code>/api/sentiment</code>.</p>
+
+<p>开发环境下，这个 URL 应改为 webapp 的实际 endpoint,  有完整的域且不带/api前缀, 如 <code>http://localhost:8080/sentiment</code>.</p>
+
+<p>生产环境下可以通过 nginx 配置，将<code>/api/sentiment</code> 请求重写为 <code>/sentiment</code>， 并转发到 webapp 的地址。 Kubernetes环境下，利用服务发现，使用 Service 名即可。</p>
+
+<p>App.js中访问 webapp:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">analyzeSentence</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;/api/sentiment&#39;</span><span class="p">,</span> <span class="p">{</span>
+            <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+            <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;application/json&#39;</span>
+            <span class="p">},</span>
+            <span class="nx">body</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span><span class="nx">sentence</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">textField</span><span class="p">.</span><span class="nx">getValue</span><span class="p">()})</span>
+        <span class="p">})</span>
+            <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+            <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
+    <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>nginx 配置, 使用 webapp 的 Service 名做服务发现：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-nginx" data-lang="nginx"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-nginx" data-lang="nginx">    <span class="k">location</span> <span class="s">/api/</span> <span class="p">{</span>
+        <span class="kn">rewrite</span> <span class="s">^.+api/?(.*)</span>$ <span class="s">/</span><span class="nv">$1</span> <span class="s">break</span><span class="p">;</span>
+        <span class="kn">include</span> <span class="s">uwsgi_params</span><span class="p">;</span>
+        <span class="kn">proxy_pass</span> <span class="s">http://sa-web-app-lb/</span><span class="p">;</span>
+    <span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>参考 :</p>
+
+<ul>
+<li><a href="https://segmentfault.com/a/1190000010792260">https://segmentfault.com/a/1190000010792260</a></li>
+<li><a href="https://segmentfault.com/a/1190000011796903">https://segmentfault.com/a/1190000011796903</a></li>
+</ul>
+
+<p>在 sentiment-analyse/resource-manifests/sa-web-app-deployment.yaml 中也使用了 logic 的服务地址：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml">env<span class="p">:</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>name<span class="p">:</span><span class="w"> </span>SA_LOGIC_API_URL<span class="w">
+</span><span class="w">    </span>value<span class="p">:</span><span class="w"> </span><span class="s2">&#34;http://sa-logic&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Wang Junjie</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-04-30</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/reward/wechat-qr-code.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div>
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/kubernetes/">kubernetes</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/myworks/kim-jong-un/">
+            <span class="next-text nav-default">宇宙无敌大将军</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+    
+
+  
+
+  
+
+  
+  </article>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wang-junjie@outlook.com" rel="me noopener" class="iconfont icon-email"
+        title="email" target="_blank">
+      </a>
+      <a href="https://github.com/ijunjie" rel="me noopener" class="iconfont icon-github"
+        title="github" target="_blank">
+      </a>
+  <a href="https://ijunjie.github.io/index.xml" rel="noopener" type="application/rss+xml" class="iconfont icon-rss"
+    title="rss" target="_blank">
+  </a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span><span class="author">Wang Junjie</span></span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
+
+
+
+
+
+
+</body>
+</html>
