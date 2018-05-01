@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ijunjie.github.io/post/literature/antithesis/</loc>
+    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/post/arch/kubernetes-practice/</loc>
     <lastmod>2018-04-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -59,6 +66,13 @@
   </url>
   
   <url>
+    <loc>https://ijunjie.github.io/tags/antithesis/</loc>
+    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/categories/arch/</loc>
     <lastmod>2018-04-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -108,6 +122,20 @@
   </url>
   
   <url>
+    <loc>https://ijunjie.github.io/tags/literature/</loc>
+    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/categories/literature/</loc>
+    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/categories/myworks/</loc>
     <lastmod>2018-04-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -123,14 +151,14 @@
   
   <url>
     <loc>https://ijunjie.github.io/post/</loc>
-    <lastmod>2018-04-30T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ijunjie.github.io/tags/</loc>
-    <lastmod>2018-04-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -144,7 +172,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/</loc>
-    <lastmod>2018-04-30T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
