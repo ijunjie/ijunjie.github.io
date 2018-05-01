@@ -25,7 +25,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Wang Junjie" />
-  <meta name="description" content="一般的递归或者尾递归都要显式地调用递归函数，那么匿名函数如何实现递归调用？ 这里用Javascript写了一个求阶乘的例子： 1 2 3 4 5 6 7 8 9" />
+  <meta name="description" content="一般的递归都要显式地调用递归函数，那么匿名函数如何实现递归调用？ 这里用 Javascript 匿名函数 &#43; 尾递归实现一个求阶乘的例子，代码如下： 1 2 3 4 5 6 7 8 9 let" />
 
 
 
@@ -59,7 +59,7 @@
 
 
 <meta property="og:title" content="匿名函数的递归调用" />
-<meta property="og:description" content="一般的递归或者尾递归都要显式地调用递归函数，那么匿名函数如何实现递归调用？ 这里用Javascript写了一个求阶乘的例子： 1 2 3 4 5 6 7 8 9" />
+<meta property="og:description" content="一般的递归都要显式地调用递归函数，那么匿名函数如何实现递归调用？ 这里用 Javascript 匿名函数 &#43; 尾递归实现一个求阶乘的例子，代码如下： 1 2 3 4 5 6 7 8 9 let" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ijunjie.github.io/post/fp/factorial/" />
 
@@ -80,19 +80,19 @@
 
 
 <meta itemprop="name" content="匿名函数的递归调用">
-<meta itemprop="description" content="一般的递归或者尾递归都要显式地调用递归函数，那么匿名函数如何实现递归调用？ 这里用Javascript写了一个求阶乘的例子： 1 2 3 4 5 6 7 8 9">
+<meta itemprop="description" content="一般的递归都要显式地调用递归函数，那么匿名函数如何实现递归调用？ 这里用 Javascript 匿名函数 &#43; 尾递归实现一个求阶乘的例子，代码如下： 1 2 3 4 5 6 7 8 9 let">
 
 
 <meta itemprop="datePublished" content="2018-04-27T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-04-27T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1245">
+<meta itemprop="wordCount" content="1212">
 
 
 
 <meta itemprop="keywords" content="fp,tail rec," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="匿名函数的递归调用"/>
-<meta name="twitter:description" content="一般的递归或者尾递归都要显式地调用递归函数，那么匿名函数如何实现递归调用？ 这里用Javascript写了一个求阶乘的例子： 1 2 3 4 5 6 7 8 9"/>
+<meta name="twitter:description" content="一般的递归都要显式地调用递归函数，那么匿名函数如何实现递归调用？ 这里用 Javascript 匿名函数 &#43; 尾递归实现一个求阶乘的例子，代码如下： 1 2 3 4 5 6 7 8 9 let"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -233,22 +233,20 @@
     <div class="post-content">
       
 
-<p>一般的递归或者尾递归都要<strong>显式地调用递归函数</strong>，那么匿名函数如何实现递归调用？</p>
+<p>一般的递归都要<strong>显式地调用递归函数</strong>，那么匿名函数如何实现递归调用？</p>
 
-<p>这里用Javascript写了一个求阶乘的例子：</p>
+<p>这里用 Javascript 匿名函数 + 尾递归实现一个求阶乘的例子，代码如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">factorial</span> <span class="o">=</span> <span class="nx">n</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">f</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="p">=&gt;</span> <span class="nx">s</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">(</span><span class="nx">f</span><span class="p">)(</span><span class="nx">n</span><span class="p">)(</span><span class="nx">s</span><span class="p">))</span>
@@ -256,23 +254,19 @@
   <span class="k">if</span> <span class="p">(</span><span class="nx">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="nx">s</span><span class="p">;</span>
   <span class="kd">let</span> <span class="nx">m</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
   <span class="k">return</span> <span class="nx">f</span><span class="p">(</span><span class="nx">f</span><span class="p">)(</span><span class="nx">m</span><span class="p">)(</span><span class="nx">s</span> <span class="o">*</span> <span class="nx">m</span><span class="p">);</span>
-<span class="p">})</span>
-<span class="p">(</span><span class="nx">n</span><span class="p">)</span>
-<span class="p">(</span><span class="nx">n</span><span class="p">);</span>
+<span class="p">})(</span><span class="nx">n</span><span class="p">)(</span><span class="nx">n</span><span class="p">);</span>
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
 </code></pre></td></tr></table>
 </div>
 </div>
-<p>在函数式编程方面训练有素的程序员对这段代码不会感到困难。这段代码中用到了高阶函数、柯里化、尾递归、IIFE等技巧。</p>
-
-<p>下面解释如何一步步写出上面这段代码。</p>
+<p>这段代码中使用了一些函数式编程技巧，如高阶函数、柯里化、尾递归、IIFE等。下面解释如何一步步写出上面这段代码。</p>
 
 <h2 id="递归和尾递归">递归和尾递归</h2>
 
 <p>这一节参考了<code>Takafumi Shido</code>的<code>Yet Scheme Another Tutorial</code>, 中文版<a href="http://deathking.github.io/yast-cn/">《Scheme入门教程》</a>.</p>
 
-<p>首先看一下什么是递归和尾递归。通常使用计算阶乘来解释递归。这里使用Scheme语言：</p>
+<p>首先看一下什么是递归。通常使用计算阶乘来解释递归。这里使用Scheme语言：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-scheme" data-lang="scheme"><span class="lnt">1
@@ -456,7 +450,7 @@
 </code></pre></td></tr></table>
 </div>
 </div>
-<p>这里面关键在于<strong>匿名函数通过形式参数实现了递归调用</strong>。匿名函数没有名字，只能将匿名函数作为参数传递实现递归调用。了解更多，请参考我的另一篇博文相关章节的示例： <a href="https://ijunjie.github.io/post/fp/fp-basic/#%E7%BB%BC%E5%90%88%E7%A4%BA%E4%BE%8B">浅谈函数式编程（高阶函数）</a></p>
+<p>这里面关键在于<strong>匿名函数通过形式参数实现了递归调用</strong>。匿名函数没有名字，只能将匿名函数作为参数传递实现递归调用。欲了解更多，请参考笔者的另一篇文章： <a href="https://ijunjie.github.io/post/fp/fp-basic/#%E7%BB%BC%E5%90%88%E7%A4%BA%E4%BE%8B">浅谈函数式编程（高阶函数）</a></p>
 
     </div>
 

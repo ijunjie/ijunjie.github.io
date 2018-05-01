@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>一个完整的 Kubernetes 微服务应用示例</title>
+      <title>一个 Kubernetes 微服务应用示例</title>
       <link>https://ijunjie.github.io/post/arch/kubernetes-practice/</link>
       <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/arch/kubernetes-practice/</guid>
-      <description>这是一个比较完整的基于 Kubernetes 的微服务开发、构建、部署和编排示例。 TL; DR 如果已有 Kubernetes 环境，想快速部署并访问应用，可以按如下步骤，使用我做好的部署配置和</description>
+      <description>Rinor Maloku 在 Kubernetes and everything else in Practice 一文中全面、细致地讲述了一个微服务应用的开发、构建，并部署到 Kubernetes 的过程。全文洋洋洒洒分为十一篇，并配有精美的动态演示图，实为</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/fp/factorial/</guid>
-      <description>一般的递归或者尾递归都要显式地调用递归函数，那么匿名函数如何实现递归调用？ 这里用Javascript写了一个求阶乘的例子： 1 2 3 4 5 6 7 8 9</description>
+      <description>一般的递归都要显式地调用递归函数，那么匿名函数如何实现递归调用？ 这里用 Javascript 匿名函数 + 尾递归实现一个求阶乘的例子，代码如下： 1 2 3 4 5 6 7 8 9 let</description>
     </item>
     
     <item>
@@ -48,7 +48,7 @@
     </item>
     
     <item>
-      <title>浅谈函数式编程—下篇：核心概念</title>
+      <title>浅谈函数式编程（下）：核心概念</title>
       <link>https://ijunjie.github.io/post/fp/fp-basic/</link>
       <pubDate>Thu, 26 Apr 2018 00:00:00 +0000</pubDate>
       
@@ -57,7 +57,7 @@
     </item>
     
     <item>
-      <title>浅谈函数式编程—上篇：编程范式</title>
+      <title>浅谈函数式编程（上）：编程范式</title>
       <link>https://ijunjie.github.io/post/fp/fp-paradigm/</link>
       <pubDate>Tue, 24 Apr 2018 00:00:00 +0000</pubDate>
       
@@ -66,12 +66,12 @@
     </item>
     
     <item>
-      <title>openstack4j 中的 IoC 设计</title>
+      <title>openstack4j 中的依赖管理</title>
       <link>https://ijunjie.github.io/post/dp/openstack4j-%E4%B8%AD%E7%9A%84-ioc-%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/dp/openstack4j-%E4%B8%AD%E7%9A%84-ioc-%E8%AE%BE%E8%AE%A1/</guid>
-      <description>openstack4j 简介 openstack4j 是一个开源的 Java OpenStack SDK. 更多信息请了解其 官网. 源码地址：https://github.com/ContainX/openstack4j.g</description>
+      <description>openstack4j 简介 openstack4j 是一个使用 Java 编写的开源 OpenStack SDK. 源码地址： https://github.com/ContainX/openstack4j.git 依赖管理 openstack4j 并没有采用第三方的 IoC 实现，如 Guice 等，而是使用很少的代码实现了简单、易用的依赖管理。 SPI SPI</description>
     </item>
     
     <item>

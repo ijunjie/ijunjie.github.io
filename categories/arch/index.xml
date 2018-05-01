@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>一个完整的 Kubernetes 微服务应用示例</title>
+      <title>一个 Kubernetes 微服务应用示例</title>
       <link>https://ijunjie.github.io/post/arch/kubernetes-practice/</link>
       <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/arch/kubernetes-practice/</guid>
-      <description>这是一个比较完整的基于 Kubernetes 的微服务开发、构建、部署和编排示例。 TL; DR 如果已有 Kubernetes 环境，想快速部署并访问应用，可以按如下步骤，使用我做好的部署配置和</description>
+      <description>Rinor Maloku 在 Kubernetes and everything else in Practice 一文中全面、细致地讲述了一个微服务应用的开发、构建，并部署到 Kubernetes 的过程。全文洋洋洒洒分为十一篇，并配有精美的动态演示图，实为</description>
     </item>
     
   </channel>
