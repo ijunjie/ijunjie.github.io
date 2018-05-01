@@ -85,7 +85,7 @@
 
 <meta itemprop="datePublished" content="2018-04-30T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-04-30T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="827">
+<meta itemprop="wordCount" content="823">
 
 
 
@@ -237,11 +237,14 @@
 
 <p><a href="https://rinormaloku.com/me/">Rinor Maloku </a> 在 <a href="https://rinormaloku.com/kubernetes-everything-else-practice/">Kubernetes and everything else in Practice</a> 一文中全面、细致地讲述了一个微服务应用的开发、构建，并部署到 Kubernetes 的过程。全文洋洋洒洒分为十一篇，并配有精美的动态演示图，实为入门 Kubernetes 的良心之作。如果链接打不开，可以访问 DockOne 提供的中文版：<a href="http://www.dockone.io/article/5132">三小时学会Kubernetes：容器编排详细指南</a>。</p>
 
-<p>本文根据实际操作情况，对代码和部署做了一些调整：
-- 使用多节点集群代替 minikube；
-- Service 类型使用 NodePort 代替 LoadBalancer；
-- 调整前端代码请求 webapp 的 URL 并使用 nginx 解决跨域问题；
-- 调整了副本数量和部署策略。</p>
+<p>本文根据实际操作情况，对代码和部署做了一些调整：</p>
+
+<ul>
+<li>使用多节点集群代替 minikube；</li>
+<li>Service 类型使用 NodePort 代替 LoadBalancer；</li>
+<li>调整前端代码请求 webapp 的 URL 并使用 nginx 解决跨域问题；</li>
+<li>调整了副本数量和部署策略。</li>
+</ul>
 
 <p>修改后的源码：<a href="https://github.com/ijunjie/sentiment-analyse">sentiment-analyse</a></p>
 
