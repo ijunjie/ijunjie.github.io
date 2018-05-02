@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Wang Junjie</title>
+    <link>https://ijunjie.github.io/tags/java/</link>
+    <description>Recent content in Java on Wang Junjie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 02 May 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://ijunjie.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>正确理解 ArrayList 和 LinkedList</title>
+      <link>https://ijunjie.github.io/post/ds/list-comparison/</link>
+      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/ds/list-comparison/</guid>
+      <description>关于 ArrayList 和 LinkedList，网上流传着很多不严谨、不准确的说法。只有深刻理解它们底层的数据结构和工作机制才能获得准确的认识。这里简要整理一</description>
+    </item>
+    
+  </channel>
+</rss>

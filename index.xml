@@ -6,10 +6,21 @@
     <description>Recent content on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 01 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 May 2018 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://ijunjie.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>正确理解 ArrayList 和 LinkedList</title>
+      <link>https://ijunjie.github.io/post/ds/list-comparison/</link>
+      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/ds/list-comparison/</guid>
+      
+        <description>关于 ArrayList 和 LinkedList，网上流传着很多不严谨、不准确的说法。只有深刻理解它们底层的数据结构和工作机制才能获得准确的认识。这里简要整理一</description>
+      
+    </item>
     
     <item>
       <title>北京地名之对仗</title>
@@ -18,7 +29,7 @@
       
       <guid>https://ijunjie.github.io/post/literature/antithesis/</guid>
       
-        <description>北京有很多地名具有对仗关系，兹列举如下： 二字组： 海淀对江亭，江亭应该是以前的地名，可能是解放前 秀水对香山 后海对前门 北海对西山 宣武对崇文 三字组</description>
+        <description>北京有很多地名具有对仗关系，兹列举如下： 二字组： 海淀 —— 江亭，江亭即陶然亭，最早是江藻所建，所以也称为“江亭”。江藻是康熙年间在住建部担任过</description>
       
     </item>
     
