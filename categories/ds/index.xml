@@ -17,7 +17,7 @@
       <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/ds/list-comparison/</guid>
-      <description>关于 ArrayList 和 LinkedList，网上流传着很多不严谨、不准确的说法。只有深刻理解它们底层的数据结构和工作机制才能获得准确的认识。这里简要整理一</description>
+      <description>关于 ArrayList 和 LinkedList，网上流传着很多不严谨、不准确的说法。要获得正确的认识必须深刻理解它们底层的数据结构和工作机制。 影响 ArrayList 性能的关键</description>
     </item>
     
   </channel>

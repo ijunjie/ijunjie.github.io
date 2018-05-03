@@ -25,7 +25,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Wang Junjie" />
-  <meta name="description" content="关于 ArrayList 和 LinkedList，网上流传着很多不严谨、不准确的说法。只有深刻理解它们底层的数据结构和工作机制才能获得准确的认识。这里简要整理一" />
+  <meta name="description" content="关于 ArrayList 和 LinkedList，网上流传着很多不严谨、不准确的说法。要获得正确的认识必须深刻理解它们底层的数据结构和工作机制。 影响 ArrayList 性能的关键" />
 
 
 
@@ -59,7 +59,7 @@
 
 
 <meta property="og:title" content="正确理解 ArrayList 和 LinkedList" />
-<meta property="og:description" content="关于 ArrayList 和 LinkedList，网上流传着很多不严谨、不准确的说法。只有深刻理解它们底层的数据结构和工作机制才能获得准确的认识。这里简要整理一" />
+<meta property="og:description" content="关于 ArrayList 和 LinkedList，网上流传着很多不严谨、不准确的说法。要获得正确的认识必须深刻理解它们底层的数据结构和工作机制。 影响 ArrayList 性能的关键" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ijunjie.github.io/post/ds/list-comparison/" />
 
@@ -80,19 +80,19 @@
 
 
 <meta itemprop="name" content="正确理解 ArrayList 和 LinkedList">
-<meta itemprop="description" content="关于 ArrayList 和 LinkedList，网上流传着很多不严谨、不准确的说法。只有深刻理解它们底层的数据结构和工作机制才能获得准确的认识。这里简要整理一">
+<meta itemprop="description" content="关于 ArrayList 和 LinkedList，网上流传着很多不严谨、不准确的说法。要获得正确的认识必须深刻理解它们底层的数据结构和工作机制。 影响 ArrayList 性能的关键">
 
 
 <meta itemprop="datePublished" content="2018-05-02T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-05-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1049">
+<meta itemprop="wordCount" content="973">
 
 
 
 <meta itemprop="keywords" content="java,list," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="正确理解 ArrayList 和 LinkedList"/>
-<meta name="twitter:description" content="关于 ArrayList 和 LinkedList，网上流传着很多不严谨、不准确的说法。只有深刻理解它们底层的数据结构和工作机制才能获得准确的认识。这里简要整理一"/>
+<meta name="twitter:description" content="关于 ArrayList 和 LinkedList，网上流传着很多不严谨、不准确的说法。要获得正确的认识必须深刻理解它们底层的数据结构和工作机制。 影响 ArrayList 性能的关键"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -221,11 +221,7 @@
 <ul>
 <li>
 <ul>
-<li><a href="#性能">性能</a></li>
-<li><a href="#场景">场景</a>
-<ul>
 <li><a href="#遍历">遍历</a></li>
-</ul></li>
 <li><a href="#尾部增加元素">尾部增加元素</a></li>
 <li><a href="#尾部删除元素">尾部删除元素</a></li>
 <li><a href="#增删靠前位置的元素">增删靠前位置的元素</a></li>
@@ -240,17 +236,13 @@
     <div class="post-content">
       
 
-<p>关于 ArrayList 和 LinkedList，网上流传着很多不严谨、不准确的说法。只有深刻理解它们底层的数据结构和工作机制才能获得准确的认识。这里简要整理一些要点。</p>
-
-<h2 id="性能">性能</h2>
+<p>关于 ArrayList 和 LinkedList，网上流传着很多不严谨、不准确的说法。要获得正确的认识必须深刻理解它们底层的数据结构和工作机制。</p>
 
 <p>影响 ArrayList 性能的关键点在于<strong>数组拷贝</strong>，<strong>动态扩容</strong>和<strong>随机增删元素</strong>都会进行数组拷贝。数组拷贝既消耗时间，又消耗空间，应尽量避免之。由数组拷贝机制可以推理得到 ArrayList 的一个特点，<strong>增删元素的位置越往后越快</strong>，因为元素位置越靠后，发生数组拷贝量的规模越小。</p>
 
 <p>影响 LinkedList 性能的关键点在于<strong>寻址</strong>和<strong>内存分配</strong>。LinkedList 寻址慢在于每 get 一个元素都需要<strong>查找</strong>， 即使有折半判断 + 双向查找优化，仍比不上 ArrayList 按“索引”取址. 因此<strong>对 LinkedList 来说，增删的元素位置越靠近两端，效率越高</strong>。 内存分配是说，向 LinkedList 增加或插入元素，每次都需要申请内存。这一点显然不如 ArrayList 的静态分配效率高（不考虑动态扩容）。</p>
 
-<h2 id="场景">场景</h2>
-
-<h3 id="遍历">遍历</h3>
+<h2 id="遍历">遍历</h2>
 
 <p>总体来讲，ArrayList 的效率比 LinkedList 稍高一些。</p>
 
