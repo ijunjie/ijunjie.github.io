@@ -6,10 +6,19 @@
     <description>Recent content in Arch on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 30 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ijunjie.github.io/categories/arch/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>一份简明的计算技术史</title>
+      <link>https://ijunjie.github.io/post/arch/from-virtualization/</link>
+      <pubDate>Fri, 04 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/arch/from-virtualization/</guid>
+      <description>由于某种无法解释的原因，我不得不整理一份简明的计算技术史，主要关注点在云计算、虚拟化、分布式和容器技术等方面。 20 世纪 30 ~ 40 年代：早期计算机时</description>
+    </item>
     
     <item>
       <title>一个 Kubernetes 微服务应用示例</title>
