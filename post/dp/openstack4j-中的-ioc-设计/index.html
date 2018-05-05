@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.39" />
+<meta name="generator" content="Hugo 0.40.2" />
 
 
 <link rel="canonical" href="https://ijunjie.github.io/post/dp/openstack4j-%E4%B8%AD%E7%9A%84-ioc-%E8%AE%BE%E8%AE%A1/" />
@@ -331,20 +331,20 @@
 </span><span class="cm"> */</span>
 <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">APIProvider</span> <span class="o">{</span>
 
-    <span class="cm">/**
-</span><span class="cm">     * Called after the APIProvider is constructed.  This allows the provider to pre-initialize or bind any interface implementations if desired
-</span><span class="cm">     */</span>
-    <span class="kt">void</span> <span class="nf">initialize</span><span class="o">();</span>
-    
-    <span class="cm">/**
-</span><span class="cm">     * Gets the implementation for the specified interface type
-</span><span class="cm">     *
-</span><span class="cm">     * @param &lt;T&gt; the Openstack4j API type
-</span><span class="cm">     * @param api the API interface
-</span><span class="cm">     * @return the implementation for T
-</span><span class="cm">     * @throws ApiNotFoundException if the API cannot be found
-</span><span class="cm">     */</span>
-    <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">T</span> <span class="nf">get</span><span class="o">(</span><span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">api</span><span class="o">);</span>
+	<span class="cm">/**
+</span><span class="cm">	 * Called after the APIProvider is constructed.  This allows the provider to pre-initialize or bind any interface implementations if desired
+</span><span class="cm">	 */</span>
+	<span class="kt">void</span> <span class="nf">initialize</span><span class="o">();</span>
+	
+	<span class="cm">/**
+</span><span class="cm">	 * Gets the implementation for the specified interface type
+</span><span class="cm">	 *
+</span><span class="cm">	 * @param &lt;T&gt; the Openstack4j API type
+</span><span class="cm">	 * @param api the API interface
+</span><span class="cm">	 * @return the implementation for T
+</span><span class="cm">	 * @throws ApiNotFoundException if the API cannot be found
+</span><span class="cm">	 */</span>
+	<span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">T</span> <span class="nf">get</span><span class="o">(</span><span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">api</span><span class="o">);</span>
 <span class="o">}</span></code></pre></td></tr></table>
 </div>
 </div>

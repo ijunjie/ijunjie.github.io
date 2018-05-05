@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>一份简明的计算技术史 - Wang Junjie</title>
+  <title>云计算技术简史 - Wang Junjie</title>
   <link rel="alternate" hreflang="zh-cn" href="https://ijunjie.github.io/" />
 
 <meta name="renderer" content="webkit" />
@@ -25,7 +25,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Wang Junjie" />
-  <meta name="description" content="由于某种无法解释的原因，我不得不整理一份简明的计算技术史，主要关注点在云计算、虚拟化、分布式和容器技术等方面。 20 世纪 30 ~ 40 年代：早期计算机时" />
+  <meta name="description" content="这是一份笔者整理的云计算技术发展简史，主要关注虚拟化、分布式、云计算和容器技术的起源和发展。 20 世纪 30 ~ 40 年代：早期计算机时代 上世纪 30 ~ 40 年代" />
 
 
 
@@ -33,7 +33,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.39" />
+<meta name="generator" content="Hugo 0.40.2" />
 
 
 <link rel="canonical" href="https://ijunjie.github.io/post/arch/from-virtualization/" />
@@ -58,8 +58,8 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="一份简明的计算技术史" />
-<meta property="og:description" content="由于某种无法解释的原因，我不得不整理一份简明的计算技术史，主要关注点在云计算、虚拟化、分布式和容器技术等方面。 20 世纪 30 ~ 40 年代：早期计算机时" />
+<meta property="og:title" content="云计算技术简史" />
+<meta property="og:description" content="这是一份笔者整理的云计算技术发展简史，主要关注虚拟化、分布式、云计算和容器技术的起源和发展。 20 世纪 30 ~ 40 年代：早期计算机时代 上世纪 30 ~ 40 年代" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ijunjie.github.io/post/arch/from-virtualization/" />
 
@@ -79,20 +79,20 @@
 
 
 
-<meta itemprop="name" content="一份简明的计算技术史">
-<meta itemprop="description" content="由于某种无法解释的原因，我不得不整理一份简明的计算技术史，主要关注点在云计算、虚拟化、分布式和容器技术等方面。 20 世纪 30 ~ 40 年代：早期计算机时">
+<meta itemprop="name" content="云计算技术简史">
+<meta itemprop="description" content="这是一份笔者整理的云计算技术发展简史，主要关注虚拟化、分布式、云计算和容器技术的起源和发展。 20 世纪 30 ~ 40 年代：早期计算机时代 上世纪 30 ~ 40 年代">
 
 
 <meta itemprop="datePublished" content="2018-05-04T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-05-04T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1320">
+<meta itemprop="wordCount" content="1283">
 
 
 
 <meta itemprop="keywords" content="container,kubernetes," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="一份简明的计算技术史"/>
-<meta name="twitter:description" content="由于某种无法解释的原因，我不得不整理一份简明的计算技术史，主要关注点在云计算、虚拟化、分布式和容器技术等方面。 20 世纪 30 ~ 40 年代：早期计算机时"/>
+<meta name="twitter:title" content="云计算技术简史"/>
+<meta name="twitter:description" content="这是一份笔者整理的云计算技术发展简史，主要关注虚拟化、分布式、云计算和容器技术的起源和发展。 20 世纪 30 ~ 40 年代：早期计算机时代 上世纪 30 ~ 40 年代"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -199,7 +199,7 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">一份简明的计算技术史</h1>
+      <h1 class="post-title">云计算技术简史</h1>
       
       <div class="post-meta">
         <span class="post-time"> 2018-05-04 </span>
@@ -224,8 +224,8 @@
 <li><a href="#20-世纪-30-40-年代-早期计算机时代">20 世纪 30 ~ 40 年代：早期计算机时代</a></li>
 <li><a href="#20-世纪-50-60-年代-大型机的时代">20 世纪 50 ~ 60 年代：大型机的时代</a></li>
 <li><a href="#20-世纪-70-90-年代-pc崛起-小型机发展-网络诞生的时代">20 世纪 70 ~ 90 年代：PC崛起、小型机发展、网络诞生的时代</a></li>
-<li><a href="#2001-2009-年-早期虚拟化时代-公有云服务起步">2001 ~ 2009 年：早期虚拟化时代、公有云服务起步</a></li>
-<li><a href="#2010-年至今-虚拟化成熟的时代-公有云服务爆发式增长">2010 年至今：虚拟化成熟的时代、公有云服务爆发式增长</a></li>
+<li><a href="#2001-2009-年-早期虚拟化时代-公有云起步">2001 ~ 2009 年：早期虚拟化时代、公有云起步</a></li>
+<li><a href="#2010-年至今-虚拟化成熟的时代-公有云爆发式增长">2010 年至今：虚拟化成熟的时代、公有云爆发式增长</a></li>
 <li><a href="#2013-年至今-容器化的时代">2013 年至今：容器化的时代</a></li>
 <li><a href="#2015-年至今-云原生时代">2015 年至今：云原生时代</a></li>
 </ul></li>
@@ -238,7 +238,7 @@
     <div class="post-content">
       
 
-<p>由于某种无法解释的原因，我不得不整理一份简明的计算技术史，主要关注点在云计算、虚拟化、分布式和容器技术等方面。</p>
+<p>这是一份笔者整理的云计算技术发展简史，主要关注虚拟化、分布式、云计算和容器技术的起源和发展。</p>
 
 <h2 id="20-世纪-30-40-年代-早期计算机时代">20 世纪 30 ~ 40 年代：早期计算机时代</h2>
 
@@ -261,9 +261,9 @@
 
 <h2 id="20-世纪-70-90-年代-pc崛起-小型机发展-网络诞生的时代">20 世纪 70 ~ 90 年代：PC崛起、小型机发展、网络诞生的时代</h2>
 
-<p><strong>PC 崛起的时代</strong>：978 年，Intel 推出 8086 中央处理器标志着 X86 的诞生。廉价 PC 的出现导致<strong>虚拟化技术的停滞</strong>，从 20 世纪 80 年代直到 20 世纪末，虚拟化技术几乎没有进展。</p>
+<p><strong>PC 崛起的时代</strong>：1978 年，Intel 推出 8086 中央处理器，标志着 X86 的诞生。在廉价 PC 的冲击下，<strong>虚拟化技术陷入长期停滞状态</strong>，从 20 世纪 80 年代直到 20 世纪末，虚拟化技术几乎没有进展。</p>
 
-<p><strong>小型机的时代</strong>：以 RISC CPU 为架构的<strong>小型 UNIX 服务器</strong>快速发展。在与 X86 多年对抗中，RISC 芯片厂商大多退出了历史舞台，只剩下了 IBM 的 Power 芯片和商业化取得成功的 ARM.</p>
+<p><strong>小型机的时代</strong>：以 RISC CPU 为架构的<strong>小型 UNIX 服务器</strong>快速发展。在与 X86 多年对抗中，RISC 芯片厂商大多退出了历史舞台，如今只剩下 Power 和 ARM.</p>
 
 <p><strong>网络诞生和互联网起步的时代</strong>：</p>
 
@@ -274,30 +274,30 @@
 <li>90 年代初，互联网诞生。</li>
 </ul>
 
-<h2 id="2001-2009-年-早期虚拟化时代-公有云服务起步">2001 ~ 2009 年：早期虚拟化时代、公有云服务起步</h2>
+<h2 id="2001-2009-年-早期虚拟化时代-公有云起步">2001 ~ 2009 年：早期虚拟化时代、公有云起步</h2>
 
-<p>2001 ~ 2009 年，受 PC 冲击而一度停滞不前的虚拟化技术重新得到重视。虚拟化有两个思路，一是拆分，将集中的计算资源拆分；二是聚合，将分散的计算资源<strong>池化</strong>。</p>
+<p>2001 ~ 2009 年，受 PC 冲击而一度停滞不前的虚拟化技术重新得到重视。虚拟化一方面将集中的计算资源拆分，另一方面将分散的计算资源<strong>池化</strong>，以达到提高利用率、降低成本的目的。</p>
 
-<p>VMware，Xen，KVM 分别于 2001、2003、2007年发布了各自的商用服务器虚拟化解决方案，由此形成三足鼎立的局面。在市场的培育下，VM 的观念深入人心。</p>
+<p>VMware，Xen，KVM 分别于 2001、2003、2007年发布了各自的商用服务器虚拟化解决方案，由此形成三足鼎立的局面。21 世纪的第一个十年间，<strong>VM 的观念深入人心</strong>。</p>
 
-<p>与此同时，作为虚拟化大规模应用场景的公有云服务也迅速起步：</p>
+<p>与此同时，公有云服务也迅速起步：</p>
 
 <ul>
 <li>2006 年，Amazon 推出 AWS 云计算平台</li>
 <li>2007 年，Amazon 推出 EC2 和 S3 服务</li>
 <li>2008 年，谷歌推出 GCE 服务</li>
-<li>2009 年，PaaS 平台的开创者 Heroku 诞生。形成 IaaS、PaaS 和 SaaS 三个层次的服务模式。</li>
+<li>2009 年，PaaS 平台的开创者 Heroku 诞生。IaaS、PaaS 和 SaaS 三层服务模式成为共识。</li>
 </ul>
 
-<h2 id="2010-年至今-虚拟化成熟的时代-公有云服务爆发式增长">2010 年至今：虚拟化成熟的时代、公有云服务爆发式增长</h2>
+<h2 id="2010-年至今-虚拟化成熟的时代-公有云爆发式增长">2010 年至今：虚拟化成熟的时代、公有云爆发式增长</h2>
 
-<p>2010 年，OpenStack 诞生，推动了开源 IaaS 的流行。很多厂商基于 OpenStack 做了二次开发，帮助一些数据中心改造为虚拟化平台（尽管事后证明其带来的麻烦远远多于便利）。</p>
+<p>2010 年，OpenStack 诞生，推动了开源 IaaS 的流行。很多厂商基于 OpenStack 做了二次开发，帮助一些数据中心改造为虚拟化平台。</p>
 
 <p>2015 年到 2017 年，AWS、Azure、Aliyun、GCE 四大公有云巨头逐渐形成。</p>
 
 <h2 id="2013-年至今-容器化的时代">2013 年至今：容器化的时代</h2>
 
-<p>以 VM 为核心的虚拟机技术有一些缺点，如云服务商锁定导致客户业务难以迁移，跨云部署困难；虚拟机过于重量级，不够轻便，不利于扩展等。</p>
+<p>以 VM 为核心的虚拟机技术有一些缺点，如云服务商锁定导致客户业务难以迁移、跨云部署困难；虚拟机过于重量级，不够轻便，不利于扩展等。</p>
 
 <p><strong>2013 年，Docker 技术发布，从此拉开了容器技术的大幕</strong>。 实际上 Docker 的容器技术并不是新技术，而是对由来已久的内核隔离技术如LXC、cgroups等进行了更好的封装和整合，并定义了标准镜像格式。</p>
 
