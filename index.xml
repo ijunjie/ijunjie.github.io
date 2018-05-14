@@ -40,7 +40,7 @@
       
       <guid>https://ijunjie.github.io/post/ds/list-comparison/</guid>
       
-        <description>关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法，如 “ArrayList 查询快，LinkedList 增删快”。这种说法过于笼统，不严谨，实际情况</description>
+        <description>关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法。比如 “ArrayList 查询快，LinkedList 增删快”，这种说法过于笼统，不严谨，实际情</description>
       
     </item>
     
