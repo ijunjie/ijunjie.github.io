@@ -25,7 +25,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Wang Junjie" />
-  <meta name="description" content="关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法。我不得不在此重新谈论一下这个问题。 要获得正确的认识必须深刻理解它们底层的数据结构和工作机制。 影" />
+  <meta name="description" content="关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法，如 “ArrayList 查询快，LinkedList 增删快”。这种说法过于笼统，不严谨，实际情况" />
 
 
 
@@ -59,7 +59,7 @@
 
 
 <meta property="og:title" content="正确理解 ArrayList 和 LinkedList" />
-<meta property="og:description" content="关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法。我不得不在此重新谈论一下这个问题。 要获得正确的认识必须深刻理解它们底层的数据结构和工作机制。 影" />
+<meta property="og:description" content="关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法，如 “ArrayList 查询快，LinkedList 增删快”。这种说法过于笼统，不严谨，实际情况" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ijunjie.github.io/post/ds/list-comparison/" />
 
@@ -80,19 +80,19 @@
 
 
 <meta itemprop="name" content="正确理解 ArrayList 和 LinkedList">
-<meta itemprop="description" content="关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法。我不得不在此重新谈论一下这个问题。 要获得正确的认识必须深刻理解它们底层的数据结构和工作机制。 影">
+<meta itemprop="description" content="关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法，如 “ArrayList 查询快，LinkedList 增删快”。这种说法过于笼统，不严谨，实际情况">
 
 
 <meta itemprop="datePublished" content="2018-05-02T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-05-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1043">
+<meta itemprop="wordCount" content="1042">
 
 
 
 <meta itemprop="keywords" content="java,list," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="正确理解 ArrayList 和 LinkedList"/>
-<meta name="twitter:description" content="关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法。我不得不在此重新谈论一下这个问题。 要获得正确的认识必须深刻理解它们底层的数据结构和工作机制。 影"/>
+<meta name="twitter:description" content="关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法，如 “ArrayList 查询快，LinkedList 增删快”。这种说法过于笼统，不严谨，实际情况"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -236,11 +236,9 @@
     <div class="post-content">
       
 
-<p>关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法。我不得不在此重新谈论一下这个问题。</p>
+<p>关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法，如 “ArrayList 查询快，LinkedList 增删快”。这种说法过于笼统，不严谨，实际情况要复杂一些。下面从它们底层的数据结构和工作机制入手，按场景对比分析它们的性能差异。</p>
 
-<p>要获得正确的认识必须深刻理解它们底层的数据结构和工作机制。</p>
-
-<p>影响 ArrayList 性能的关键点在于<strong>数组拷贝</strong>，<strong>动态扩容</strong>和<strong>随机增删元素</strong>都会进行数组拷贝。数组拷贝既消耗时间，又消耗空间，应尽量避免之。由数组拷贝机制可以推理得到 ArrayList 的一个特点，<strong>增删元素的位置越往后越快</strong>，因为元素位置越靠后，发生数组拷贝量的规模越小。</p>
+<p>影响 ArrayList 性能的关键点在于<strong>数组拷贝</strong>，动态扩容和随机增删元素都会进行数组拷贝。数组拷贝既消耗时间，又消耗空间，应尽量避免之。由数组拷贝机制可以推理得到 ArrayList 的一个特点，<strong>增删元素的位置越往后越快</strong>，因为元素位置越靠后，数组拷贝的规模越小。</p>
 
 <p>影响 LinkedList 性能的关键点在于<strong>寻址</strong>和<strong>内存分配</strong>。LinkedList 寻址慢在于每 get 一个元素都需要<strong>查找</strong>， 即使有折半判断 + 双向查找优化，仍比不上 ArrayList 按“索引”取址. 因此<strong>对 LinkedList 来说，增删的元素位置越靠近两端，效率越高</strong>。 内存分配是说，向 LinkedList 增加或插入元素，每次都需要申请内存。这一点显然不如 ArrayList 的静态分配效率高（不考虑动态扩容）。</p>
 
@@ -330,7 +328,7 @@
         
           <a class="prev" href="/post/arch/from-virtualization/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">一份简明的计算技术史</span>
+            <span class="prev-text nav-default">云计算技术简史</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         

@@ -6,19 +6,30 @@
     <description>Recent content on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 04 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 May 2018 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://ijunjie.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>一份简明的计算技术史</title>
+      <title>动态代理和 AOP</title>
+      <link>https://ijunjie.github.io/post/dp/dynamic-proxy-aop/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/dp/dynamic-proxy-aop/</guid>
+      
+        <description>JDK 动态代理创建时比较快，运行时较慢；CGlib 动态代理正好相反，创建时慢，运行时快。一般选择在系统初始化时，使用 CGlib 代理，并托管到 ApplicationContext 中。 Spring AOP 经</description>
+      
+    </item>
+    
+    <item>
+      <title>云计算技术简史</title>
       <link>https://ijunjie.github.io/post/arch/from-virtualization/</link>
       <pubDate>Fri, 04 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/arch/from-virtualization/</guid>
       
-        <description>由于某种无法解释的原因，我不得不整理一份简明的计算技术史，主要关注点在云计算、虚拟化、分布式和容器技术等方面。 20 世纪 30 ~ 40 年代：早期计算机时</description>
+        <description>这是一份笔者整理的云计算技术发展简史，主要关注虚拟化、分布式、云计算和容器技术的起源和发展。 20 世纪 30 ~ 40 年代：早期计算机时代 上世纪 30 ~ 40 年代</description>
       
     </item>
     
@@ -29,7 +40,7 @@
       
       <guid>https://ijunjie.github.io/post/ds/list-comparison/</guid>
       
-        <description>关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法。我不得不在此重新谈论一下这个问题。 要获得正确的认识必须深刻理解它们底层的数据结构和工作机制。 影</description>
+        <description>关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法，如 “ArrayList 查询快，LinkedList 增删快”。这种说法过于笼统，不严谨，实际情况</description>
       
     </item>
     
@@ -129,6 +140,17 @@
       <guid>https://ijunjie.github.io/post/fp/ramda/</guid>
       
         <description>Ramda是什么 Ramda的官方文档中文版：Ramda 简介 阮一峰也曾以他一贯的通俗易懂的风格写过一篇介绍： Ramda 函数库参考教程 柯里化 关于什么是柯</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ijunjie.github.io/post/arch/docker-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/arch/docker-notes/</guid>
+      
+        <description>Docker 学习笔记整理 本篇是 每天5分钟玩转 Docker 容器技术 的学习笔记。 一、容器生态系统 容器核心技术 容器规范：OCI 发布的 runtime spec 和 image format spec 容器runtime：主</description>
       
     </item>
     

@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> - Wang Junjie</title>
+  <link rel="alternate" hreflang="zh-cn" href="https://ijunjie.github.io/" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Wang Junjie" />
+  <meta name="description" content="Docker 学习笔记整理 本篇是 每天5分钟玩转 Docker 容器技术 的学习笔记。 一、容器生态系统 容器核心技术 容器规范：OCI 发布的 runtime spec 和 image format spec 容器runtime：主" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.39" />
+
+
+<link rel="canonical" href="https://ijunjie.github.io/post/arch/docker-notes/" />
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<link href="/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="Docker 学习笔记整理 本篇是 每天5分钟玩转 Docker 容器技术 的学习笔记。 一、容器生态系统 容器核心技术 容器规范：OCI 发布的 runtime spec 和 image format spec 容器runtime：主" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ijunjie.github.io/post/arch/docker-notes/" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Docker 学习笔记整理 本篇是 每天5分钟玩转 Docker 容器技术 的学习笔记。 一、容器生态系统 容器核心技术 容器规范：OCI 发布的 runtime spec 和 image format spec 容器runtime：主">
+
+
+
+<meta itemprop="wordCount" content="5755">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Docker 学习笔记整理 本篇是 每天5分钟玩转 Docker 容器技术 的学习笔记。 一、容器生态系统 容器核心技术 容器规范：OCI 发布的 runtime spec 和 image format spec 容器runtime：主"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wang Junjie</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Wang Junjie
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/">Home</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+  </ul>
+</nav>
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#docker-学习笔记整理">Docker 学习笔记整理</a>
+<ul>
+<li><a href="#一-容器生态系统">一、容器生态系统</a>
+<ul>
+<li><a href="#容器核心技术">容器核心技术</a></li>
+<li><a href="#容器平台技术">容器平台技术：</a></li>
+<li><a href="#容器支持技术">容器支持技术：</a></li>
+</ul></li>
+<li><a href="#二-容器架构">二、容器架构</a>
+<ul>
+<li><a href="#容器与虚拟机">容器与虚拟机：</a></li>
+<li><a href="#docker-核心组件">Docker 核心组件：</a></li>
+</ul></li>
+<li><a href="#三-镜像">三、镜像</a>
+<ul>
+<li><a href="#base-镜像">base 镜像</a></li>
+<li><a href="#分层结构">分层结构</a></li>
+<li><a href="#构建镜像">构建镜像：</a></li>
+<li><a href="#镜像的缓存特性">镜像的缓存特性</a></li>
+<li><a href="#dockerfile-常用指令">Dockerfile 常用指令</a></li>
+</ul></li>
+<li><a href="#shell-和-exec-格式的命令">Shell 和 Exec 格式的命令</a>
+<ul>
+<li><a href="#entrypoint-cmd">ENTRYPOINT &amp; CMD</a></li>
+<li><a href="#镜像的命名">镜像的命名</a></li>
+<li><a href="#镜像的分发">镜像的分发</a></li>
+</ul></li>
+<li><a href="#四-容器">四 容器</a>
+<ul>
+<li><a href="#服务类容器和工具类容器">服务类容器和工具类容器</a></li>
+<li><a href="#docker-容器操作">docker 容器操作</a></li>
+<li><a href="#限额">限额</a></li>
+<li><a href="#progrium-stress-镜像">progrium/stress 镜像</a></li>
+<li><a href="#容器底层原理">容器底层原理</a>
+<ul>
+<li><a href="#cgroup">cgroup</a></li>
+<li><a href="#namespace">namespace</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#五-容器网络">五、容器网络</a>
+<ul>
+<li><a href="#bridge">bridge</a></li>
+<li><a href="#指定容器-ip">指定容器 IP</a></li>
+<li><a href="#互通性">互通性</a></li>
+<li><a href="#通信方式">通信方式</a>
+<ul>
+<li><a href="#ip-方式">IP 方式</a></li>
+<li><a href="#docker-dns-server">Docker DNS Server</a></li>
+<li><a href="#joined-容器">joined 容器</a></li>
+</ul></li>
+<li><a href="#容器与外部网络通信">容器与外部网络通信</a></li>
+<li><a href="#外部网络访问容器">外部网络访问容器</a></li>
+</ul></li>
+<li><a href="#六-docker-存储">六、Docker 存储</a>
+<ul>
+<li><a href="#docker-storage-driver">Docker storage driver</a></li>
+<li><a href="#docker-volume">Docker Volume</a></li>
+<li><a href="#bind-mount">bind mount</a></li>
+<li><a href="#docker-managed-volume">Docker managed volume</a></li>
+</ul></li>
+<li><a href="#共享数据">共享数据</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h1 id="docker-学习笔记整理">Docker 学习笔记整理</h1>
+
+<p>本篇是 <a href="http://www.cnblogs.com/CloudMan6/">每天5分钟玩转 Docker 容器技术</a> 的学习笔记。</p>
+
+<h2 id="一-容器生态系统">一、容器生态系统</h2>
+
+<h3 id="容器核心技术">容器核心技术</h3>
+
+<ul>
+<li>容器规范：OCI 发布的 runtime spec 和 image format spec</li>
+<li>容器runtime：主流的三种
+
+<ul>
+<li>lxc，Linux 老牌容器 runtime</li>
+<li>runc，Docker 开发的</li>
+<li>rkt，CoreOS 开发的</li>
+</ul></li>
+<li>容器管理工具：
+
+<ul>
+<li>lxc：lxd，</li>
+<li>runc：docker engine，包括 deamon 和 cli</li>
+<li>rkt：rkt cli</li>
+</ul></li>
+<li>容器定义工具：
+
+<ul>
+<li>docker image &amp; docker file</li>
+<li>ACI，与 docker image 类似，CoreOS 开发</li>
+</ul></li>
+<li>Registries
+
+<ul>
+<li>Docker registry</li>
+<li>Docker hub</li>
+<li>Quay.io</li>
+</ul></li>
+<li>容器 OS：
+
+<ul>
+<li>coreos</li>
+<li>atomic</li>
+<li>ubuntu core
+<br /></li>
+</ul></li>
+</ul>
+
+<h3 id="容器平台技术">容器平台技术：</h3>
+
+<ul>
+<li>容器编排引擎：
+
+<ul>
+<li>kubernetes</li>
+<li>docker swarm</li>
+<li>mesos + marathon</li>
+</ul></li>
+<li>容器管理平台：
+
+<ul>
+<li>Rancher</li>
+<li>ContainerShip</li>
+</ul></li>
+<li>基于容器的PaaS：
+
+<ul>
+<li>Deis</li>
+<li>Flynn</li>
+<li>Dokku</li>
+</ul></li>
+</ul>
+
+<h3 id="容器支持技术">容器支持技术：</h3>
+
+<ul>
+<li>容器网络
+
+<ul>
+<li>docker network</li>
+<li>flannel</li>
+<li>weave</li>
+<li>calico</li>
+</ul></li>
+<li>服务发现：
+
+<ul>
+<li>etcd</li>
+<li>consul</li>
+<li>zookeeper</li>
+</ul></li>
+<li>监控
+
+<ul>
+<li>docker ps/top/stats</li>
+<li>docker stats API</li>
+<li>sysdig</li>
+<li>aAdvisor/Heapster</li>
+<li>Weave Scope</li>
+</ul></li>
+<li>数据管理
+
+<ul>
+<li>Flocker 数据管理工具</li>
+</ul></li>
+<li>日志管理
+
+<ul>
+<li>docker logs</li>
+<li>logsout</li>
+</ul></li>
+<li>安全性
+
+<ul>
+<li>OpenSCAP 能够对容器镜像进行扫描，发现潜在的漏洞</li>
+</ul></li>
+</ul>
+
+<h2 id="二-容器架构">二、容器架构</h2>
+
+<h3 id="容器与虚拟机">容器与虚拟机：</h3>
+
+<ul>
+<li>更小体积</li>
+<li>启动速度快</li>
+<li>开销小</li>
+<li>更容易迁移</li>
+</ul>
+
+<h3 id="docker-核心组件">Docker 核心组件：</h3>
+
+<ul>
+<li>Client</li>
+<li>Docker daemon</li>
+<li>Image</li>
+<li>Registry</li>
+<li>Container</li>
+</ul>
+
+<h2 id="三-镜像">三、镜像</h2>
+
+<h3 id="base-镜像">base 镜像</h3>
+
+<p>所有容器共用 Host 的 kernel. 如果容器对 kernel 版本有要求，则不适合使用 Docker。</p>
+
+<h3 id="分层结构">分层结构</h3>
+
+<ul>
+<li>可写容器层，容器启动时，一个可写层被加载到镜像的顶部。所有对容器的改动，只会发生在容器层。</li>
+<li>叠加文件系统，如果不同层中有一个相同路径的文件，比如 /a，上层的 /a 会覆盖下层的 /a，也就是说用户只能访问到上层中的文件 /a。在容器层中，用户看到的是一个叠加之后的文件系统。</li>
+<li>Copy-On-Write, 只有当需要修改时才复制一份数据，这种特性被称作 Copy-on-Write。容器层保存的是镜像变化的部分，不会对镜像本身进行任何修改。
+
+<ul>
+<li>添加文件：在容器中创建文件时，新文件被添加到容器层中。</li>
+<li>读取文件：在容器中读取某个文件时，Docker 会从上往下依次在各镜像层中查找此文件。一旦找到，立即将其复制到容器层，然后打开并读入内存。</li>
+<li>修改文件：在容器中修改已存在的文件时，Docker 会从上往下依次在各镜像层中查找此文件。一旦找到，立即将其复制到容器层，然后修改之。</li>
+<li>删除文件：在容器中删除文件时，Docker 也是从上往下依次在镜像层中查找此文件。找到后，会在容器层中记录下此删除操作。</li>
+</ul></li>
+</ul>
+
+<h3 id="构建镜像">构建镜像：</h3>
+
+<p>两种方式：</p>
+
+<ul>
+<li><code>docker commit &lt;current_container_name&gt; &lt;new_image_name&gt;</code></li>
+<li>dockerfile. 底层实际也是通过 docker commit 一层一层构建的。
+
+<ul>
+<li>调试 Dockerfile：例如，第三层镜像构建失败，可以手动启动一个第二层的容器查看失败原因。</li>
+<li><code>docker history &lt;image_name&gt;</code> 会显示镜像的构建历史，也就是 Dockerfile 的执行过程。</li>
+</ul></li>
+</ul>
+
+<h3 id="镜像的缓存特性">镜像的缓存特性</h3>
+
+<h3 id="dockerfile-常用指令">Dockerfile 常用指令</h3>
+
+<ul>
+<li>FROM</li>
+<li>MAINTAINER</li>
+<li>COPY</li>
+<li>ADD 自动解压 tar, zip, tgz,xz 等</li>
+<li>ENV, 如 <code>ENV MYSQL_HOST &quot;10.153.46.32&quot;</code>,后续指令以 <code>$MYSQL_HOST</code>获取</li>
+<li>EXPOSE</li>
+<li>VOLUME</li>
+<li>WORKDIR, 指定容器内工作目录，如果 WORKDIR 不存在，Docker 会自动创建。如 <code>WORKDIR /app</code> 则后面指令涉及容器内路径时，相对于<code>/app</code></li>
+<li>RUN</li>
+<li>CMD</li>
+<li>ENTRYPOINT</li>
+</ul>
+
+<h2 id="shell-和-exec-格式的命令">Shell 和 Exec 格式的命令</h2>
+
+<ul>
+<li><p>Shell 格式的命令会调用 <code>/bin/sh -c &lt;command&gt;</code>, command会被shell解析。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">ENV name Foo Bar
+ENTRYPOINT echo &#34;Hello, $name&#34;</pre></td></tr></table>
+</div>
+</div>
+<p>启动容器输出 <code>Hello, Foo Bar</code>. （注意 ENV 的用法 ENV name Foo Bar 可以写成 ENV name &ldquo;Foo Bar&rdquo;）</p></li>
+
+<li><p>Exec 格式的命令会直接执行 command，不会解析。如上面例子，使用Exec：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">ENV name Foo Bar  
+ENTRYPOINT [&#34;/bin/echo&#34;, &#34;Hello, $name&#34;]</pre></td></tr></table>
+</div>
+</div>
+<p>输出 <code>Hello, $name</code></p></li>
+</ul>
+
+<h3 id="entrypoint-cmd">ENTRYPOINT &amp; CMD</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">ENTRYPOINT [&#34;/bin/echo&#34;, &#34;Hello&#34;]  
+CMD [&#34;world&#34;]</pre></td></tr></table>
+</div>
+</div>
+<p>此时，可以在启动容器时传入参数，覆盖 CMD 提供的内容。</p>
+
+<p><code>docker run -it [image]</code> 输出 <code>Hello world</code>;
+<code>docker run -it [image] Foo Bar Haha</code> 输出 <code>Hello Foo Bar Haha</code>;</p>
+
+<p><strong><code>ENTRYPOINT command param1 param2</code> 会忽略任何 CMD 或 docker run 提供的参数。</strong></p>
+
+<h3 id="镜像的命名">镜像的命名</h3>
+
+<h3 id="镜像的分发">镜像的分发</h3>
+
+<ul>
+<li>提供 Dockerfile 给他人自行构建</li>
+<li>上传到 registry 供别人下载
+
+<ul>
+<li>公共 Registry</li>
+<li>私有 Registry</li>
+</ul></li>
+</ul>
+
+<h2 id="四-容器">四 容器</h2>
+
+<h3 id="服务类容器和工具类容器">服务类容器和工具类容器</h3>
+
+<ul>
+<li>服务类容器以 daemon 的形式运行，对外提供服务。比如 web server，数据库等。通过 -d 以后台方式启动这类容器是非常合适的。如果要排查问题，可以通过 exec -it 进入容器。</li>
+<li>工具类容器通常给能我们提供一个临时的工作环境，通常以 run -it 方式运行。</li>
+</ul>
+
+<h3 id="docker-容器操作">docker 容器操作</h3>
+
+<ul>
+<li>attach 直接进入容器 启动命令 的终端，不会启动新的进程</li>
+<li>exec 则是在容器中打开新的终端，并且可以启动新的进程。<code>docker exec -it &lt;container&gt; bash|sh</code> 是执行 exec 最常用的方式。</li>
+<li><code>docker logs -f</code> 也比较常用。</li>
+<li>重命名容器, docker rename</li>
+<li>docker stop</li>
+<li>docker kill</li>
+<li>docker start, 保留容器的第一次启动时的所有参数</li>
+<li>docker restart, 相当于依次执行 docker stop 和docker start.</li>
+<li>docker create 创建的容器处于 Created 状态。可以先创建容器，稍后再启动。</li>
+<li>docker start 将以后台方式启动容器。 docker run 命令实际上是 docker create 和 docker start 的组合。</li>
+<li><code>--restart=always</code> 意味着无论容器因何种原因退出（包括正常退出），就立即重启。该参数的形式还可以是 <code>--restart=on-failure:3</code>，意思是如果启动进程退出代码非0，则重启容器，最多重启3次。</li>
+<li>有时我们只是希望暂时让容器暂停工作一段时间，比如要对容器的文件系统打个快照，或者 dcoker host 需要使用 CPU，这时可以执行 <code>docker pause</code>. 处于暂停状态的容器不会占用 CPU 资源，直到通过 docker unpause 恢复运行。</li>
+<li>docker rm 一次可以指定多个容器，如果希望批量删除所有已经退出的容器，可以执行如下命令：<code>docker rm -v $(docker ps -aq -f status=exited)</code></li>
+</ul>
+
+<h3 id="限额">限额</h3>
+
+<ul>
+<li>内存限额，容器可使用的内存包括两部分：物理内存和 swap, 默认都为 -1
+
+<ul>
+<li><code>-m</code> 或 <code>--memory</code>：设置内存的使用限额，例如 100M, 2G。</li>
+<li><code>--memory-swap</code>：设置 内存+swap 的使用限额。 &ndash;memory-swap 默认为 momory 的两倍</li>
+<li>例如 <code>-m 200M --memory-swap=300M</code></li>
+</ul></li>
+<li>CPU 限额，默认设置下，所有容器可以平等地使用 host CPU 资源并且没有限制。通过 cpu share 可以设置容器使用 CPU 的优先级。
+
+<ul>
+<li>通过 -c 或 &ndash;cpu-shares 设置容器使用 CPU 的权重，默认为 1024</li>
+</ul></li>
+
+<li><p>Block IO 限额，默认情况下，所有容器能平等地读写磁盘</p>
+
+<ul>
+<li><p>可以通过设置 &ndash;blkio-weight 参数来改变容器 block IO 的优先级。&ndash;blkio-weight 设置的是相对权重值，<strong>默认为 500</strong>. 在下面的例子中，container_A 读写磁盘的带宽是 container_B 的两倍。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">docker run -it --name container_A --blkio-weight 600 ubuntu   
+        
+docker run -it --name container_B --blkio-weight 300 ubuntu</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>限制 bps 和 iops. bps 是 byte per second，每秒读写的数据量。iops 是 io per second，每秒 IO 的次数。可通过以下参数控制容器的 bps 和 iops：</p>
+
+<ul>
+<li>&ndash;device-read-bps，限制读某个设备的 bps。</li>
+<li>&ndash;device-write-bps，限制写某个设备的 bps。</li>
+<li>&ndash;device-read-iops，限制读某个设备的 iops。</li>
+<li>&ndash;device-write-iops，限制写某个设备的 iops。</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="progrium-stress-镜像">progrium/stress 镜像</h3>
+
+<p>测试内存限额：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">docker run -it -m 200M --memory-swap=300M progrium/stress --vm 1 --vm-bytes 280M</pre></td></tr></table>
+</div>
+</div>
+<p>&ndash;vm 1：启动 1 个内存工作线程。</p>
+
+<p>&ndash;vm-bytes 280M：每个线程分配 280M 内存。</p>
+
+<p>因为 280M 在可分配的范围（300M）内，所以工作线程能够正常工作，其过程是：</p>
+
+<ol>
+<li><p>分配 280M 内存。</p></li>
+
+<li><p>释放 280M 内存。</p></li>
+
+<li><p>再分配 280M 内存。</p></li>
+
+<li><p>再释放 280M 内存。</p></li>
+</ol>
+
+<p>一直循环&hellip;&hellip;</p>
+
+<p>测试CPU限额：</p>
+
+<p>如在 host 中启动了两个容器：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">docker run --name &#34;container_A&#34; -c 1024 ubuntu
+
+docker run --name &#34;container_B&#34; -c 512 ubuntu</pre></td></tr></table>
+</div>
+</div>
+<p>container_A 的 cpu share 1024，是 container_B 的两倍。当两个容器都需要 CPU 资源时，container_A 可以得到的 CPU 是 container_B 的两倍。</p>
+
+<p>需要特别注意的是，这种按权重分配 CPU 只会发生在 CPU 资源紧张的情况下。如果 container_A 处于空闲状态，这时，为了充分利用 CPU 资源，container_B 也可以分配到全部可用的 CPU。</p>
+
+<p><strong>实验</strong>：</p>
+
+<ol>
+<li><p>启动 container_A, cpu_share 为 1024</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">docker run --name container_A -it -c 1024 progrium/stress --cpu 1</pre></td></tr></table>
+</div>
+</div>
+<p>&ndash;cpu 用来设置工作线程的数量。因为当前 host 只有 1 颗 CPU，所以一个工作线程就能将 CPU 压满。</p></li>
+
+<li><p>启动 container_B, cpu_share 为 512：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">docker run --name container_B -it -c 512 progrium/stress --cpu 1</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>在 host 中执行 top, 可以看到两个容器对 CPU 的使用情况。可以看到分别使用了 66.3% 和 33.3% 左右。</p></li>
+
+<li><p>此时暂停 container_A, 可以观察到 container_B 在 container_A 空闲的情况下能够用满整颗 CPU.</p></li>
+</ol>
+
+<h3 id="容器底层原理">容器底层原理</h3>
+
+<h4 id="cgroup">cgroup</h4>
+
+<p>cgroup 实现资源限额， namespace 实现资源隔离。</p>
+
+<p>cgroup 全称 Control Group。Linux 操作系统通过 cgroup 可以设置进程使用 CPU、内存 和 IO 资源的限额。&ndash;cpu-shares、-m、&ndash;device-write-bps 实际上就是在配置 cgroup.</p>
+
+<p>在 /sys/fs/cgroup/cpu/docker/<container_id>/ 下的文件中记录了容器资源限额对应到 cgroup 的配置。</p>
+
+<h4 id="namespace">namespace</h4>
+
+<p>在每个容器中，我们都可以看到文件系统，网卡等资源，这些资源看上去是容器自己的。拿网卡来说，每个容器都会认为自己有一块独立的网卡，即使 host 上只有一块物理网卡。这种方式非常好，它使得容器更像一个独立的计算机。</p>
+
+<p>Linux 实现这种方式的技术是 namespace. namespace 管理着 host 中全局唯一的资源，并可以让每个容器都觉得只有自己在使用它。换句话说，namespace 实现了容器间资源的隔离。</p>
+
+<p>Linux 使用了六种 namespace，分别对应六种资源：Mount、UTS、IPC、PID、Network 和 User.</p>
+
+<ul>
+<li>Mount namespace 让容器看上去拥有整个文件系统。容器有自己的 / 目录，可以执行 mount 和 umount 命令。当然我们知道这些操作只在当前容器中生效，不会影响到 host 和其他容器。</li>
+<li>UTS namespace 让容器有自己的 hostname。 <strong>默认情况下，容器的 hostname 是它的短ID</strong>，可以通过 -h 或 &ndash;hostname 参数设置。</li>
+<li>IPC namesapce 让容器拥有自己的共享内存和信号量（semaphore）来实现进程间通信，而不会与 host 和其他容器的 IPC 混在一起。</li>
+<li>PID namespace 容器在 host 中以进程的形式运行。例如当前 host 中运行了的容器，可以使用 <code>ps axf</code> 查看容器进程。所有容器的进程都挂在 dockerd 进程下。容器中进程的 PID 不同于 host 中对应进程的 PID，容器中 PID=1 的进程当然也不是 host 的 init 进程。也就是说：容器拥有自己独立的一套 PID，这就是 PID namespace 提供的功能。</li>
+<li>Network namespace 让容器拥有自己独立的网卡、IP、路由等资源。我们会在后面网络章节详细讨论。</li>
+<li>User namespace 让容器能够管理自己的用户，host 不能看到容器中创建的用户。</li>
+</ul>
+
+<h2 id="五-容器网络">五、容器网络</h2>
+
+<ul>
+<li>none，挂在这个网络下的容器除了 lo，没有其他任何网卡。容器创建时，可以通过 &ndash;network=none 指定使用 none 网络。比如某个容器的唯一用途是生成随机密码，就可以放到 none 网络中避免密码被窃取</li>
+<li>host，容器的网络配置与 host 完全一样。可以通过 &ndash;network=host 指定使用 host 网络。直接使用 Docker host 的网络最大的好处就是性能，如果容器对网络传输效率有较高要求，则可以选择 host 网络。当然不便之处就是牺牲一些灵活性，比如要考虑端口冲突问题，Docker host 上已经使用的端口就不能再用了。</li>
+<li>bridge，默认网络</li>
+</ul>
+
+<h3 id="bridge">bridge</h3>
+
+<p>Docker 安装时会创建一个 命名为 docker0 的 linux bridge。如果不指定&ndash;network，创建的容器默认都会挂到 docker0 上。</p>
+
+<p>使用 <code>docker network create --driver bridge mynet</code> 创建自定义网络。使用 <code>brctl show</code> 查看发现新增一个网桥。</p>
+
+<p>创建网络时可以指定 &ndash;subnet 和 &ndash;gateway 参数。</p>
+
+<h3 id="指定容器-ip">指定容器 IP</h3>
+
+<p>可以通过&ndash;ip指定容器的 IP，前提是网络使用 &ndash;subnet 创建。</p>
+
+<h3 id="互通性">互通性</h3>
+
+<p>为 container 增加一个某个网络的网卡：</p>
+
+<p><code>docker netwrok connect &lt;net-name&gt; &lt;container-id&gt;</code></p>
+
+<h3 id="通信方式">通信方式</h3>
+
+<ul>
+<li>IP 通信</li>
+<li>Docker DNS Server</li>
+<li>joined 容器</li>
+</ul>
+
+<h4 id="ip-方式">IP 方式</h4>
+
+<p>两个容器要能通信，必须要有属于同一个网络的网卡。
+满足这个条件后，容器就可以通过 IP 交互了。具体做法是在容器创建时通过 &ndash;network 指定相应的网络，或者通过 docker network connect 将现有容器加入到指定网络。</p>
+
+<h4 id="docker-dns-server">Docker DNS Server</h4>
+
+<p>通过 IP 访问容器虽然满足了通信的需求，但还是不够灵活。因为我们在部署应用之前可能无法确定 IP，部署之后再指定要访问的 IP 会比较麻烦。对于这个问题，可以通过 docker 自带的 DNS 服务解决。</p>
+
+<p>从 Docker 1.10 版本开始，docker daemon 实现了一个内嵌的 DNS server，使容器可以直接通过“容器名”通信。方法很简单，只要在启动时用 &ndash;name 为容器命名就可以了。</p>
+
+<p><strong>使用 docker DNS 有个限制：只能在 user-defined 网络中使用。也就是说，默认的 bridge 网络是无法使用 DNS 的。</strong></p>
+
+<h4 id="joined-容器">joined 容器</h4>
+
+<p>joined 容器是另一种实现容器间通信的方式。</p>
+
+<p>joined 容器非常特别，它可以使两个或多个容器共享一个网络栈，共享网卡和配置信息，joined 容器之间可以通过 127.0.0.1 直接通信。请看下面的例子：</p>
+
+<p>先创建一个 httpd 容器，名字为 web1。</p>
+
+<p><code>docker run -d -it --name=web1 httpd</code></p>
+
+<p>然后创建 busybox 容器并通过 &ndash;network=container:web1 指定 jointed 容器为 web1.</p>
+
+<p>busybox 和 web1 的网卡 mac 地址与 IP 完全一样，它们共享了相同的网络栈。</p>
+
+<h3 id="容器与外部网络通信">容器与外部网络通信</h3>
+
+<p>容器默认就能访问容器网络以外的网络环境。通过NAT实现。</p>
+
+<h3 id="外部网络访问容器">外部网络访问容器</h3>
+
+<p><code>docker run -d -p 80 httpd</code> 只有 80 时，host 端口随机分配。通过 <code>docker port &lt;container-id&gt;</code>查看。</p>
+
+<p>除了映射动态端口，也可在 -p 中指定映射到 host 某个特定端口，例如可将 80 端口映射到 host 的 8080 端口：<code>-p 8080:80</code>.</p>
+
+<p>每一个映射的端口，host 都会启动一个 docker-proxy 进程来处理访问容器的流量。</p>
+
+<p>外部访问容器过程，例如 httpd 容器 <code>32723:80</code> ：
+1. docker-proxy 监听 host 的 32773 端口。</p>
+
+<ol>
+<li><p>当 curl 访问 host的 32773 时，docker-proxy 转发给容器的80端口。</p></li>
+
+<li><p>httpd 容器响应请求并返回结果。</p></li>
+</ol>
+
+<h2 id="六-docker-存储">六、Docker 存储</h2>
+
+<p>Docker 为容器提供了两种存放数据的资源：</p>
+
+<ul>
+<li><p>由 storage driver 管理的镜像层和容器层。</p></li>
+
+<li><p>Data Volume.</p></li>
+</ul>
+
+<h3 id="docker-storage-driver">Docker storage driver</h3>
+
+<p>正是 storage driver 实现了多层数据的堆叠并为用户提供一个单一的合并之后的统一视图。</p>
+
+<p>Docker 支持多种 storage driver，有 AUFS、Device Mapper、Btrfs、OverlayFS、VFS 和 ZFS。它们都能实现分层的架构，同时又有各自的特性。对于 Docker 用户来说，具体选择使用哪个 storage driver 是一个难题，因为：</p>
+
+<p>没有哪个 driver 能够适应所有的场景。</p>
+
+<p>driver 本身在快速发展和迭代。</p>
+
+<p>不过 Docker 官方给出了一个简单的答案：</p>
+
+<p><strong>优先使用 Linux 发行版默认的 storage driver</strong>.</p>
+
+<p>Docker 安装时会根据当前系统的配置选择默认的 driver。默认 driver 具有最好的稳定性，因为默认 driver 在发行版上经过了严格的测试。</p>
+
+<p>运行docker info查看 Ubuntu 的默认 driver.</p>
+
+<h3 id="docker-volume">Docker Volume</h3>
+
+<p>Data Volume 本质上是 Docker Host 文件系统中的目录或文件，能够直接被 mount 到容器的文件系统中。</p>
+
+<p>Data Volume 有以下特点：</p>
+
+<ul>
+<li><p>Data Volume 是目录或文件，而非没有格式化的磁盘（块设备）。</p></li>
+
+<li><p>容器可以读写 volume 中的数据。</p></li>
+
+<li><p>volume 数据可以被永久的保存，即使使用它的容器已经销毁。</p></li>
+</ul>
+
+<p>好，现在我们有数据层（镜像层和容器层）和 volume 都可以用来存放数据，具体使用的时候要怎样选择呢？考虑下面几个场景：</p>
+
+<ul>
+<li><p>Database 软件 vs Database 数据</p></li>
+
+<li><p>Web 应用 vs 应用产生的日志</p></li>
+
+<li><p>数据分析软件 vs input/output 数据</p></li>
+
+<li><p>Apache Server vs 静态 HTML 文件</p></li>
+</ul>
+
+<p>相信大家会做出这样的选择：</p>
+
+<p>前者放在数据层中。因为这部分内容是无状态的，应该作为镜像的一部分。</p>
+
+<p>后者放在 Data Volume 中。这是需要持久化的数据，并且应该与镜像分开存放。</p>
+
+<p>还有个大家可能会关心的问题：如何设置 voluem 的容量？</p>
+
+<p>因为 volume 实际上是 docker host 文件系统的一部分，所以 volume 的容量取决于文件系统当前未使用的空间，<strong>目前还没有方法设置 volume 的容量。</strong></p>
+
+<h3 id="bind-mount">bind mount</h3>
+
+<p>在具体的使用上，docker 提供了两种类型的 volume：bind mount 和 docker managed volume。</p>
+
+<p>bind mount 是将 host 上已存在的目录或文件 mount 到容器。</p>
+
+<p>通过 -v 将其 mount 到 httpd 容器, -v 的格式为 <code>&lt;host path&gt;:&lt;container path&gt;</code>. 于 /usr/local/apache2/htdocs 已经存在，原有数据会被隐藏起来，取而代之的是 host $HOME/htdocs/ 中的数据，这与 linux mount 命令的行为是一致的。</p>
+
+<p>bind mount 时还可以指定数据的读写权限，<strong>默认是可读可写</strong>，可指定为只读：<code>-v ~/htdocs:/usr/local/apache2/htdocs:ro</code>.</p>
+
+<p>除了目录到目录，还可以文件到文件。只需要向容器添加文件，不希望覆盖整个目录。<strong>使用单一文件有一点要注意：host 中的源文件必须要存在，不然会当作一个新目录 bind mount 给容器。</strong></p>
+
+<p>bind mount 的使用直观高效，易于理解，但它也有不足的地方：<strong>bind mount 需要指定 host 文件系统的特定路径，这就限制了容器的可移植性，当需要将容器迁移到其他 host，而该 host 没有要 mount 的数据或者数据不在相同的路径时，操作会失败。</strong></p>
+
+<h3 id="docker-managed-volume">Docker managed volume</h3>
+
+<p>docker managed volume 与 bind mount 在使用上的最大区别是不需要指定 mount 源，指明 mount point 就行了。</p>
+
+<h2 id="共享数据">共享数据</h2>
+
+<ul>
+<li>docker cp</li>
+<li>将数据放到 bind mount 中</li>
+<li>volume container
+
+<ul>
+<li>docker create， 因为 volume container 的作用只是提供数据，它本身不需要处于运行状态。</li>
+<li>其他容器可以通过 &ndash;volumes-from 使用 volume container</li>
+<li>data-packed volume container</li>
+</ul></li>
+</ul>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Wang Junjie</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">0001-01-01</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/reward/wechat-qr-code.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div>
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/fp/ramda/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Ramda：一个精致的Javascript函数式编程库</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+      </nav>
+    </footer>
+    
+
+  
+
+  
+
+  
+  </article>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wang-junjie@outlook.com" rel="me noopener" class="iconfont icon-email"
+        title="email" target="_blank">
+      </a>
+      <a href="https://github.com/ijunjie" rel="me noopener" class="iconfont icon-github"
+        title="github" target="_blank">
+      </a>
+  <a href="https://ijunjie.github.io/index.xml" rel="noopener" type="application/rss+xml" class="iconfont icon-rss"
+    title="rss" target="_blank">
+  </a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span><span class="author">Wang Junjie</span></span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
+
+
+
+
+
+
+</body>
+</html>
