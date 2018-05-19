@@ -94,12 +94,6 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/arch/docker-notes/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://ijunjie.github.io/tags/antithesis/</loc>
     <lastmod>2018-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>

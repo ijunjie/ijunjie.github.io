@@ -154,16 +154,5 @@
       
     </item>
     
-    <item>
-      <title></title>
-      <link>https://ijunjie.github.io/post/arch/docker-notes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/arch/docker-notes/</guid>
-      
-        <description>Docker 学习笔记整理 本篇是 每天5分钟玩转 Docker 容器技术 的学习笔记。 一、容器生态系统 容器核心技术 容器规范：OCI 发布的 runtime spec 和 image format spec 容器runtime：主</description>
-      
-    </item>
-    
   </channel>
 </rss>
