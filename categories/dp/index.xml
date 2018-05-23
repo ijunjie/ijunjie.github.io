@@ -17,7 +17,7 @@
       <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/dp/dynamic-proxy-aop/</guid>
-      <description>JDK 动态代理创建时比较快，运行时较慢；CGlib 动态代理正好相反，创建时慢，运行时快。一般选择在系统初始化时，使用 CGlib 代理，并托管到 ApplicationContext 中。 Spring AOP 经</description>
+      <description>JDK 动态代理创建时比较快，运行时较慢；CGlib 动态代理正好相反，创建时慢，运行时快。一般选择在系统初始化时，使用 CGlib 代理，并托管到 ApplicationContext 中。代理模</description>
     </item>
     
     <item>
