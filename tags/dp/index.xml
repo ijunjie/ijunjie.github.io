@@ -22,10 +22,10 @@
     
     <item>
       <title>openstack4j 中的依赖管理</title>
-      <link>https://ijunjie.github.io/post/dp/openstack4j-%E4%B8%AD%E7%9A%84-ioc-%E8%AE%BE%E8%AE%A1/</link>
+      <link>https://ijunjie.github.io/post/dp/openstack4j-dependencies/</link>
       <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ijunjie.github.io/post/dp/openstack4j-%E4%B8%AD%E7%9A%84-ioc-%E8%AE%BE%E8%AE%A1/</guid>
+      <guid>https://ijunjie.github.io/post/dp/openstack4j-dependencies/</guid>
       <description>openstack4j 简介 openstack4j 是一个使用 Java 编写的开源 OpenStack SDK. 源码地址： https://github.com/ContainX/openstack4j.git 依赖管理 openstack4j 并没有采用第三方的 IoC 实现，如 Guice 等，而是使用很少的代码实现了简单、易用的依赖管理。 SPI SPI</description>
     </item>
     

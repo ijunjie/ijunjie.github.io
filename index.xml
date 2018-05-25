@@ -6,19 +6,30 @@
     <description>Recent content on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 24 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 May 2018 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://ijunjie.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>你们的产品能够自举吗？</title>
+      <title>阳炎</title>
+      <link>https://ijunjie.github.io/post/nihongo/kagerou/</link>
+      <pubDate>Fri, 25 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/nihongo/kagerou/</guid>
+      
+        <description>你可曾在夏日无风的天气里观察过远处的景物，仿佛可以看见气流在上升涌动，若隐若现。你看到的便是叫做“阳炎”的东西。 “陽炎”是个日语词，读作 かげ</description>
+      
+    </item>
+    
+    <item>
+      <title>你的产品能够自举吗？</title>
       <link>https://ijunjie.github.io/post/philosophy/bootstrap/</link>
       <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/philosophy/bootstrap/</guid>
       
-        <description>不知当初是谁把 bootstrap 翻译成了“自举”。由于中文的博大精深，这个词也不可避免地带有一些谐谑的意味，使人联想到一些电线杆上的广告。 假如有一家公司，产</description>
+        <description>不知当初是谁把 bootstrap 翻译成了“自举”。由于中文的博大精深，这个词仿佛带有某种谐谑的意味，容易使人联想到电线杆上的野广告。 假如有一家公司，产品是 DevOps</description>
       
     </item>
     
@@ -29,7 +40,7 @@
       
       <guid>https://ijunjie.github.io/post/arch/cpu-false-sharing/</guid>
       
-        <description>所谓“伪共享”实在是一个错误的翻译。不知是谁最初把 false sharing 翻译成“伪共享”。翻译得莫名其妙，不知所谓。实际意思是“错误的共享”。 最近在读的几本书</description>
+        <description>不知是谁最初把 false sharing 翻译成“伪共享”，翻译得莫名其妙，不知所谓。实际意思应该是“错误的共享”。 最近在读的几本书都提到了 CPU 伪共享问题。这里尝试做</description>
       
     </item>
     
@@ -112,10 +123,10 @@
     
     <item>
       <title>昔日龌龊不足夸</title>
-      <link>https://ijunjie.github.io/post/myworks/%E6%98%94%E6%97%A5%E9%BE%8C%E9%BE%8A%E4%B8%8D%E8%B6%B3%E5%A4%B8/</link>
+      <link>https://ijunjie.github.io/post/myworks/xiriwochuo/</link>
       <pubDate>Thu, 26 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ijunjie.github.io/post/myworks/%E6%98%94%E6%97%A5%E9%BE%8C%E9%BE%8A%E4%B8%8D%E8%B6%B3%E5%A4%B8/</guid>
+      <guid>https://ijunjie.github.io/post/myworks/xiriwochuo/</guid>
       
         <description></description>
       
@@ -145,10 +156,10 @@
     
     <item>
       <title>openstack4j 中的依赖管理</title>
-      <link>https://ijunjie.github.io/post/dp/openstack4j-%E4%B8%AD%E7%9A%84-ioc-%E8%AE%BE%E8%AE%A1/</link>
+      <link>https://ijunjie.github.io/post/dp/openstack4j-dependencies/</link>
       <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ijunjie.github.io/post/dp/openstack4j-%E4%B8%AD%E7%9A%84-ioc-%E8%AE%BE%E8%AE%A1/</guid>
+      <guid>https://ijunjie.github.io/post/dp/openstack4j-dependencies/</guid>
       
         <description>openstack4j 简介 openstack4j 是一个使用 Java 编写的开源 OpenStack SDK. 源码地址： https://github.com/ContainX/openstack4j.git 依赖管理 openstack4j 并没有采用第三方的 IoC 实现，如 Guice 等，而是使用很少的代码实现了简单、易用的依赖管理。 SPI SPI</description>
       

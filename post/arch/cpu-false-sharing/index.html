@@ -25,7 +25,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Wang Junjie" />
-  <meta name="description" content="所谓“伪共享”实在是一个错误的翻译。不知是谁最初把 false sharing 翻译成“伪共享”。翻译得莫名其妙，不知所谓。实际意思是“错误的共享”。 最近在读的几本书" />
+  <meta name="description" content="不知是谁最初把 false sharing 翻译成“伪共享”，翻译得莫名其妙，不知所谓。实际意思应该是“错误的共享”。 最近在读的几本书都提到了 CPU 伪共享问题。这里尝试做" />
 
 
 
@@ -59,7 +59,7 @@
 
 
 <meta property="og:title" content="CPU 伪共享问题" />
-<meta property="og:description" content="所谓“伪共享”实在是一个错误的翻译。不知是谁最初把 false sharing 翻译成“伪共享”。翻译得莫名其妙，不知所谓。实际意思是“错误的共享”。 最近在读的几本书" />
+<meta property="og:description" content="不知是谁最初把 false sharing 翻译成“伪共享”，翻译得莫名其妙，不知所谓。实际意思应该是“错误的共享”。 最近在读的几本书都提到了 CPU 伪共享问题。这里尝试做" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ijunjie.github.io/post/arch/cpu-false-sharing/" />
 
@@ -80,19 +80,19 @@
 
 
 <meta itemprop="name" content="CPU 伪共享问题">
-<meta itemprop="description" content="所谓“伪共享”实在是一个错误的翻译。不知是谁最初把 false sharing 翻译成“伪共享”。翻译得莫名其妙，不知所谓。实际意思是“错误的共享”。 最近在读的几本书">
+<meta itemprop="description" content="不知是谁最初把 false sharing 翻译成“伪共享”，翻译得莫名其妙，不知所谓。实际意思应该是“错误的共享”。 最近在读的几本书都提到了 CPU 伪共享问题。这里尝试做">
 
 
 <meta itemprop="datePublished" content="2018-05-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-05-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1780">
+<meta itemprop="wordCount" content="1787">
 
 
 
 <meta itemprop="keywords" content="MESI,volatile," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="CPU 伪共享问题"/>
-<meta name="twitter:description" content="所谓“伪共享”实在是一个错误的翻译。不知是谁最初把 false sharing 翻译成“伪共享”。翻译得莫名其妙，不知所谓。实际意思是“错误的共享”。 最近在读的几本书"/>
+<meta name="twitter:description" content="不知是谁最初把 false sharing 翻译成“伪共享”，翻译得莫名其妙，不知所谓。实际意思应该是“错误的共享”。 最近在读的几本书都提到了 CPU 伪共享问题。这里尝试做"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -222,9 +222,9 @@
 <li>
 <ul>
 <li><a href="#cpu-伪共享">CPU 伪共享</a></li>
-<li><a href="#要点-1-cpu-通过缓存操作内存">要点 1：CPU 通过缓存操作内存</a></li>
-<li><a href="#要点-2-通过-mesi-协议解决-cache-一致性问题">要点 2：通过 MESI 协议解决 Cache 一致性问题</a></li>
-<li><a href="#要点-3-伪共享问题的解决">要点 3：伪共享问题的解决</a></li>
+<li><a href="#cpu-通过缓存操作内存">CPU 通过缓存操作内存</a></li>
+<li><a href="#cache-一致性问题和-mesi-协议">Cache 一致性问题和 MESI 协议</a></li>
+<li><a href="#伪共享问题的解决">伪共享问题的解决</a></li>
 <li><a href="#实验">实验</a></li>
 <li><a href="#参考资料">参考资料</a></li>
 </ul></li>
@@ -237,7 +237,7 @@
     <div class="post-content">
       
 
-<p>所谓“伪共享”实在是一个错误的翻译。不知是谁最初把 false sharing 翻译成“伪共享”。翻译得莫名其妙，不知所谓。实际意思是“错误的共享”。</p>
+<p>不知是谁最初把 false sharing 翻译成“伪共享”，翻译得莫名其妙，不知所谓。实际意思应该是“错误的共享”。</p>
 
 <p>最近在读的几本书都提到了 CPU 伪共享问题。这里尝试做一下总结。这几本书是：</p>
 
@@ -253,7 +253,7 @@
 
 <p>当多线程修改互相独立的变量时，如果这些变量共享同一个缓存行，就会无意中影响彼此的性能，这就是伪共享。伪共享是上层编程层面的问题，底层对应的是 CPU Cache 一致性问题。</p>
 
-<h2 id="要点-1-cpu-通过缓存操作内存">要点 1：CPU 通过缓存操作内存</h2>
+<h2 id="cpu-通过缓存操作内存">CPU 通过缓存操作内存</h2>
 
 <p>CPU 和内存的处理速度差距在 <strong>100 倍</strong>左右，因此需要高速缓存。CPU 的高速缓存采用SRAM (Static Random-Access Memory, 静态随机存取存储器), 频率与 CPU 基本一致，速度快，造价高；而内存使用 DRAM (Dynamic Random-Access Memory), DRAM 直到 DDR4 才接近 CPU 的速度。</p>
 
@@ -267,7 +267,7 @@
 
 <p>CPU 要访问 DRAM 的数据，要经过 L3，L2，L1 才能最终到达 CPU.</p>
 
-<h2 id="要点-2-通过-mesi-协议解决-cache-一致性问题">要点 2：通过 MESI 协议解决 Cache 一致性问题</h2>
+<h2 id="cache-一致性问题和-mesi-协议">Cache 一致性问题和 MESI 协议</h2>
 
 <p>每个 CPU 都有自己的 Cache；多个 CPU 核心的 Cache 应该是一致的。来自 Intel 的 MESI 协议是业界公认的 Cache 一致性问题最佳解决方案。</p>
 
@@ -284,14 +284,17 @@
 
 <p>一些细节：</p>
 
-<p>(1) 同时读取。CPU A 读取 &ndash; Invalid 状态；加载后 &ndash; Exclusive 状态。此时 CPU B 的读取请求会被 A 嗅探到，CPU A 在总线上复制一份作为应答，并将自身 Cache Line 改为 Shared 状态。CPU B 收到后也改为 Shared.
-(2) A 写 B 读。CPU A 写入内存前 &ndash; Modified，此时其他 CPU 如果有读请求，则 A 嗅探到后先将自己的缓存写入内存，然后复制给其他 CPU，状态改为 Shared.
-(3) A 写 B 写。A 的 Modified 写入内存前， B 也发起写请求，则 A 优先写入，完成后设置为 Invalid. 然后导致 B 请求无响应，B 只能再次请求。
-(4) 如果多个 Shared 状态，有一个 CPU 进行写操作，会导致其他都变为 Invalid.</p>
+<p>(1) 同时读取。CPU A 读取 &ndash; Invalid 状态；加载后 &ndash; Exclusive 状态。此时 CPU B 的读取请求会被 A 嗅探到，CPU A 在总线上复制一份作为应答，并将自身 Cache Line 改为 Shared 状态。CPU B 收到后也改为 Shared.</p>
+
+<p>(2) A 写 B 读。CPU A 写入内存前 &ndash; Modified，此时其他 CPU 如果有读请求，则 A 嗅探到后先将自己的缓存写入内存，然后复制给其他 CPU，状态改为 Shared.</p>
+
+<p>(3) A 写 B 写。A 的 Modified 写入内存前， B 也发起写请求，则 A 优先写入，完成后设置为 Invalid. 然后导致 B 请求无响应，B 只能再次请求。</p>
+
+<p>(4) 如果多个 Shared 状态，有一个 CPU 进行写操作，会导致其他都变为 Invalid.</p>
 
 <p>总结：存在多个处理器时，对共享变量的操作会涉及多个 CPU 之间的协调问题及 Cache 失效问题。</p>
 
-<h2 id="要点-3-伪共享问题的解决">要点 3：伪共享问题的解决</h2>
+<h2 id="伪共享问题的解决">伪共享问题的解决</h2>
 
 <p>Java 对象是在堆内存上分配空间的，成员变量是在内存空间上是连续的。它们完全有可能被加载到同一个 Cache Line 中。如果有两个线程运行在不同的 CPU 上，它们分别修改不同的成员变量，则会造成一个线程对变量的修改导致另一个线程所在的 CPU 的 Cache Line 失效，被迫重新加载 —— 这仅仅是因为不同变量处于同一个 Cache Line.</p>
 
@@ -317,9 +320,11 @@
 <span class="o">}</span></code></pre></td></tr></table>
 </div>
 </div>
+<p>由于填充字节的方案操作较为复杂，推荐使用 Java 8 的 @Contended 注解。<strong>务必记得要加 jvm 参数 <code>-XX:-RestrictContended</code></strong>.</p>
+
 <h2 id="实验">实验</h2>
 
-<p>这个例子来源于 <a href="http://ifeve.com/falsesharing/">http://ifeve.com/falsesharing/</a></p>
+<p>这个例子来源于 <a href="http://ifeve.com/falsesharing/">http://ifeve.com/falsesharing/</a> 但做了修改。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
@@ -423,7 +428,7 @@
 
 <span class="kd">class</span> <span class="nc">VolatileLong</span> <span class="o">{</span>
     <span class="kd">volatile</span> <span class="kt">long</span> <span class="n">value</span><span class="o">;</span>
-    <span class="kd">public</span> <span class="kt">long</span> <span class="n">p1</span><span class="o">,</span> <span class="n">p2</span><span class="o">,</span> <span class="n">p3</span><span class="o">,</span> <span class="n">p4</span><span class="o">,</span> <span class="n">p5</span><span class="o">,</span> <span class="n">p6</span><span class="o">;</span> <span class="c1">// comment out
+    <span class="kd">public</span> <span class="kt">long</span> <span class="n">p1</span><span class="o">,</span> <span class="n">p2</span><span class="o">,</span> <span class="n">p3</span><span class="o">,</span> <span class="n">p4</span><span class="o">,</span> <span class="n">p5</span><span class="o">;</span> <span class="c1">// comment out, 原文中到 p6
 </span><span class="c1"></span><span class="o">}</span>
 
 <span class="kd">class</span> <span class="nc">MyRunnable</span> <span class="kd">implements</span> <span class="n">Runnable</span> <span class="o">{</span>
@@ -523,7 +528,7 @@
         
           <a class="prev" href="/post/philosophy/bootstrap/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">你们的产品能够自举吗？</span>
+            <span class="prev-text nav-default">你的产品能够自举吗？</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         
