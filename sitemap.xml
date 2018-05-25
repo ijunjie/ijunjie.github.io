@@ -17,6 +17,13 @@
   </url>
   
   <url>
+    <loc>https://ijunjie.github.io/post/art/chinese-painting-puzzle/</loc>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/post/arch/cpu-false-sharing/</loc>
     <lastmod>2018-05-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -124,6 +131,20 @@
   <url>
     <loc>https://ijunjie.github.io/categories/arch/</loc>
     <lastmod>2018-05-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/tags/art/</loc>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/categories/art/</loc>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
