@@ -6,10 +6,19 @@
     <description>Recent content in Arch on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 19 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ijunjie.github.io/categories/arch/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>网关和点对点，谁是反模式？</title>
+      <link>https://ijunjie.github.io/post/arch/api-gw-p2p/</link>
+      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/arch/api-gw-p2p/</guid>
+      <description>有的观点认为，点对点是反模式，也有人认为网关才是反模式。 李艳鹏在《分布式服务架构：原理、设计与实战》中认为，网关是反模式，因为网关会成为性能</description>
+    </item>
     
     <item>
       <title>CPU 伪共享问题</title>

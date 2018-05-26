@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>404 page not found - Wang Junjie</title>
+  <title>网关和点对点，谁是反模式？ - Wang Junjie</title>
   <link rel="alternate" hreflang="zh-cn" href="https://ijunjie.github.io/" />
 
 <meta name="renderer" content="webkit" />
@@ -25,6 +25,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Wang Junjie" />
+  <meta name="description" content="有的观点认为，点对点是反模式，也有人认为网关才是反模式。 李艳鹏在《分布式服务架构：原理、设计与实战》中认为，网关是反模式，因为网关会成为性能" />
+
 
 
 
@@ -34,7 +36,7 @@
 <meta name="generator" content="Hugo 0.39" />
 
 
-<link rel="canonical" href="" />
+<link rel="canonical" href="https://ijunjie.github.io/post/arch/api-gw-p2p/" />
 
 
 
@@ -56,10 +58,16 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="404 Page not found" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="" />
+<meta property="og:title" content="网关和点对点，谁是反模式？" />
+<meta property="og:description" content="有的观点认为，点对点是反模式，也有人认为网关才是反模式。 李艳鹏在《分布式服务架构：原理、设计与实战》中认为，网关是反模式，因为网关会成为性能" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ijunjie.github.io/post/arch/api-gw-p2p/" />
+
+
+
+<meta property="article:published_time" content="2018-05-26T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-05-26T00:00:00&#43;00:00"/>
 
 
 
@@ -71,15 +79,20 @@
 
 
 
+<meta itemprop="name" content="网关和点对点，谁是反模式？">
+<meta itemprop="description" content="有的观点认为，点对点是反模式，也有人认为网关才是反模式。 李艳鹏在《分布式服务架构：原理、设计与实战》中认为，网关是反模式，因为网关会成为性能">
+
+
+<meta itemprop="datePublished" content="2018-05-26T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-05-26T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="476">
 
 
 
-<meta itemprop="name" content="404 Page not found">
-<meta itemprop="description" content="">
-
+<meta itemprop="keywords" content="microservice," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="404 Page not found"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="网关和点对点，谁是反模式？"/>
+<meta name="twitter:description" content="有的观点认为，点对点是反模式，也有人认为网关才是反模式。 李艳鹏在《分布式服务架构：原理、设计与实战》中认为，网关是反模式，因为网关会成为性能"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -183,22 +196,111 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<div class="not-found">
-  <h1 class="error-emoji"></h1>
-  <p class="error-text">/* 404 page not found. */</p>
-  <p class="error-link"><a href="/">↑ Back Home ↑</a></p>
-</div>
-<script>
-  var errorEmojiContainer = document.getElementsByClassName('error-emoji')[0];
-  var emojiArray = [
-    '\\(o_o)/', '(o^^)o', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)',
-    '(=\'X\'=)', '(>_<)', '(;-;)', '\\(^Д^)/',
-  ];
-  var errorEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
-  errorEmojiContainer.appendChild(document.createTextNode(errorEmoji));
-</script>
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">网关和点对点，谁是反模式？</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 2018-05-26 </span>
+        <div class="post-category">
+            
+              <a href="/categories/arch/"> arch </a>
+            
+          </div>
+        
+      </div>
+    </header>
 
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>有的观点认为，点对点是反模式，也有人认为网关才是反模式。</p>
+
+<p>李艳鹏在《分布式服务架构：原理、设计与实战》中认为，网关是反模式，因为网关会成为性能瓶颈，并且也不符合微服务去中心化的理念。</p>
+
+<p>李艳鹏曾经在一个互联网平台上工作，平台决策者倡导建设 API 网关，所有外部服务和内部服务由统一的 API 网关进行管理。</p>
+
+<p>项目初期，中心化的 API 网关统一了所有 API 入口，看起来很规范，但从技术角度看限制了 API 的多样化。</p>
+
+<p>随着业务发展， API 网关开始暴露问题，每个用户请求经过机房时只要有服务之间的交互，都会从 API 网关进行路由，服务上量以后，由于内部服务之间的交互都会叠加在 API 网关的调用上，所以在很大程度上放大了 API 网关的调用 TPS, API 网关很快遭遇了性能瓶颈。</p>
+
+<p>然而 API 还是有其必要性，如安全、限流、服务路由等，否则需要每个微服务自己实现代码。微服务本身的一个难题就是冗余代码问题。每个微服务可能不可避免地需要做一些重复的东西。</p>
+
+<p><strong>一个妥协的方案是，有 API 网关，但要能够降级到点对点模式。如果网关出现崩溃，能够切换到点对点远程调用。</strong></p>
+
+<p>如李艳鹏在书中提到，第一层 SOA 服务化采用 Dubbo 框架定制，如果 Dubbo 服务化出现了大面积地崩溃，则服务化体系切换到点对点地 hessian 远程调用，称作<strong>服务降级</strong></p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Wang Junjie</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-05-26</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/reward/wechat-qr-code.jpg">
+        <span>微信打赏</span>
+      </label>
+    
+  </div>
+</div>
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/microservice/">microservice</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/nihongo/kagerou/">
+            <span class="next-text nav-default">你可曾见过阳炎</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+    
+
+  
+
+  
+
+  
+  </article>
         </div>
       </div>
     </main>

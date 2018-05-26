@@ -6,10 +6,21 @@
     <description>Recent content on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 25 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 May 2018 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://ijunjie.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>网关和点对点，谁是反模式？</title>
+      <link>https://ijunjie.github.io/post/arch/api-gw-p2p/</link>
+      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/arch/api-gw-p2p/</guid>
+      
+        <description>有的观点认为，点对点是反模式，也有人认为网关才是反模式。 李艳鹏在《分布式服务架构：原理、设计与实战》中认为，网关是反模式，因为网关会成为性能</description>
+      
+    </item>
     
     <item>
       <title>你可曾见过阳炎</title>
@@ -40,7 +51,7 @@
       
       <guid>https://ijunjie.github.io/post/art/chinese-painting-puzzle/</guid>
       
-        <description>最近读了一本赫伯特·里德的 *The Meaning of Art*，中文译作“艺术的真谛”，这个翻译不信、不达、不雅，让人感觉很不爽。里面提到一些有趣的问题，比如接下</description>
+        <description>最近读了一本赫伯特·里德的 The Meaning of Art，中文译作“艺术的真谛”，这个翻译不信、不达、不雅，让人感觉很不爽。里面提到一些有趣的问题，比如接下来</description>
       
     </item>
     
