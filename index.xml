@@ -12,6 +12,50 @@
     
     
     <item>
+      <title>一副潦草的自画像</title>
+      <link>https://ijunjie.github.io/post/myworks/self-portrait/</link>
+      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/myworks/self-portrait/</guid>
+      
+        <description>具体时间忘却了，可能是 2017 年春。</description>
+      
+    </item>
+    
+    <item>
+      <title>我画过的一些人物</title>
+      <link>https://ijunjie.github.io/post/myworks/portraits/</link>
+      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/myworks/portraits/</guid>
+      
+        <description>霍普金斯 2017 年 2 月下旬某个晚上，临摹了一副汉尼拔，彼时居住在回龙观。 原图可能是《沉默地羔羊》中的： 金正恩 特朗普 一副潦草的特朗普画像。2017 年</description>
+      
+    </item>
+    
+    <item>
+      <title>手绘凯尔特结及其他</title>
+      <link>https://ijunjie.github.io/post/myworks/celtic-knot/</link>
+      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/myworks/celtic-knot/</guid>
+      
+        <description>手绘凯尔特结 钢笔画 不知什么动物 长颈鹿或餐叉 耳机 樱桃 猫 头骨 黑洞 几何 其他</description>
+      
+    </item>
+    
+    <item>
+      <title>永远是这样</title>
+      <link>https://ijunjie.github.io/post/myworks/always-like-this/</link>
+      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/myworks/always-like-this/</guid>
+      
+        <description>永远是这样 风后面是风 天空上面是天空 道路前面还是道路</description>
+      
+    </item>
+    
+    <item>
       <title>网关和点对点，谁是反模式？</title>
       <link>https://ijunjie.github.io/post/arch/api-gw-p2p/</link>
       <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
@@ -19,6 +63,17 @@
       <guid>https://ijunjie.github.io/post/arch/api-gw-p2p/</guid>
       
         <description>有的观点认为，点对点是反模式，也有人认为网关才是反模式。 李艳鹏在《分布式服务架构：原理、设计与实战》中认为，网关是反模式，因为网关会成为性能</description>
+      
+    </item>
+    
+    <item>
+      <title>鲜花</title>
+      <link>https://ijunjie.github.io/post/myworks/flowers/</link>
+      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/myworks/flowers/</guid>
+      
+        <description>钢笔速写： 原图： 鲜花： 原图：</description>
       
     </item>
     
@@ -173,28 +228,6 @@
       <guid>https://ijunjie.github.io/post/fp/fp-paradigm/</guid>
       
         <description>当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&amp;hellip; (请自动脑补标签云图&amp;hellip;) 几年前我在在部门内部做了一次函数式编程</description>
-      
-    </item>
-    
-    <item>
-      <title>openstack4j 中的依赖管理</title>
-      <link>https://ijunjie.github.io/post/dp/openstack4j-dependencies/</link>
-      <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/dp/openstack4j-dependencies/</guid>
-      
-        <description>openstack4j 简介 openstack4j 是一个使用 Java 编写的开源 OpenStack SDK. 源码地址： https://github.com/ContainX/openstack4j.git 依赖管理 openstack4j 并没有采用第三方的 IoC 实现，如 Guice 等，而是使用很少的代码实现了简单、易用的依赖管理。 SPI SPI</description>
-      
-    </item>
-    
-    <item>
-      <title>Ramda：一个精致的Javascript函数式编程库</title>
-      <link>https://ijunjie.github.io/post/fp/ramda/</link>
-      <pubDate>Sun, 22 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/fp/ramda/</guid>
-      
-        <description>Ramda是什么 Ramda的官方文档中文版：Ramda 简介 阮一峰也曾以他一贯的通俗易懂的风格写过一篇介绍： Ramda 函数库参考教程 柯里化 关于什么是柯</description>
       
     </item>
     
