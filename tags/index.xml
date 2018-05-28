@@ -57,6 +57,15 @@
     </item>
     
     <item>
+      <title>Docker</title>
+      <link>https://ijunjie.github.io/tags/docker/</link>
+      <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Dp</title>
       <link>https://ijunjie.github.io/tags/dp/</link>
       <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
@@ -80,6 +89,15 @@
       <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://ijunjie.github.io/tags/javascript/</link>
+      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     
@@ -170,24 +188,6 @@
       <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/tags/tail-rec/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Volatile</title>
-      <link>https://ijunjie.github.io/tags/volatile/</link>
-      <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/tags/volatile/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>かげろう</title>
-      <link>https://ijunjie.github.io/tags/%E3%81%8B%E3%81%92%E3%82%8D%E3%81%86/</link>
-      <pubDate>Fri, 25 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/tags/%E3%81%8B%E3%81%92%E3%82%8D%E3%81%86/</guid>
       <description></description>
     </item>
     
