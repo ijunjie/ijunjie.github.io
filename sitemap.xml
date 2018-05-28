@@ -10,6 +10,20 @@
   </url>
   
   <url>
+    <loc>https://ijunjie.github.io/post/myworks/eye/</loc>
+    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/post/literature/koudannsha-history/</loc>
+    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/post/myworks/self-portrait/</loc>
     <lastmod>2018-05-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -276,6 +290,13 @@
   </url>
   
   <url>
+    <loc>https://ijunjie.github.io/tags/history/</loc>
+    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/tags/java/</loc>
     <lastmod>2018-05-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -312,7 +333,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/categories/literature/</loc>
-    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -333,7 +354,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/categories/myworks/</loc>
-    <lastmod>2018-05-26T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -347,7 +368,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/tags/painting/</loc>
-    <lastmod>2018-05-26T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -376,6 +397,13 @@
   <url>
     <loc>https://ijunjie.github.io/tags/proxy/</loc>
     <lastmod>2018-05-14T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/tags/reading/</loc>
+    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

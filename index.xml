@@ -12,13 +12,35 @@
     
     
     <item>
-      <title>我读过的几本 JavaScript 书籍</title>
+      <title>几本 JavaScript 书籍</title>
       <link>https://ijunjie.github.io/post/frontend/js-books/</link>
       <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/frontend/js-books/</guid>
       
         <description>JavaScript 是我最喜爱的语言之一。虽然并没有直接从事前端开发，但一直关注 JavaScript，并且对原生 JavaScript 语言有浓厚兴趣。以前读过几本不错的书籍，在这</description>
+      
+    </item>
+    
+    <item>
+      <title>眼睛</title>
+      <link>https://ijunjie.github.io/post/myworks/eye/</link>
+      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/myworks/eye/</guid>
+      
+        <description>重新画很难画出来了。只有一次机会。</description>
+      
+    </item>
+    
+    <item>
+      <title>讲谈社-中国的历史</title>
+      <link>https://ijunjie.github.io/post/literature/koudannsha-history/</link>
+      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/literature/koudannsha-history/</guid>
+      
+        <description>最近入手一套讲谈社的《中国的历史》。这是我第一次读日本人写的中国历史，尤其是中国近现代史，之前读过世界通史和新全球史中关于中国的部分，还有剑</description>
       
     </item>
     
@@ -34,7 +56,7 @@
     </item>
     
     <item>
-      <title>我画过的一些人物</title>
+      <title>人物</title>
       <link>https://ijunjie.github.io/post/myworks/portraits/</link>
       <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
       
@@ -206,28 +228,6 @@
       <guid>https://ijunjie.github.io/post/myworks/kim-jong-un/</guid>
       
         <description>传说他在3岁学会开枪，9岁时能射中移动的目标；6岁开始学会骑马，不到8岁时就能驾驶大货车狂奔120公里，16岁时便写了一篇关于朝鲜战争的论文</description>
-      
-    </item>
-    
-    <item>
-      <title>匿名函数的递归调用</title>
-      <link>https://ijunjie.github.io/post/fp/factorial/</link>
-      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/fp/factorial/</guid>
-      
-        <description>一般的递归都要显式地调用递归函数，那么匿名函数如何实现递归调用？ 这里用 Javascript 匿名函数 + 尾递归实现一个求阶乘的例子，代码如下： 1 2 3 4 5 6 7 8 9 let</description>
-      
-    </item>
-    
-    <item>
-      <title>昔日龌龊不足夸</title>
-      <link>https://ijunjie.github.io/post/myworks/xiriwochuo/</link>
-      <pubDate>Thu, 26 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/myworks/xiriwochuo/</guid>
-      
-        <description></description>
       
     </item>
     
