@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>一些 Java 和分布式方面的书</title>
+      <link>https://ijunjie.github.io/post/arch/java-books/</link>
+      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/arch/java-books/</guid>
+      
+        <description>说一说我读过的 Java 并发和分布式方面的书。 并发相关书籍 并发编程有本经典的书叫 Java Concurrency In Practice, 这里就不说了，这里只说近几年一些比较新的书。 《Java 并发编</description>
+      
+    </item>
+    
+    <item>
       <title>近四个月以来与咳嗽变异型哮喘和嗜酸性粒细胞哮喘的斗争</title>
       <link>https://ijunjie.github.io/post/life/cva-ea/</link>
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
@@ -217,17 +228,6 @@
       <guid>https://ijunjie.github.io/post/literature/antithesis/</guid>
       
         <description>北京有很多地名具有对仗关系，兹列举如下： 二字组： 海淀 —— 江亭，江亭即陶然亭，是康熙年间江藻所建，所以也称为“江亭”。 秀水 —— 香山 后海 —— 前门</description>
-      
-    </item>
-    
-    <item>
-      <title>一个 Kubernetes 微服务应用示例</title>
-      <link>https://ijunjie.github.io/post/arch/kubernetes-practice/</link>
-      <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/arch/kubernetes-practice/</guid>
-      
-        <description>Rinor Maloku 在 Kubernetes and everything else in Practice 一文中全面、细致地讲述了一个微服务应用的开发、构建，并部署到 Kubernetes 的过程。全文洋洋洒洒分为十一篇，并配有精美的动态演示图，实为</description>
       
     </item>
     

@@ -6,10 +6,19 @@
     <description>Recent content in Java on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 02 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ijunjie.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>一些 Java 和分布式方面的书</title>
+      <link>https://ijunjie.github.io/post/arch/java-books/</link>
+      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/arch/java-books/</guid>
+      <description>说一说我读过的 Java 并发和分布式方面的书。 并发相关书籍 并发编程有本经典的书叫 Java Concurrency In Practice, 这里就不说了，这里只说近几年一些比较新的书。 《Java 并发编</description>
+    </item>
     
     <item>
       <title>正确理解 ArrayList 和 LinkedList</title>
