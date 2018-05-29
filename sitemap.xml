@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ijunjie.github.io/post/life/cva-ea/</loc>
+    <lastmod>2018-05-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/post/frontend/js-books/</loc>
     <lastmod>2018-05-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -241,6 +248,13 @@
   </url>
   
   <url>
+    <loc>https://ijunjie.github.io/tags/cva/</loc>
+    <lastmod>2018-05-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/tags/docker/</loc>
     <lastmod>2018-05-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -264,6 +278,13 @@
   <url>
     <loc>https://ijunjie.github.io/categories/ds/</loc>
     <lastmod>2018-05-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/tags/ea/</loc>
+    <lastmod>2018-05-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -313,6 +334,13 @@
   <url>
     <loc>https://ijunjie.github.io/tags/kubernetes/</loc>
     <lastmod>2018-05-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/categories/life/</loc>
+    <lastmod>2018-05-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -389,7 +417,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/post/</loc>
-    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -438,7 +466,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/</loc>
-    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

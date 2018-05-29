@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 28 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ijunjie.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>近四个月以来与咳嗽变异型哮喘和嗜酸性粒细胞哮喘的斗争</title>
+      <link>https://ijunjie.github.io/post/life/cva-ea/</link>
+      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/life/cva-ea/</guid>
+      <description>近四个月以来，我饱受慢性呼吸系统炎症的困扰，从初期的咳嗽变异型哮喘最终发展为嗜酸性粒细胞哮喘。目前正在接受漫长的激素药物吸入治疗。 所谓咳嗽变</description>
+    </item>
     
     <item>
       <title>几本 JavaScript 书籍</title>
@@ -180,15 +189,6 @@
       
       <guid>https://ijunjie.github.io/post/arch/kubernetes-practice/</guid>
       <description>Rinor Maloku 在 Kubernetes and everything else in Practice 一文中全面、细致地讲述了一个微服务应用的开发、构建，并部署到 Kubernetes 的过程。全文洋洋洒洒分为十一篇，并配有精美的动态演示图，实为</description>
-    </item>
-    
-    <item>
-      <title>宇宙无敌大将军</title>
-      <link>https://ijunjie.github.io/post/myworks/kim-jong-un/</link>
-      <pubDate>Sat, 28 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/myworks/kim-jong-un/</guid>
-      <description>传说他在3岁学会开枪，9岁时能射中移动的目标；6岁开始学会骑马，不到8岁时就能驾驶大货车狂奔120公里，16岁时便写了一篇关于朝鲜战争的论文</description>
     </item>
     
   </channel>
