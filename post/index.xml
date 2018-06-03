@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 29 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ijunjie.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>递归实现 List</title>
+      <link>https://ijunjie.github.io/post/fp/recursive-list/</link>
+      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/fp/recursive-list/</guid>
+      <description>使用模式匹配和递归实现 List，不考虑栈溢出的问题。 由于 Java 没有模式匹配，没有 sealed 关键字，也不支持协变，采用 FP 思想实现 List 有些不便，但好在新版 Java 的</description>
+    </item>
     
     <item>
       <title>一些 Java 和分布式方面的书</title>
@@ -180,15 +189,6 @@
       
       <guid>https://ijunjie.github.io/post/ds/list-comparison/</guid>
       <description>关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法。比如 “ArrayList 查询快，LinkedList 增删快”，这种说法过于笼统，不严谨，实际情</description>
-    </item>
-    
-    <item>
-      <title>北京地名之对仗</title>
-      <link>https://ijunjie.github.io/post/literature/antithesis/</link>
-      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/literature/antithesis/</guid>
-      <description>北京有很多地名具有对仗关系，兹列举如下： 二字组： 海淀 —— 江亭，江亭即陶然亭，是康熙年间江藻所建，所以也称为“江亭”。 秀水 —— 香山 后海 —— 前门</description>
     </item>
     
   </channel>

@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ijunjie.github.io/post/fp/recursive-list/</loc>
+    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/post/arch/java-books/</loc>
     <lastmod>2018-05-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -305,7 +312,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/categories/fp/</loc>
-    <lastmod>2018-04-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -354,7 +361,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/tags/list/</loc>
-    <lastmod>2018-05-02T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -424,7 +431,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/post/</loc>
-    <lastmod>2018-05-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -439,6 +446,13 @@
   <url>
     <loc>https://ijunjie.github.io/tags/reading/</loc>
     <lastmod>2018-05-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/tags/recursive/</loc>
+    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -473,7 +487,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/</loc>
-    <lastmod>2018-05-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
