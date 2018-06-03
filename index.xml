@@ -45,6 +45,17 @@
     </item>
     
     <item>
+      <title>聊聊分布式事务</title>
+      <link>https://ijunjie.github.io/post/arch/distributed-transaction/</link>
+      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/arch/distributed-transaction/</guid>
+      
+        <description>丢个链接闪人：https://www.cnblogs.com/savorboard/p/distributed-system-transac</description>
+      
+    </item>
+    
+    <item>
       <title>递归实现 List</title>
       <link>https://ijunjie.github.io/post/fp/recursive-list/</link>
       <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
@@ -217,17 +228,6 @@
       <guid>https://ijunjie.github.io/post/arch/cpu-false-sharing/</guid>
       
         <description>不知是谁最初把 false sharing 翻译成“伪共享”，翻译得莫名其妙，不知所谓。实际意思应该是“错误的共享”。 最近在读的几本书都提到了 CPU 伪共享问题。这里尝试做</description>
-      
-    </item>
-    
-    <item>
-      <title>浅谈设计模式</title>
-      <link>https://ijunjie.github.io/post/dp/design-patterns/</link>
-      <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/dp/design-patterns/</guid>
-      
-        <description>推荐一个极好的设计模式学习网站 http://java-design-patterns.com/. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900+. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式</description>
       
     </item>
     

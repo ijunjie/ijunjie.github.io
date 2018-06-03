@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Arch · Wang Junjie</title>
+  <title>聊聊分布式事务 - Wang Junjie</title>
   <link rel="alternate" hreflang="zh-cn" href="https://ijunjie.github.io/" />
 
 <meta name="renderer" content="webkit" />
@@ -25,6 +25,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Wang Junjie" />
+  <meta name="description" content="丢个链接闪人：https://www.cnblogs.com/savorboard/p/distributed-system-transac" />
+
 
 
 
@@ -34,9 +36,7 @@
 <meta name="generator" content="Hugo 0.39" />
 
 
-<link rel="canonical" href="https://ijunjie.github.io/categories/arch/" />
-<link href="https://ijunjie.github.io/categories/arch/index.xml" rel="alternate" type="application/rss+xml" title="Wang Junjie" />
-  <link href="https://ijunjie.github.io/categories/arch/index.xml" rel="feed" type="application/rss+xml" title="Wang Junjie" />
+<link rel="canonical" href="https://ijunjie.github.io/post/arch/distributed-transaction/" />
 
 
 
@@ -58,30 +58,41 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="Arch" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ijunjie.github.io/categories/arch/" />
+<meta property="og:title" content="聊聊分布式事务" />
+<meta property="og:description" content="丢个链接闪人：https://www.cnblogs.com/savorboard/p/distributed-system-transac" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ijunjie.github.io/post/arch/distributed-transaction/" />
 
 
 
-<meta property="og:updated_time" content="2018-06-03T00:00:00&#43;00:00"/>
+<meta property="article:published_time" content="2018-06-03T00:00:00&#43;00:00"/>
 
-
-
-
-
-
+<meta property="article:modified_time" content="2018-06-03T00:00:00&#43;00:00"/>
 
 
 
 
-<meta itemprop="name" content="Arch">
-<meta itemprop="description" content="">
 
+
+
+
+
+
+
+<meta itemprop="name" content="聊聊分布式事务">
+<meta itemprop="description" content="丢个链接闪人：https://www.cnblogs.com/savorboard/p/distributed-system-transac">
+
+
+<meta itemprop="datePublished" content="2018-06-03T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-06-03T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="244">
+
+
+
+<meta itemprop="keywords" content="BASE,distributed transaction," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Arch"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="聊聊分布式事务"/>
+<meta name="twitter:description" content="丢个链接闪人：https://www.cnblogs.com/savorboard/p/distributed-system-transac"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -185,123 +196,131 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-
-<section id="archive" class="archive">
-  
+          <article class="post bg-white">
     
-      <div class="archive-title category">
-        <h2 class="archive-name">分类： Arch</h2>
+    <header class="post-header">
+      <h1 class="post-title">聊聊分布式事务</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 2018-06-03 </span>
+        <div class="post-category">
+            
+              <a href="/categories/arch/"> arch </a>
+            
+          </div>
+        
       </div>
+    </header>
+
     
-  
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    
+  </div>
+</div>
 
-  
-    <div class="archive-post">
-      <span class="archive-post-time">
-        2018-06-03
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/arch/distributed-transaction/" class="archive-post-link">
-          聊聊分布式事务
-        </a>
-      </span>
+    
+    <div class="post-content">
+      <p>丢个链接闪人：<a href="https://www.cnblogs.com/savorboard/p/distributed-system-transaction-consistency.html">https://www.cnblogs.com/savorboard/p/distributed-system-transaction-consistency.html</a></p>
+
+<p>算了，还是写点导读。上面链接是关于分布式事务极其解决方案写的比较好的一篇文章。主要总结了如下问题：</p>
+
+<ul>
+<li>分布式理论
+
+<ul>
+<li>CAP</li>
+<li>BASE</li>
+</ul></li>
+<li>分布式事务
+
+<ul>
+<li>2PC (两阶段提交) 和 XA 协议</li>
+<li>TCC（补偿事务）</li>
+<li>本地消息表（异步确保）。一种非常经典的实现，避免了分布式事务，实现了最终一致性</li>
+<li>MQ 事务消息。RabbitMQ 和 Kafka 都不支持，RocketMQ 支持。</li>
+<li>Sagas 事务模型。鲜为人知。</li>
+</ul></li>
+</ul>
+
+<p>再丢个链接 <a href="https://blog.csdn.net/mine_song/article/details/64118963">https://blog.csdn.net/mine_song/article/details/64118963</a> ，闪人。</p>
+
     </div>
-  
-    <div class="archive-post">
-      <span class="archive-post-time">
-        2018-06-03
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/arch/jmm-volatile/" class="archive-post-link">
-          浅谈 JMM 和 volatile
-        </a>
-      </span>
-    </div>
-  
-    <div class="archive-post">
-      <span class="archive-post-time">
-        2018-05-29
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/arch/java-books/" class="archive-post-link">
-          一些 Java 和分布式方面的书
-        </a>
-      </span>
-    </div>
-  
-    <div class="archive-post">
-      <span class="archive-post-time">
-        2018-05-26
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/arch/api-gw-p2p/" class="archive-post-link">
-          网关和点对点，谁是反模式？
-        </a>
-      </span>
-    </div>
-  
-    <div class="archive-post">
-      <span class="archive-post-time">
-        2018-05-19
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/dp/design-patterns/" class="archive-post-link">
-          浅谈设计模式
-        </a>
-      </span>
-    </div>
-  
-    <div class="archive-post">
-      <span class="archive-post-time">
-        2018-05-19
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/arch/cpu-false-sharing/" class="archive-post-link">
-          CPU 伪共享问题
-        </a>
-      </span>
-    </div>
-  
-    <div class="archive-post">
-      <span class="archive-post-time">
-        2018-05-04
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/arch/from-virtualization/" class="archive-post-link">
-          云计算技术简史
-        </a>
-      </span>
-    </div>
-  
-    <div class="archive-post">
-      <span class="archive-post-time">
-        2018-04-30
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/arch/kubernetes-practice/" class="archive-post-link">
-          一个 Kubernetes 微服务应用示例
-        </a>
-      </span>
-    </div>
-  
-</section>
 
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Wang Junjie</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-06-03</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
 
+    
+    
 
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/base/">BASE</a>
+          
+          <a href="/tags/distributed-transaction/">distributed transaction</a>
+          
+        </div>
 
-
-<nav class="pagination">
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/life/trump/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">特金会</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/fp/recursive-list/">
+            <span class="next-text nav-default">递归实现 List</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+    
 
   
 
   
 
-</nav>
-
-
-
-
+  <div id="comments-gitment"></div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  const gitment = new Gitment({
+    id: 'distributed-transaction.md',
+    title: '聊聊分布式事务',
+    link: decodeURI(location.href),
+    desc: '丢个链接闪人：https:\/\/www.cnblogs.com\/savorboard\/p\/distributed-system-transac',
+    owner: 'ijunjie',
+    repo: 'blog-gitment',
+    oauth: {
+      client_id: '1554b4f2b80abedeb1fe',
+      client_secret: '8c203d8374520b8871e4c0b1b309bcf77bd369fe'
+    }
+  })
+  gitment.render('comments-gitment')
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+  </article>
         </div>
       </div>
     </main>

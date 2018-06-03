@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>聊聊分布式事务</title>
+      <link>https://ijunjie.github.io/post/arch/distributed-transaction/</link>
+      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/arch/distributed-transaction/</guid>
+      <description>丢个链接闪人：https://www.cnblogs.com/savorboard/p/distributed-system-transac</description>
+    </item>
+    
+    <item>
       <title>一些 Java 和分布式方面的书</title>
       <link>https://ijunjie.github.io/post/arch/java-books/</link>
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>

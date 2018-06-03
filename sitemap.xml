@@ -24,6 +24,13 @@
   </url>
   
   <url>
+    <loc>https://ijunjie.github.io/post/arch/distributed-transaction/</loc>
+    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/post/fp/recursive-list/</loc>
     <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -262,6 +269,13 @@
   </url>
   
   <url>
+    <loc>https://ijunjie.github.io/tags/base/</loc>
+    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/tags/bootstrap/</loc>
     <lastmod>2018-05-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -285,6 +299,13 @@
   <url>
     <loc>https://ijunjie.github.io/tags/cva/</loc>
     <lastmod>2018-05-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/tags/distributed-transaction/</loc>
+    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
