@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Volatile on Wang Junjie</title>
-    <link>https://ijunjie.github.io/tags/volatile/</link>
-    <description>Recent content in Volatile on Wang Junjie</description>
+    <title>Jmm on Wang Junjie</title>
+    <link>https://ijunjie.github.io/tags/jmm/</link>
+    <description>Recent content in Jmm on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 03 Jun 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ijunjie.github.io/tags/volatile/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ijunjie.github.io/tags/jmm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://ijunjie.github.io/post/arch/jmm-volatile/</guid>
       <description>并发世界有两大阵营，共享内存和消息通信。前者以 JMM 为代表，后者以 Actor 模型为代表。本篇将整理总结 JMM 相关知识并全面梳理 volatile；关于 Actor 模型，</description>
-    </item>
-    
-    <item>
-      <title>CPU 伪共享问题</title>
-      <link>https://ijunjie.github.io/post/arch/cpu-false-sharing/</link>
-      <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/arch/cpu-false-sharing/</guid>
-      <description>不知是谁最初把 false sharing 翻译成“伪共享”，翻译得莫名其妙，不知所谓。实际意思应该是“错误的共享”。 最近在读的几本书都提到了 CPU 伪共享问题。这里尝试做</description>
     </item>
     
   </channel>

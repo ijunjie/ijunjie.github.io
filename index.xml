@@ -12,6 +12,28 @@
     
     
     <item>
+      <title>20世纪俄国三次革命所证实的一条基本规律</title>
+      <link>https://ijunjie.github.io/post/life/lenin/</link>
+      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/life/lenin/</guid>
+      
+        <description>20世纪俄国三次革命所证实的一条基本规律是：单是被剥削被压迫的人认识到不能照旧生活下去而要求变革是不够的；要举行革命，还必须要剥削者也不能照</description>
+      
+    </item>
+    
+    <item>
+      <title>浅谈 JMM 和 volatile</title>
+      <link>https://ijunjie.github.io/post/arch/jmm-volatile/</link>
+      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/arch/jmm-volatile/</guid>
+      
+        <description>并发世界有两大阵营，共享内存和消息通信。前者以 JMM 为代表，后者以 Actor 模型为代表。本篇将整理总结 JMM 相关知识并全面梳理 volatile；关于 Actor 模型，</description>
+      
+    </item>
+    
+    <item>
       <title>特金会</title>
       <link>https://ijunjie.github.io/post/life/trump/</link>
       <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
@@ -206,28 +228,6 @@
       <guid>https://ijunjie.github.io/post/dp/design-patterns/</guid>
       
         <description>推荐一个极好的设计模式学习网站 http://java-design-patterns.com/. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900+. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式</description>
-      
-    </item>
-    
-    <item>
-      <title>动态代理和 AOP</title>
-      <link>https://ijunjie.github.io/post/dp/dynamic-proxy-aop/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/dp/dynamic-proxy-aop/</guid>
-      
-        <description>JDK 动态代理创建时比较快，运行时较慢；CGlib 动态代理正好相反，创建时慢，运行时快。一般选择在系统初始化时，使用 CGlib 代理，并托管到 ApplicationContext 中。代理模</description>
-      
-    </item>
-    
-    <item>
-      <title>云计算技术简史</title>
-      <link>https://ijunjie.github.io/post/arch/from-virtualization/</link>
-      <pubDate>Fri, 04 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/arch/from-virtualization/</guid>
-      
-        <description>这是一份笔者整理的云计算技术发展简史，主要关注虚拟化、分布式、云计算和容器技术的起源和发展。 20 世纪 30 ~ 40 年代：早期计算机时代 上世纪 30 ~ 40 年代</description>
       
     </item>
     
