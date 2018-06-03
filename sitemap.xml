@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ijunjie.github.io/post/life/trump/</loc>
+    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/post/fp/recursive-list/</loc>
     <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -354,7 +361,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/categories/life/</loc>
-    <lastmod>2018-05-29T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -474,6 +481,13 @@
   <url>
     <loc>https://ijunjie.github.io/tags/tail-rec/</loc>
     <lastmod>2018-04-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/tags/trump/</loc>
+    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

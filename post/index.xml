@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>特金会</title>
+      <link>https://ijunjie.github.io/post/life/trump/</link>
+      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/life/trump/</guid>
+      <description>自打特朗普上台以后，我们忽然发现原来大国政治真的如同儿戏一般。 这位不按常理出牌的总统通过推特将政治和外交活动的运作细节暴露给普罗大众，而在以</description>
+    </item>
+    
+    <item>
       <title>递归实现 List</title>
       <link>https://ijunjie.github.io/post/fp/recursive-list/</link>
       <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
@@ -180,15 +189,6 @@
       
       <guid>https://ijunjie.github.io/post/arch/from-virtualization/</guid>
       <description>这是一份笔者整理的云计算技术发展简史，主要关注虚拟化、分布式、云计算和容器技术的起源和发展。 20 世纪 30 ~ 40 年代：早期计算机时代 上世纪 30 ~ 40 年代</description>
-    </item>
-    
-    <item>
-      <title>正确理解 ArrayList 和 LinkedList</title>
-      <link>https://ijunjie.github.io/post/ds/list-comparison/</link>
-      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/ds/list-comparison/</guid>
-      <description>关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法。比如 “ArrayList 查询快，LinkedList 增删快”，这种说法过于笼统，不严谨，实际情</description>
     </item>
     
   </channel>
