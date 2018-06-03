@@ -85,7 +85,7 @@
 
 <meta itemprop="datePublished" content="2018-06-03T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-06-03T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2305">
+<meta itemprop="wordCount" content="2308">
 
 
 
@@ -234,7 +234,7 @@
 <li><a href="#应用场景">应用场景</a></li>
 <li><a href="#volatile-使用优化">volatile 使用优化</a></li>
 <li><a href="#jsr-133-对-volatile-的增强">JSR-133 对 volatile 的增强</a></li>
-<li><a href="#volatile-与-synchronized">volatile 与 synchronized</a></li>
+<li><a href="#volatile-与锁">volatile 与锁</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -343,7 +343,7 @@
 <li>应用场景：状态判断和 DCL</li>
 <li>volatile 的使用优化：cpu false-sharing 问题，字节填充解决方案等</li>
 <li>JSR-133 对 volatile 的语义增强</li>
-<li></li>
+<li>volatile 与锁</li>
 </ul>
 
 <p>以上几个方面应该是比较全面的关于 volatile 的知识了。下面是每一点的简要讲解。</p>
@@ -372,7 +372,7 @@
 
 <p>旧的模型允许 volatile 和普通变量重排序，JSR-133 做了限制。</p>
 
-<h3 id="volatile-与-synchronized">volatile 与 synchronized</h3>
+<h3 id="volatile-与锁">volatile 与锁</h3>
 
 <p>功能上，锁比 volatile 更强大；可伸缩性和执行性能上，volatile 更有优势。</p>
 
