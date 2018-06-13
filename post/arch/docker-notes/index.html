@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title> - Wang Junjie</title>
+  <title>Docker 基础知识整理 - Wang Junjie</title>
   <link rel="alternate" hreflang="zh-cn" href="https://ijunjie.github.io/" />
 
 <meta name="renderer" content="webkit" />
@@ -25,7 +25,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Wang Junjie" />
-  <meta name="description" content="Docker 学习笔记整理 本篇是 每天5分钟玩转 Docker 容器技术 的学习笔记。 一、容器生态系统 容器核心技术 容器规范：OCI 发布的 runtime spec 和 image format spec 容器runtime：主" />
+  <meta name="description" content="每天5分钟玩转 Docker 容器技术 的学习笔记。 一、容器生态系统 容器核心技术 容器规范：OCI 发布的 runtime spec 和 image format spec 容器runtime：主流的三种 lxc，Li" />
 
 
 
@@ -58,13 +58,16 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="" />
-<meta property="og:description" content="Docker 学习笔记整理 本篇是 每天5分钟玩转 Docker 容器技术 的学习笔记。 一、容器生态系统 容器核心技术 容器规范：OCI 发布的 runtime spec 和 image format spec 容器runtime：主" />
+<meta property="og:title" content="Docker 基础知识整理" />
+<meta property="og:description" content="每天5分钟玩转 Docker 容器技术 的学习笔记。 一、容器生态系统 容器核心技术 容器规范：OCI 发布的 runtime spec 和 image format spec 容器runtime：主流的三种 lxc，Li" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ijunjie.github.io/post/arch/docker-notes/" />
 
 
 
+<meta property="article:published_time" content="2018-05-19T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-05-19T00:00:00&#43;00:00"/>
 
 
 
@@ -76,21 +79,20 @@
 
 
 
+<meta itemprop="name" content="Docker 基础知识整理">
+<meta itemprop="description" content="每天5分钟玩转 Docker 容器技术 的学习笔记。 一、容器生态系统 容器核心技术 容器规范：OCI 发布的 runtime spec 和 image format spec 容器runtime：主流的三种 lxc，Li">
 
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content="Docker 学习笔记整理 本篇是 每天5分钟玩转 Docker 容器技术 的学习笔记。 一、容器生态系统 容器核心技术 容器规范：OCI 发布的 runtime spec 和 image format spec 容器runtime：主">
+<meta itemprop="datePublished" content="2018-05-19T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-05-19T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="4943">
 
 
 
-<meta itemprop="wordCount" content="5755">
-
-
-
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="docker," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Docker 学习笔记整理 本篇是 每天5分钟玩转 Docker 容器技术 的学习笔记。 一、容器生态系统 容器核心技术 容器规范：OCI 发布的 runtime spec 和 image format spec 容器runtime：主"/>
+<meta name="twitter:title" content="Docker 基础知识整理"/>
+<meta name="twitter:description" content="每天5分钟玩转 Docker 容器技术 的学习笔记。 一、容器生态系统 容器核心技术 容器规范：OCI 发布的 runtime spec 和 image format spec 容器runtime：主流的三种 lxc，Li"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -197,11 +199,15 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title"></h1>
+      <h1 class="post-title">Docker 基础知识整理</h1>
       
       <div class="post-meta">
-        <span class="post-time"> 0001-01-01 </span>
-        
+        <span class="post-time"> 2018-05-19 </span>
+        <div class="post-category">
+            
+              <a href="/categories/arch/"> arch </a>
+            
+          </div>
         
       </div>
     </header>
@@ -213,7 +219,7 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#docker-学习笔记整理">Docker 学习笔记整理</a>
+<li>
 <ul>
 <li><a href="#一-容器生态系统">一、容器生态系统</a>
 <ul>
@@ -240,12 +246,11 @@
 <li><a href="#镜像的命名">镜像的命名</a></li>
 <li><a href="#镜像的分发">镜像的分发</a></li>
 </ul></li>
-<li><a href="#四-容器">四 容器</a>
+<li><a href="#四-容器">四、容器</a>
 <ul>
 <li><a href="#服务类容器和工具类容器">服务类容器和工具类容器</a></li>
 <li><a href="#docker-容器操作">docker 容器操作</a></li>
 <li><a href="#限额">限额</a></li>
-<li><a href="#progrium-stress-镜像">progrium/stress 镜像</a></li>
 <li><a href="#容器底层原理">容器底层原理</a>
 <ul>
 <li><a href="#cgroup">cgroup</a></li>
@@ -284,9 +289,7 @@
     <div class="post-content">
       
 
-<h1 id="docker-学习笔记整理">Docker 学习笔记整理</h1>
-
-<p>本篇是 <a href="http://www.cnblogs.com/CloudMan6/">每天5分钟玩转 Docker 容器技术</a> 的学习笔记。</p>
+<p><a href="http://www.cnblogs.com/CloudMan6/">每天5分钟玩转 Docker 容器技术</a> 的学习笔记。</p>
 
 <h2 id="一-容器生态系统">一、容器生态系统</h2>
 
@@ -431,21 +434,12 @@
 <h3 id="分层结构">分层结构</h3>
 
 <ul>
-<li>可写容器层，容器启动时，一个可写层被加载到镜像的顶部。所有对容器的改动，只会发生在容器层。</li>
-<li>叠加文件系统，如果不同层中有一个相同路径的文件，比如 /a，上层的 /a 会覆盖下层的 /a，也就是说用户只能访问到上层中的文件 /a。在容器层中，用户看到的是一个叠加之后的文件系统。</li>
-<li>Copy-On-Write, 只有当需要修改时才复制一份数据，这种特性被称作 Copy-on-Write。容器层保存的是镜像变化的部分，不会对镜像本身进行任何修改。
-
-<ul>
-<li>添加文件：在容器中创建文件时，新文件被添加到容器层中。</li>
-<li>读取文件：在容器中读取某个文件时，Docker 会从上往下依次在各镜像层中查找此文件。一旦找到，立即将其复制到容器层，然后打开并读入内存。</li>
-<li>修改文件：在容器中修改已存在的文件时，Docker 会从上往下依次在各镜像层中查找此文件。一旦找到，立即将其复制到容器层，然后修改之。</li>
-<li>删除文件：在容器中删除文件时，Docker 也是从上往下依次在镜像层中查找此文件。找到后，会在容器层中记录下此删除操作。</li>
-</ul></li>
+<li>可写容器层</li>
+<li>叠加文件系统</li>
+<li>Copy-On-Write</li>
 </ul>
 
 <h3 id="构建镜像">构建镜像：</h3>
-
-<p>两种方式：</p>
 
 <ul>
 <li><code>docker commit &lt;current_container_name&gt; &lt;new_image_name&gt;</code></li>
@@ -458,6 +452,8 @@
 </ul>
 
 <h3 id="镜像的缓存特性">镜像的缓存特性</h3>
+
+<p>Docker 会缓存已有镜像的镜像层，构建新镜像时，如果某镜像层已经存在，就直接使用，无需重新创建。</p>
 
 <h3 id="dockerfile-常用指令">Dockerfile 常用指令</h3>
 
@@ -525,6 +521,14 @@ CMD [&#34;world&#34;]</pre></td></tr></table>
 
 <h3 id="镜像的命名">镜像的命名</h3>
 
+<p>一个特定镜像的名字由两部分组成：repository 和 tag:</p>
+
+<p><code>[repository]:[tag]</code></p>
+
+<p>如果执行 docker build 时没有指定 tag，会使用默认值 <code>latest</code>. 其效果相当于：</p>
+
+<p><code>docker build -t ubuntu-with-vi:latest</code></p>
+
 <h3 id="镜像的分发">镜像的分发</h3>
 
 <ul>
@@ -537,13 +541,13 @@ CMD [&#34;world&#34;]</pre></td></tr></table>
 </ul></li>
 </ul>
 
-<h2 id="四-容器">四 容器</h2>
+<h2 id="四-容器">四、容器</h2>
 
 <h3 id="服务类容器和工具类容器">服务类容器和工具类容器</h3>
 
 <ul>
-<li>服务类容器以 daemon 的形式运行，对外提供服务。比如 web server，数据库等。通过 -d 以后台方式启动这类容器是非常合适的。如果要排查问题，可以通过 exec -it 进入容器。</li>
-<li>工具类容器通常给能我们提供一个临时的工作环境，通常以 run -it 方式运行。</li>
+<li>服务类容器以 daemon 的形式运行，对外提供服务。比如 web server，数据库等。通过 <code>-d</code> 以后台方式启动这类容器是非常合适的。如果要排查问题，可以通过 <code>exec -it</code> 进入容器。</li>
+<li>工具类容器通常给能我们提供一个临时的工作环境，通常以 <code>run -it</code> 方式运行。</li>
 </ul>
 
 <h3 id="docker-容器操作">docker 容器操作</h3>
@@ -567,37 +571,22 @@ CMD [&#34;world&#34;]</pre></td></tr></table>
 <h3 id="限额">限额</h3>
 
 <ul>
-<li>内存限额，容器可使用的内存包括两部分：物理内存和 swap, 默认都为 -1
+<li><p>CPU 限额，默认设置下，所有容器可以平等地使用 host CPU 资源并且没有限制。通过 cpu share 可以设置容器使用 CPU 的优先级。通过 <code>-c</code> 或 <code>--cpu-shares</code> 设置容器使用 CPU 的权重，默认为 1024</p></li>
+
+<li><p>内存限额，容器可使用的内存包括两部分：物理内存和 swap, 默认都为 -1</p>
 
 <ul>
 <li><code>-m</code> 或 <code>--memory</code>：设置内存的使用限额，例如 100M, 2G。</li>
 <li><code>--memory-swap</code>：设置 内存+swap 的使用限额。 &ndash;memory-swap 默认为 momory 的两倍</li>
-<li>例如 <code>-m 200M --memory-swap=300M</code></li>
-</ul></li>
-<li>CPU 限额，默认设置下，所有容器可以平等地使用 host CPU 资源并且没有限制。通过 cpu share 可以设置容器使用 CPU 的优先级。
+</ul>
 
-<ul>
-<li>通过 -c 或 &ndash;cpu-shares 设置容器使用 CPU 的权重，默认为 1024</li>
-</ul></li>
+<p>例如 <code>-m 200M --memory-swap=300M</code></p></li>
 
 <li><p>Block IO 限额，默认情况下，所有容器能平等地读写磁盘</p>
 
 <ul>
-<li><p>可以通过设置 &ndash;blkio-weight 参数来改变容器 block IO 的优先级。&ndash;blkio-weight 设置的是相对权重值，<strong>默认为 500</strong>. 在下面的例子中，container_A 读写磁盘的带宽是 container_B 的两倍。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">docker run -it --name container_A --blkio-weight 600 ubuntu   
-        
-docker run -it --name container_B --blkio-weight 300 ubuntu</pre></td></tr></table>
-</div>
-</div></li>
-
-<li><p>限制 bps 和 iops. bps 是 byte per second，每秒读写的数据量。iops 是 io per second，每秒 IO 的次数。可通过以下参数控制容器的 bps 和 iops：</p>
+<li>可以通过设置 &ndash;blkio-weight 参数来改变容器 block IO 的优先级。<code>--blkio-weight</code> 设置的是相对权重值，默认为 500.</li>
+<li>限制 bps 和 iops. bps 是 byte per second，每秒读写的数据量。iops 是 io per second，每秒 IO 的次数。可通过以下参数控制容器的 bps 和 iops：
 
 <ul>
 <li>&ndash;device-read-bps，限制读某个设备的 bps。</li>
@@ -607,83 +596,6 @@ docker run -it --name container_B --blkio-weight 300 ubuntu</pre></td></tr></tab
 </ul></li>
 </ul></li>
 </ul>
-
-<h3 id="progrium-stress-镜像">progrium/stress 镜像</h3>
-
-<p>测试内存限额：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">docker run -it -m 200M --memory-swap=300M progrium/stress --vm 1 --vm-bytes 280M</pre></td></tr></table>
-</div>
-</div>
-<p>&ndash;vm 1：启动 1 个内存工作线程。</p>
-
-<p>&ndash;vm-bytes 280M：每个线程分配 280M 内存。</p>
-
-<p>因为 280M 在可分配的范围（300M）内，所以工作线程能够正常工作，其过程是：</p>
-
-<ol>
-<li><p>分配 280M 内存。</p></li>
-
-<li><p>释放 280M 内存。</p></li>
-
-<li><p>再分配 280M 内存。</p></li>
-
-<li><p>再释放 280M 内存。</p></li>
-</ol>
-
-<p>一直循环&hellip;&hellip;</p>
-
-<p>测试CPU限额：</p>
-
-<p>如在 host 中启动了两个容器：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">docker run --name &#34;container_A&#34; -c 1024 ubuntu
-
-docker run --name &#34;container_B&#34; -c 512 ubuntu</pre></td></tr></table>
-</div>
-</div>
-<p>container_A 的 cpu share 1024，是 container_B 的两倍。当两个容器都需要 CPU 资源时，container_A 可以得到的 CPU 是 container_B 的两倍。</p>
-
-<p>需要特别注意的是，这种按权重分配 CPU 只会发生在 CPU 资源紧张的情况下。如果 container_A 处于空闲状态，这时，为了充分利用 CPU 资源，container_B 也可以分配到全部可用的 CPU。</p>
-
-<p><strong>实验</strong>：</p>
-
-<ol>
-<li><p>启动 container_A, cpu_share 为 1024</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">docker run --name container_A -it -c 1024 progrium/stress --cpu 1</pre></td></tr></table>
-</div>
-</div>
-<p>&ndash;cpu 用来设置工作线程的数量。因为当前 host 只有 1 颗 CPU，所以一个工作线程就能将 CPU 压满。</p></li>
-
-<li><p>启动 container_B, cpu_share 为 512：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">docker run --name container_B -it -c 512 progrium/stress --cpu 1</pre></td></tr></table>
-</div>
-</div></li>
-
-<li><p>在 host 中执行 top, 可以看到两个容器对 CPU 的使用情况。可以看到分别使用了 66.3% 和 33.3% 左右。</p></li>
-
-<li><p>此时暂停 container_A, 可以观察到 container_B 在 container_A 空闲的情况下能够用满整颗 CPU.</p></li>
-</ol>
 
 <h3 id="容器底层原理">容器底层原理</h3>
 
@@ -722,11 +634,11 @@ docker run --name &#34;container_B&#34; -c 512 ubuntu</pre></td></tr></table>
 
 <h3 id="bridge">bridge</h3>
 
-<p>Docker 安装时会创建一个 命名为 docker0 的 linux bridge。如果不指定&ndash;network，创建的容器默认都会挂到 docker0 上。</p>
+<p>Docker 安装时会创建一个 命名为 docker0 的 linux bridge。如果不指定 <code>--network</code>，创建的容器默认都会挂到 docker0 上。</p>
 
 <p>使用 <code>docker network create --driver bridge mynet</code> 创建自定义网络。使用 <code>brctl show</code> 查看发现新增一个网桥。</p>
 
-<p>创建网络时可以指定 &ndash;subnet 和 &ndash;gateway 参数。</p>
+<p>创建网络时可以指定 <code>--subnet</code> 和 <code>--gateway</code> 参数。</p>
 
 <h3 id="指定容器-ip">指定容器 IP</h3>
 
@@ -769,7 +681,7 @@ docker run --name &#34;container_B&#34; -c 512 ubuntu</pre></td></tr></table>
 
 <p><code>docker run -d -it --name=web1 httpd</code></p>
 
-<p>然后创建 busybox 容器并通过 &ndash;network=container:web1 指定 jointed 容器为 web1.</p>
+<p>然后创建 busybox 容器并通过 &ndash;network=container:web1 指定 jointed 容器为 web1. 格式为 <code>--network=container:&lt;container-name&gt;</code></p>
 
 <p>busybox 和 web1 的网卡 mac 地址与 IP 完全一样，它们共享了相同的网络栈。</p>
 
@@ -785,10 +697,11 @@ docker run --name &#34;container_B&#34; -c 512 ubuntu</pre></td></tr></table>
 
 <p>每一个映射的端口，host 都会启动一个 docker-proxy 进程来处理访问容器的流量。</p>
 
-<p>外部访问容器过程，例如 httpd 容器 <code>32723:80</code> ：
-1. docker-proxy 监听 host 的 32773 端口。</p>
+<p>外部访问容器过程，例如 httpd 容器 host 端口绑定 <code>32723:80</code> 时：</p>
 
 <ol>
+<li><p>docker-proxy 监听 host 的 32773 端口。</p></li>
+
 <li><p>当 curl 访问 host的 32773 时，docker-proxy 转发给容器的80端口。</p></li>
 
 <li><p>httpd 容器响应请求并返回结果。</p></li>
@@ -901,7 +814,7 @@ docker run --name &#34;container_B&#34; -c 512 ubuntu</pre></td></tr></table>
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
-    <span class="item-content">0001-01-01</span>
+    <span class="item-content">2018-05-19</span>
   </p>
   
   <p class="copyright-item">
@@ -912,32 +825,28 @@ docker run --name &#34;container_B&#34; -c 512 ubuntu</pre></td></tr></table>
 
     
     
-<div class="post-reward">
-  <input type="checkbox" name="reward" id="reward" hidden />
-  <label class="reward-button" for="reward">赞赏支持</label>
-  <div class="qr-code">
-    
-    
-      <label class="qr-code-image" for="reward">
-        <img class="image" src="/reward/wechat-qr-code.jpg">
-        <span>微信打赏</span>
-      </label>
-    
-  </div>
-</div>
 
     <footer class="post-footer">
-      
+      <div class="post-tags">
+          
+          <a href="/tags/docker/">docker</a>
+          
+        </div>
 
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/fp/ramda/">
+          <a class="prev" href="/post/arch/cpu-false-sharing/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Ramda：一个精致的Javascript函数式编程库</span>
+            <span class="prev-text nav-default">CPU 伪共享问题</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         
+          <a class="next" href="/post/dp/design-patterns/">
+            <span class="next-text nav-default">浅谈设计模式</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
       </nav>
     </footer>
     
@@ -946,7 +855,25 @@ docker run --name &#34;container_B&#34; -c 512 ubuntu</pre></td></tr></table>
 
   
 
-  
+  <div id="comments-gitment"></div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  const gitment = new Gitment({
+    id: 'docker-notes.md',
+    title: 'Docker 基础知识整理',
+    link: decodeURI(location.href),
+    desc: '每天5分钟玩转 Docker 容器技术 的学习笔记。 一、容器生态系统 容器核心技术 容器规范：OCI 发布的 runtime spec 和 image format spec 容器runtime：主流的三种 lxc，Li',
+    owner: 'ijunjie',
+    repo: 'blog-gitment',
+    oauth: {
+      client_id: '1554b4f2b80abedeb1fe',
+      client_secret: '8c203d8374520b8871e4c0b1b309bcf77bd369fe'
+    }
+  })
+  gitment.render('comments-gitment')
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
   </article>
         </div>
       </div>

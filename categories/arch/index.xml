@@ -6,10 +6,19 @@
     <description>Recent content in Arch on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 03 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ijunjie.github.io/categories/arch/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Docker Machine</title>
+      <link>https://ijunjie.github.io/post/arch/docker-machine/</link>
+      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/arch/docker-machine/</guid>
+      <description>关于 Docker Machine 的一些实践总结。 Docker Machine 用于解决多主机环境部署 docker 的效率和一致性问题。 创建 machine 要求能够无密码登录远程主机，所以需要先通过 ssh-copy-id 将 ssh key 拷贝到目标机</description>
+    </item>
     
     <item>
       <title>浅谈 JMM 和 volatile</title>
@@ -54,6 +63,15 @@
       
       <guid>https://ijunjie.github.io/post/arch/cpu-false-sharing/</guid>
       <description>不知是谁最初把 false sharing 翻译成“伪共享”，翻译得莫名其妙，不知所谓。实际意思应该是“错误的共享”。 最近在读的几本书都提到了 CPU 伪共享问题。这里尝试做</description>
+    </item>
+    
+    <item>
+      <title>Docker 基础知识整理</title>
+      <link>https://ijunjie.github.io/post/arch/docker-notes/</link>
+      <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/arch/docker-notes/</guid>
+      <description>每天5分钟玩转 Docker 容器技术 的学习笔记。 一、容器生态系统 容器核心技术 容器规范：OCI 发布的 runtime spec 和 image format spec 容器runtime：主流的三种 lxc，Li</description>
     </item>
     
     <item>
