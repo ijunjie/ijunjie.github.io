@@ -6,10 +6,32 @@
     <description>Recent content on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 13 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Jun 2018 16:00:30 +0800</lastBuildDate>
     
         <atom:link href="https://ijunjie.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>关于</title>
+      <link>https://ijunjie.github.io/about/</link>
+      <pubDate>Fri, 15 Jun 2018 16:00:30 +0800</pubDate>
+      
+      <guid>https://ijunjie.github.io/about/</guid>
+      
+        <description>人文主义理想 极客 喜欢的语言：Esperanto, 日本语 编程：函数式编程；Scala, JS, Java, Python, Scheme 绘画； 古典音乐: 勃拉姆斯，柴可夫斯基，马勒 哲学：</description>
+      
+    </item>
+    
+    <item>
+      <title>舍不得璀璨俗世</title>
+      <link>https://ijunjie.github.io/post/life/peking-five-years/</link>
+      <pubDate>Fri, 15 Jun 2018 14:57:30 +0800</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/life/peking-five-years/</guid>
+      
+        <description>我从乡下跑到京城里，一转眼已经五年了。比鲁迅还少一年 😂😂😂 这几年来一度对自身价值发生过怀疑与绝望，也一度幻想过脱离职场自由地生活，或者从事某</description>
+      
+    </item>
     
     <item>
       <title>Docker Machine</title>
@@ -206,28 +228,6 @@
       <guid>https://ijunjie.github.io/post/nihongo/kagerou/</guid>
       
         <description>你可曾在夏日无风的天气里观察过远处的景物，仿佛隔着一层若隐若现、上下波动的气流。这便是叫做“阳炎”的东西。 “陽炎”其实是个日语词，读作 かげろ</description>
-      
-    </item>
-    
-    <item>
-      <title>你的产品能够自举吗？</title>
-      <link>https://ijunjie.github.io/post/philosophy/bootstrap/</link>
-      <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/philosophy/bootstrap/</guid>
-      
-        <description>不知当初是谁把 bootstrap 翻译成了“自举”。由于中文的博大精深，这个词仿佛带有某种谐谑的意味，容易使人联想到电线杆上的野广告。 假如有一家公司，产品是 DevOps</description>
-      
-    </item>
-    
-    <item>
-      <title>线条与透视</title>
-      <link>https://ijunjie.github.io/post/art/chinese-painting-puzzle/</link>
-      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/art/chinese-painting-puzzle/</guid>
-      
-        <description>最近读了一本赫伯特·里德的 The Meaning of Art，中文译作“艺术的真谛”，这个翻译不信、不达、不雅，让人感觉很不爽。里面提到一些有趣的问题，比如接下来</description>
       
     </item>
     

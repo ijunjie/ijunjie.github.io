@@ -3,6 +3,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ijunjie.github.io/about/</loc>
+    <lastmod>2018-06-15T16:00:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/post/life/peking-five-years/</loc>
+    <lastmod>2018-06-15T14:57:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/post/arch/docker-machine/</loc>
     <lastmod>2018-06-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -437,8 +451,15 @@
   </url>
   
   <url>
+    <loc>https://ijunjie.github.io/tags/life/</loc>
+    <lastmod>2018-06-15T14:57:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/categories/life/</loc>
-    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-15T14:57:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -515,7 +536,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/post/</loc>
-    <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-15T14:57:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -578,7 +599,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/</loc>
-    <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-15T16:00:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
