@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ijunjie.github.io/post/reading/education/</loc>
+    <lastmod>2018-06-20T20:22:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/about/</loc>
     <lastmod>2018-06-15T16:00:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -143,7 +150,7 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/philosophy/bootstrap/</loc>
+    <loc>https://ijunjie.github.io/post/life/bootstrap/</loc>
     <lastmod>2018-05-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -388,6 +395,13 @@
   </url>
   
   <url>
+    <loc>https://ijunjie.github.io/tags/education/</loc>
+    <lastmod>2018-06-20T20:22:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/tags/fp/</loc>
     <lastmod>2018-04-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -528,15 +542,8 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/categories/philosophy/</loc>
-    <lastmod>2018-05-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ijunjie.github.io/post/</loc>
-    <lastmod>2018-06-15T14:57:30+08:00</lastmod>
+    <lastmod>2018-06-20T20:22:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -551,6 +558,13 @@
   <url>
     <loc>https://ijunjie.github.io/tags/reading/</loc>
     <lastmod>2018-05-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/categories/reading/</loc>
+    <lastmod>2018-06-20T20:22:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -599,7 +613,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/</loc>
-    <lastmod>2018-06-15T16:00:30+08:00</lastmod>
+    <lastmod>2018-06-20T20:22:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
