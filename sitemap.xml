@@ -318,21 +318,7 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/tags/bootstrap/</loc>
-    <lastmod>2018-05-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ijunjie.github.io/categories/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/cva/</loc>
-    <lastmod>2018-05-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -347,13 +333,6 @@
   <url>
     <loc>https://ijunjie.github.io/tags/docker/</loc>
     <lastmod>2018-06-13T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/ea/</loc>
-    <lastmod>2018-05-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -408,13 +387,6 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/tags/life/</loc>
-    <lastmod>2018-06-15T14:57:30+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ijunjie.github.io/categories/life/</loc>
     <lastmod>2018-06-15T14:57:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -438,13 +410,6 @@
   <url>
     <loc>https://ijunjie.github.io/tags/painting/</loc>
     <lastmod>2018-05-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/philosophy/</loc>
-    <lastmod>2018-05-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -487,13 +452,6 @@
   <url>
     <loc>https://ijunjie.github.io/tags/tech-books/</loc>
     <lastmod>2018-05-29T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/trump/</loc>
-    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
