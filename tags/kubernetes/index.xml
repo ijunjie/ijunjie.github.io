@@ -6,26 +6,17 @@
     <description>Recent content in Kubernetes on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 04 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ijunjie.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>云计算技术简史</title>
-      <link>https://ijunjie.github.io/post/arch/from-virtualization/</link>
-      <pubDate>Fri, 04 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/arch/from-virtualization/</guid>
-      <description>这是一份笔者整理的云计算技术发展简史，主要关注虚拟化、分布式、云计算和容器技术的起源和发展。 20 世纪 30 ~ 40 年代：早期计算机时代 上世纪 30 ~ 40 年代</description>
-    </item>
-    
-    <item>
       <title>一个 Kubernetes 微服务应用示例</title>
-      <link>https://ijunjie.github.io/post/arch/kubernetes-practice/</link>
+      <link>https://ijunjie.github.io/post/programming/kubernetes-practice/</link>
       <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ijunjie.github.io/post/arch/kubernetes-practice/</guid>
+      <guid>https://ijunjie.github.io/post/programming/kubernetes-practice/</guid>
       <description>Rinor Maloku 在 Kubernetes and everything else in Practice 一文中全面、细致地讲述了一个微服务应用的开发、构建，并部署到 Kubernetes 的过程。全文洋洋洒洒分为十一篇，并配有精美的动态演示图，实为</description>
     </item>
     

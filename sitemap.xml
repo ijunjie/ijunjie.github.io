@@ -38,21 +38,21 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/arch/docker-machine/</loc>
+    <loc>https://ijunjie.github.io/post/programming/docker-machine/</loc>
     <lastmod>2018-06-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/life/lenin/</loc>
+    <loc>https://ijunjie.github.io/post/reading/lenin/</loc>
     <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/arch/jmm-volatile/</loc>
+    <loc>https://ijunjie.github.io/post/programming/jmm-volatile/</loc>
     <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -66,21 +66,21 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/arch/distributed-transaction/</loc>
+    <loc>https://ijunjie.github.io/post/programming/distributed-transaction/</loc>
     <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/fp/recursive-list/</loc>
+    <loc>https://ijunjie.github.io/post/programming/recursive-list/</loc>
     <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/arch/java-books/</loc>
+    <loc>https://ijunjie.github.io/post/programming/java-books/</loc>
     <lastmod>2018-05-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -94,7 +94,7 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/frontend/js-books/</loc>
+    <loc>https://ijunjie.github.io/post/programming/js-books/</loc>
     <lastmod>2018-05-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -108,7 +108,7 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/literature/koudannsha-history/</loc>
+    <loc>https://ijunjie.github.io/post/reading/koudannsha-history/</loc>
     <lastmod>2018-05-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -143,7 +143,7 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/arch/api-gw-p2p/</loc>
+    <loc>https://ijunjie.github.io/post/programming/api-gw-p2p/</loc>
     <lastmod>2018-05-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -157,7 +157,7 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/nihongo/kagerou/</loc>
+    <loc>https://ijunjie.github.io/post/literature/kagerou/</loc>
     <lastmod>2018-05-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -171,56 +171,63 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/art/chinese-painting-puzzle/</loc>
+    <loc>https://ijunjie.github.io/post/reading/the-meaning-of-art/</loc>
     <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/arch/cpu-false-sharing/</loc>
+    <loc>https://ijunjie.github.io/post/reading/chinese-painting-puzzle/</loc>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/post/programming/cpu-false-sharing/</loc>
     <lastmod>2018-05-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/arch/docker-omissions-make-up/</loc>
+    <loc>https://ijunjie.github.io/post/programming/docker-omissions-make-up/</loc>
     <lastmod>2018-05-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/arch/docker-notes/</loc>
+    <loc>https://ijunjie.github.io/post/programming/docker-notes/</loc>
     <lastmod>2018-05-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/dp/design-patterns/</loc>
+    <loc>https://ijunjie.github.io/post/programming/design-patterns/</loc>
     <lastmod>2018-05-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/dp/dynamic-proxy-aop/</loc>
+    <loc>https://ijunjie.github.io/post/programming/dynamic-proxy-aop/</loc>
     <lastmod>2018-05-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/arch/from-virtualization/</loc>
+    <loc>https://ijunjie.github.io/post/programming/from-virtualization/</loc>
     <lastmod>2018-05-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/ds/list-comparison/</loc>
+    <loc>https://ijunjie.github.io/post/programming/list-comparison/</loc>
     <lastmod>2018-05-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -234,7 +241,7 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/arch/kubernetes-practice/</loc>
+    <loc>https://ijunjie.github.io/post/programming/kubernetes-practice/</loc>
     <lastmod>2018-04-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -248,7 +255,7 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/fp/factorial/</loc>
+    <loc>https://ijunjie.github.io/post/programming/factorial/</loc>
     <lastmod>2018-04-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -262,28 +269,28 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/fp/fp-basic/</loc>
+    <loc>https://ijunjie.github.io/post/programming/fp-basic/</loc>
     <lastmod>2018-04-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/fp/fp-paradigm/</loc>
+    <loc>https://ijunjie.github.io/post/programming/fp-paradigm/</loc>
     <lastmod>2018-04-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/dp/openstack4j-dependencies/</loc>
+    <loc>https://ijunjie.github.io/post/programming/openstack4j-dependencies/</loc>
     <lastmod>2018-04-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/post/fp/ramda/</loc>
+    <loc>https://ijunjie.github.io/post/programming/ramda/</loc>
     <lastmod>2018-04-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -297,14 +304,7 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/tags/aop/</loc>
-    <lastmod>2018-05-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/categories/arch/</loc>
+    <loc>https://ijunjie.github.io/tags/arch/</loc>
     <lastmod>2018-06-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -318,20 +318,6 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/categories/art/</loc>
-    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/base/</loc>
-    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ijunjie.github.io/tags/bootstrap/</loc>
     <lastmod>2018-05-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -340,14 +326,6 @@
   
   <url>
     <loc>https://ijunjie.github.io/categories/</loc>
-    <lastmod>2018-06-13T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/container/</loc>
-    <lastmod>2018-05-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -367,36 +345,8 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/tags/distributed-transaction/</loc>
-    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ijunjie.github.io/tags/docker/</loc>
     <lastmod>2018-06-13T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/dp/</loc>
-    <lastmod>2018-05-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/categories/dp/</loc>
-    <lastmod>2018-05-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/categories/ds/</loc>
-    <lastmod>2018-05-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -417,48 +367,34 @@
   
   <url>
     <loc>https://ijunjie.github.io/tags/fp/</loc>
-    <lastmod>2018-04-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/categories/fp/</loc>
     <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/categories/frontend/</loc>
-    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
+    <loc>https://ijunjie.github.io/tags/handwriting/</loc>
+    <lastmod>2018-05-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ijunjie.github.io/tags/history/</loc>
-    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/tags/java/</loc>
-    <lastmod>2018-05-29T00:00:00+00:00</lastmod>
+    <loc>https://ijunjie.github.io/tags/japanese/</loc>
+    <lastmod>2018-05-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/tags/javascript/</loc>
-    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/jmm/</loc>
+    <loc>https://ijunjie.github.io/tags/jvm/</loc>
     <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -466,14 +402,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/tags/kubernetes/</loc>
-    <lastmod>2018-05-04T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/lenin/</loc>
-    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
+    <lastmod>2018-04-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -493,43 +422,8 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/tags/list/</loc>
-    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/literature/</loc>
-    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ijunjie.github.io/categories/literature/</loc>
-    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/mesi/</loc>
-    <lastmod>2018-05-19T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/microservice/</loc>
-    <lastmod>2018-05-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/modern-society/</loc>
-    <lastmod>2018-06-20T20:44:14+08:00</lastmod>
+    <lastmod>2018-05-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -537,13 +431,6 @@
   <url>
     <loc>https://ijunjie.github.io/categories/myworks/</loc>
     <lastmod>2018-05-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/categories/nihongo/</loc>
-    <lastmod>2018-05-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -563,6 +450,13 @@
   </url>
   
   <url>
+    <loc>https://ijunjie.github.io/tags/politics/</loc>
+    <lastmod>2018-06-20T20:44:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/post/</loc>
     <lastmod>2018-06-20T20:44:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -570,15 +464,8 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/tags/proxy/</loc>
-    <lastmod>2018-05-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/reading/</loc>
-    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
+    <loc>https://ijunjie.github.io/categories/programming/</loc>
+    <lastmod>2018-06-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -591,27 +478,6 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/tags/recursive/</loc>
-    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/right-deviation/</loc>
-    <lastmod>2018-06-20T20:42:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/spring/</loc>
-    <lastmod>2018-05-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ijunjie.github.io/tags/</loc>
     <lastmod>2018-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -619,8 +485,8 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/tags/tail-rec/</loc>
-    <lastmod>2018-04-27T00:00:00+00:00</lastmod>
+    <loc>https://ijunjie.github.io/tags/tech-books/</loc>
+    <lastmod>2018-05-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -633,36 +499,8 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/tags/volatile/</loc>
-    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ijunjie.github.io/</loc>
     <lastmod>2018-06-20T20:44:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/%E3%81%8B%E3%81%92%E3%82%8D%E3%81%86/</loc>
-    <lastmod>2018-05-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/%E7%89%A9%E5%80%99/</loc>
-    <lastmod>2018-05-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ijunjie.github.io/tags/%E9%99%BD%E7%82%8E/</loc>
-    <lastmod>2018-05-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

@@ -6,64 +6,9 @@
     <description>Recent content in Categories on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 13 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ijunjie.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Arch</title>
-      <link>https://ijunjie.github.io/categories/arch/</link>
-      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/categories/arch/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Art</title>
-      <link>https://ijunjie.github.io/categories/art/</link>
-      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/categories/art/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dp</title>
-      <link>https://ijunjie.github.io/categories/dp/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/categories/dp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ds</title>
-      <link>https://ijunjie.github.io/categories/ds/</link>
-      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/categories/ds/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fp</title>
-      <link>https://ijunjie.github.io/categories/fp/</link>
-      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/categories/fp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Frontend</title>
-      <link>https://ijunjie.github.io/categories/frontend/</link>
-      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/categories/frontend/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Life</title>
@@ -77,7 +22,7 @@
     <item>
       <title>Literature</title>
       <link>https://ijunjie.github.io/categories/literature/</link>
-      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 25 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/categories/literature/</guid>
       <description></description>
@@ -93,11 +38,11 @@
     </item>
     
     <item>
-      <title>Nihongo</title>
-      <link>https://ijunjie.github.io/categories/nihongo/</link>
-      <pubDate>Fri, 25 May 2018 00:00:00 +0000</pubDate>
+      <title>Programming</title>
+      <link>https://ijunjie.github.io/categories/programming/</link>
+      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ijunjie.github.io/categories/nihongo/</guid>
+      <guid>https://ijunjie.github.io/categories/programming/</guid>
       <description></description>
     </item>
     
