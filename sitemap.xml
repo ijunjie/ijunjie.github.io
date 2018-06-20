@@ -3,6 +3,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ijunjie.github.io/post/reading/modern-society/</loc>
+    <lastmod>2018-06-20T20:44:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/post/reading/right-deviation/</loc>
+    <lastmod>2018-06-20T20:42:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/post/reading/education/</loc>
     <lastmod>2018-06-20T20:22:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -297,14 +311,14 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/tags/art/</loc>
+    <loc>https://ijunjie.github.io/categories/art/</loc>
     <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/categories/art/</loc>
+    <loc>https://ijunjie.github.io/tags/art/</loc>
     <lastmod>2018-05-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -367,14 +381,14 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/tags/dp/</loc>
+    <loc>https://ijunjie.github.io/categories/dp/</loc>
     <lastmod>2018-05-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/categories/dp/</loc>
+    <loc>https://ijunjie.github.io/tags/dp/</loc>
     <lastmod>2018-05-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -402,15 +416,15 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/tags/fp/</loc>
-    <lastmod>2018-04-27T00:00:00+00:00</lastmod>
+    <loc>https://ijunjie.github.io/categories/fp/</loc>
+    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/categories/fp/</loc>
-    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
+    <loc>https://ijunjie.github.io/tags/fp/</loc>
+    <lastmod>2018-04-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -465,14 +479,14 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/tags/life/</loc>
+    <loc>https://ijunjie.github.io/categories/life/</loc>
     <lastmod>2018-06-15T14:57:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/categories/life/</loc>
+    <loc>https://ijunjie.github.io/tags/life/</loc>
     <lastmod>2018-06-15T14:57:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -486,15 +500,15 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/tags/literature/</loc>
-    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
+    <loc>https://ijunjie.github.io/categories/literature/</loc>
+    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/categories/literature/</loc>
-    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
+    <loc>https://ijunjie.github.io/tags/literature/</loc>
+    <lastmod>2018-05-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -509,6 +523,13 @@
   <url>
     <loc>https://ijunjie.github.io/tags/microservice/</loc>
     <lastmod>2018-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/tags/modern-society/</loc>
+    <lastmod>2018-06-20T20:44:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -543,7 +564,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/post/</loc>
-    <lastmod>2018-06-20T20:22:14+08:00</lastmod>
+    <lastmod>2018-06-20T20:44:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -556,6 +577,13 @@
   </url>
   
   <url>
+    <loc>https://ijunjie.github.io/categories/reading/</loc>
+    <lastmod>2018-06-20T20:44:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/tags/reading/</loc>
     <lastmod>2018-05-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -563,15 +591,15 @@
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/categories/reading/</loc>
-    <lastmod>2018-06-20T20:22:14+08:00</lastmod>
+    <loc>https://ijunjie.github.io/tags/recursive/</loc>
+    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ijunjie.github.io/tags/recursive/</loc>
-    <lastmod>2018-06-03T00:00:00+00:00</lastmod>
+    <loc>https://ijunjie.github.io/tags/right-deviation/</loc>
+    <lastmod>2018-06-20T20:42:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -613,7 +641,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/</loc>
-    <lastmod>2018-06-20T20:22:14+08:00</lastmod>
+    <lastmod>2018-06-20T20:44:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
