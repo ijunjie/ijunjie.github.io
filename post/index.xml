@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 08 Jul 2018 17:22:39 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 Jul 2018 22:04:28 +0800</lastBuildDate>
     
 	<atom:link href="https://ijunjie.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Apache Kylin 单实例部署</title>
+      <link>https://ijunjie.github.io/post/programming/kylin-setup/</link>
+      <pubDate>Mon, 09 Jul 2018 22:04:28 +0800</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/programming/kylin-setup/</guid>
+      <description>1. 部署方式概览 Apache Kylin ( 以下简称 Kylin ) 有四种部署方式（参考 Kylin 的部署）。 1.1 Single Instance, 单实例部署 在 Hadoop 集群的客户机 （或 Hadoop 集群的一个节点）部署。建模人员通过 Web 登</description>
+    </item>
     
     <item>
       <title>Theory of Levels: 层次论</title>
@@ -180,15 +189,6 @@
       
       <guid>https://ijunjie.github.io/post/myworks/portraits/</guid>
       <description>霍普金斯 2017 年 2 月下旬某个晚上，临摹了一副汉尼拔，彼时居住在回龙观。 原图可能是《沉默地羔羊》中的： 金正恩 特朗普 一副潦草的特朗普画像。2017 年</description>
-    </item>
-    
-    <item>
-      <title>手绘凯尔特结及其他</title>
-      <link>https://ijunjie.github.io/post/myworks/celtic-knot/</link>
-      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/myworks/celtic-knot/</guid>
-      <description>手绘凯尔特结 钢笔画 不知什么动物 长颈鹿或餐叉 耳机 樱桃 猫 头骨 黑洞 几何 其他</description>
     </item>
     
   </channel>
