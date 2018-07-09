@@ -85,7 +85,7 @@
 
 <meta itemprop="datePublished" content="2018-07-09T22:04:28&#43;08:00" />
 <meta itemprop="dateModified" content="2018-07-09T22:04:28&#43;08:00" />
-<meta itemprop="wordCount" content="2330">
+<meta itemprop="wordCount" content="2336">
 
 
 
@@ -221,7 +221,7 @@
               <a href="/categories/programming/"> programming </a>
             
           </div>
-        <span class="more-meta"> 约 2330 字 </span>
+        <span class="more-meta"> 约 2336 字 </span>
         <span class="more-meta"> 预计阅读 5 分钟 </span>
       </div>
     </header>
@@ -244,9 +244,9 @@
 </ul></li>
 <li><a href="#2-单实例部署">2. 单实例部署</a>
 <ul>
-<li><a href="#2-1-hadoop-集群">2. 1 Hadoop 集群</a></li>
+<li><a href="#2-1-hadoop-集群">2.1 Hadoop 集群</a></li>
 <li><a href="#2-2-hadoop-客户机">2.2 Hadoop 客户机</a></li>
-<li><a href="#2-3-配置-hadoop-集群客户端">2. 3 配置 Hadoop 集群客户端</a>
+<li><a href="#2-3-配置-hadoop-集群客户端">2.3 配置 Hadoop 集群客户端</a>
 <ul>
 <li><a href="#2-3-1-主机映射">2.3.1 主机映射</a></li>
 <li><a href="#2-3-2-新建用户">2.3.2 新建用户</a></li>
@@ -326,7 +326,7 @@
 <li>OS: Linux only, CentOS 6.5+ or Ubuntu 16.0.4+</li>
 </ul>
 
-<h3 id="2-1-hadoop-集群">2. 1 Hadoop 集群</h3>
+<h3 id="2-1-hadoop-集群">2.1 Hadoop 集群</h3>
 
 <p>由于 Kylin 依赖于 Hadoop 集群，所以需要事先搭建一个 Hadoop 集群。Kylin 的官网推荐使用 <a href="http://hortonworks.com/products/hortonworks-sandbox/">HDP sandbox</a>, 有条件的个人用户可以下载 HDP 虚拟机镜像（VMware 镜像 15 G 左右，需要 4 核 8 G 配置 ）。</p>
 
@@ -353,7 +353,7 @@
 
 <p>因此，需要准备一台 Hadoop 集群客户端机器。按文档要求，最小配置为 4 核 CPU, 16 G 内存，100 G 磁盘。这台机器要与 Hadoop 集群在网络上互通。挂载磁盘并格式化相关操作可以参考 <a href="https://www.jdcloud.com/help/detail/515/isCatalog/1">https://www.jdcloud.com/help/detail/515/isCatalog/1</a>.</p>
 
-<h3 id="2-3-配置-hadoop-集群客户端">2. 3 配置 Hadoop 集群客户端</h3>
+<h3 id="2-3-配置-hadoop-集群客户端">2.3 配置 Hadoop 集群客户端</h3>
 
 <p>将这台机器改造为 Hadoop 集群客户端的思路比较简单，将已有 Hadoop 集群中的 jdk, Hadoop, hive, hbase 等组件复制过来并做一些相应的配置即可。</p>
 
@@ -362,14 +362,14 @@
 <p>将 Hadoop 集群 Namenode 的 /etc/hosts 配置拷贝过来。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></code></pre></td>
+</span></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="m">192</span>.168.0.3 a2yGLbxU-Master1.jcloud.local a2yGLbxU-Master1
-<span class="m">192</span>.168.0.5 a2yGLbxU-Core1.jcloud.local a2yGLbxU-Core1
-<span class="m">192</span>.168.0.4 a2yGLbxU-Core2.jcloud.local a2yGLbxU-Core2</code></pre></td></tr></table>
+<pre class="chroma">192.168.0.3 a2yGLbxU-Master1.jcloud.local a2yGLbxU-Master1
+192.168.0.5 a2yGLbxU-Core1.jcloud.local a2yGLbxU-Core1
+192.168.0.4 a2yGLbxU-Core2.jcloud.local a2yGLbxU-Core2</pre></td></tr></table>
 </div>
 </div>
 <h4 id="2-3-2-新建用户">2.3.2 新建用户</h4>
@@ -377,21 +377,21 @@
 <p>新建用户组和用户：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">groupadd Hadoop
+<pre class="chroma"><code class="language-bash" data-lang="bash">groupadd Hadoop
 useradd -d /usr/Hadoop -g Hadoop -m Hadoop</code></pre></td></tr></table>
 </div>
 </div>
 <p>设置密码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">passwd Hadoop</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">passwd Hadoop</code></pre></td></tr></table>
 </div>
 </div>
 <h4 id="2-3-3-配置-jdk-hadoop-hive-hbase">2.3.3 配置 JDK, Hadoop, Hive, Hbase</h4>
@@ -401,35 +401,35 @@ useradd -d /usr/Hadoop -g Hadoop -m Hadoop</code></pre></td></tr></table>
 <p>使用 scp -r 将 Hadoop 集群 master 节点的 jdk, Hadoop, Hive, HBase, Spark 等拷贝到客户机对应位置，并编辑 /etc/profile：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
 </span><span class="lnt">7
-</span></code></pre></td>
+</span></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">JAVA_HOME</span><span class="o">=</span>/opt/jmr/jdk1.8.0_77
-<span class="nv">HADOOP_HOME</span><span class="o">=</span>/data0/Hadoop-2.7.4
-<span class="nv">HBASE_HOME</span><span class="o">=</span>/data0/hbase-1.2.6
-<span class="nv">HIVE_HOME</span><span class="o">=</span>/data0/apache-hive-2.1.1-bin
-<span class="nv">SPARK_HOME</span><span class="o">=</span>/data0/spark-2.2.0-bin-Hadoop2.7
-<span class="nv">CLASSPATH</span><span class="o">=</span>.:<span class="nv">$JAVA_HOME</span>/lib/dt.jar:<span class="nv">$JAVA_HOME</span>/lib/tools.jar
-<span class="nv">PATH</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>/bin:<span class="nv">$HBASE_HOME</span>/bin:<span class="nv">$HIVE_HOME</span>/bin:<span class="nv">$SPARK_HOME</span>/bin:<span class="nv">$JAVA_HOME</span>/bin:<span class="nv">$PATH</span></code></pre></td></tr></table>
+<pre class="chroma">JAVA_HOME=/opt/jmr/jdk1.8.0_77
+HADOOP_HOME=/data0/Hadoop-2.7.4
+HBASE_HOME=/data0/hbase-1.2.6
+HIVE_HOME=/data0/apache-hive-2.1.1-bin
+SPARK_HOME=/data0/spark-2.2.0-bin-Hadoop2.7
+CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+PATH=$HADOOP_HOME/bin:$HBASE_HOME/bin:$HIVE_HOME/bin:$SPARK_HOME/bin:$JAVA_HOME/bin:$PATH</pre></td></tr></table>
 </div>
 </div>
 <h4 id="2-3-4-验证-hadoop-集群客户端">2.3.4 验证 Hadoop 集群客户端</h4>
 
-<p>使用 su - hadoop 切换用户，验证 Hadoop 集群客户端是否 ready.</p>
+<p>使用 <code>su - hadoop</code> 切换用户，验证 Hadoop 集群客户端是否 ready.</p>
 
 <p><strong>Hadoop version</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">hadoop version</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">hadoop version</code></pre></td></tr></table>
 </div>
 </div>
 <p>输出：</p>
@@ -456,21 +456,19 @@ This command was run using /data0/hadoop-2.7.4/share/hadoop/common/hadoop-common
 <p>运行一个示例 Job：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">hadoop jar /data0/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar pi <span class="m">10</span> <span class="m">100</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">hadoop jar /data0/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar pi <span class="m">10</span> <span class="m">100</span></code></pre></td></tr></table>
 </div>
 </div>
-<p>输出：</p>
+<p>输出结果中包含 Pi 的近似值：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
 </span></pre></td>
 <td class="lntd">
-<pre class="chroma">...
-Estimated value of Pi is 3.14800000000000000000</pre></td></tr></table>
+<pre class="chroma">Estimated value of Pi is 3.14800000000000000000</pre></td></tr></table>
 </div>
 </div>
 <p><strong>HDFS</strong></p>
@@ -478,11 +476,11 @@ Estimated value of Pi is 3.14800000000000000000</pre></td></tr></table>
 <p>上传文件到 HDFS：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">hadoop fs -mkdir /kylin_test
+<pre class="chroma"><code class="language-bash" data-lang="bash">hadoop fs -mkdir /kylin_test
 hadoop fs -put /data0/hadoop-2.7.4/etc/hadoop /kylin_test/input</code></pre></td></tr></table>
 </div>
 </div>
@@ -491,10 +489,10 @@ hadoop fs -put /data0/hadoop-2.7.4/etc/hadoop /kylin_test/input</code></pre></td
 <p>执行运算：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">hadoop jar /data0/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar grep /kylin_test/input /kylin_test/output <span class="s1">&#39;dfs[a-z.]+&#39;</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">hadoop jar /data0/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar grep /kylin_test/input /kylin_test/output <span class="s1">&#39;dfs[a-z.]+&#39;</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>以上命令使用示例程序调用 MapReduce 分析上传到 HDFS 的文件包含的所有文本，统计正则表达式 <code>’dfs[a-z.]+’</code> 匹配到内容和出现的次数，结果保存到 HDFS 的 /kylin_test/output.</p>
@@ -502,10 +500,10 @@ hadoop fs -put /data0/hadoop-2.7.4/etc/hadoop /kylin_test/input</code></pre></td
 <p>查看结果：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">hadoop fs -cat /kylin_test/output/part-r-00000</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">hadoop fs -cat /kylin_test/output/part-r-00000</code></pre></td></tr></table>
 </div>
 </div>
 <p><strong>Hive</strong></p>
@@ -515,10 +513,10 @@ hadoop fs -put /data0/hadoop-2.7.4/etc/hadoop /kylin_test/input</code></pre></td
 <p>连接 Hiverserver：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">beeline -u jdbc:hive2://192.168.0.3:10000 -n hadoop</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">beeline -u jdbc:hive2://192.168.0.3:10000 -n hadoop</code></pre></td></tr></table>
 </div>
 </div>
 <p>192.168.0.3 是 Hadoop 集群的 master 节点 IP，也可以使用域名；<code>-n</code> 指定用户。</p>
@@ -530,10 +528,10 @@ hadoop fs -put /data0/hadoop-2.7.4/etc/hadoop /kylin_test/input</code></pre></td
 <p>进入 Spark 安装位置，运行 Spark 自带的示例应用：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">run-example SparkPi <span class="m">10</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">run-example SparkPi <span class="m">10</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>输出结果中包含使用<a href="https://www.zhihu.com/question/20254139">蒙特卡罗算法</a>计算得出的圆周率近似值：</p>
@@ -564,12 +562,12 @@ Pi is roughly 3.1395711395711396</pre></td></tr></table>
 <p>解压安装包：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">tar -zxvf apache-kylin-2.3.1-hbase1x-bin.tar.gz
+<pre class="chroma"><code class="language-bash" data-lang="bash">tar -zxvf apache-kylin-2.3.1-hbase1x-bin.tar.gz
 <span class="nb">cd</span> apache-kylin-2.3.1-bin
 <span class="nb">export</span> <span class="nv">KYLIN_HOME</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span></code></pre></td></tr></table>
 </div>
@@ -577,19 +575,19 @@ Pi is roughly 3.1395711395711396</pre></td></tr></table>
 <p>安装环境预检查：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sh <span class="nv">$KYLIN_HOME</span>/bin/check-env.sh</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">sh <span class="nv">$KYLIN_HOME</span>/bin/check-env.sh</code></pre></td></tr></table>
 </div>
 </div>
 <h4 id="2-4-3-启动-kylin">2.4.3 启动 Kylin</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sh <span class="nv">$KYLIN_HOME</span>/bin/kylin.sh start</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">sh <span class="nv">$KYLIN_HOME</span>/bin/kylin.sh start</code></pre></td></tr></table>
 </div>
 </div>
 <p>启动后，可以查看运行日志： <code>$KYLIN_HOME/logs/kylin.log</code></p>
@@ -601,10 +599,10 @@ Pi is roughly 3.1395711395711396</pre></td></tr></table>
 <h4 id="2-4-5-停止-kylin">2.4.5 停止 Kylin</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">sh <span class="nv">$KYLIN_HOME</span>/bin/kylin.sh stop</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">sh <span class="nv">$KYLIN_HOME</span>/bin/kylin.sh stop</code></pre></td></tr></table>
 </div>
 </div>
 <h2 id="3-参考资料">3. 参考资料</h2>
