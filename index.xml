@@ -6,10 +6,21 @@
     <description>Recent content on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 09 Jul 2018 22:04:28 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 Jul 2018 22:37:32 +0800</lastBuildDate>
     
         <atom:link href="https://ijunjie.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>后海印象</title>
+      <link>https://ijunjie.github.io/post/life/houhai/</link>
+      <pubDate>Mon, 09 Jul 2018 22:37:32 +0800</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/life/houhai/</guid>
+      
+        <description>北京这几年其实也是有过一些好天气的。在天气晴朗的日子，后海沿岸的风光还是非常漂亮的。 即使用手机也可以拍出效果不错的照片。画面明净清澈，仿佛油</description>
+      
+    </item>
     
     <item>
       <title>Apache Kylin 单实例部署</title>
@@ -217,17 +228,6 @@
       <guid>https://ijunjie.github.io/post/reading/koudannsha-history/</guid>
       
         <description>最近入手一套讲谈社的《中国的历史》。这是我第一次读日本人写的中国历史，尤其是中国近现代史，之前读过世界通史和新全球史中关于中国的部分，还有剑</description>
-      
-    </item>
-    
-    <item>
-      <title>一副潦草的自画像</title>
-      <link>https://ijunjie.github.io/post/myworks/self-portrait/</link>
-      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/myworks/self-portrait/</guid>
-      
-        <description>具体时间忘却了，可能是 2017 年春。</description>
       
     </item>
     

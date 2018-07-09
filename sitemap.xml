@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ijunjie.github.io/post/life/houhai/</loc>
+    <lastmod>2018-07-09T22:37:32+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/post/programming/kylin-setup/</loc>
     <lastmod>2018-07-09T22:04:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -416,7 +423,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/categories/life/</loc>
-    <lastmod>2018-06-15T14:57:30+08:00</lastmod>
+    <lastmod>2018-07-09T22:37:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -458,7 +465,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/post/</loc>
-    <lastmod>2018-07-09T22:04:28+08:00</lastmod>
+    <lastmod>2018-07-09T22:37:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -493,7 +500,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/</loc>
-    <lastmod>2018-07-09T22:04:28+08:00</lastmod>
+    <lastmod>2018-07-09T22:37:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
