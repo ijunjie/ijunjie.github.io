@@ -3,6 +3,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ijunjie.github.io/post/life/houhai/</loc>
+    <lastmod>2018-07-09T22:37:32+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/post/programming/kylin-setup/</loc>
+    <lastmod>2018-07-09T22:04:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/post/reading/theory-of-levels/</loc>
+    <lastmod>2018-07-08T17:22:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/post/reading/sketch/</loc>
+    <lastmod>2018-06-23T10:21:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/post/reading/modern-society/</loc>
     <lastmod>2018-06-20T20:44:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -312,7 +340,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/tags/art/</loc>
-    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-23T10:21:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -387,8 +415,15 @@
   </url>
   
   <url>
+    <loc>https://ijunjie.github.io/tags/kylin/</loc>
+    <lastmod>2018-07-09T22:04:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/categories/life/</loc>
-    <lastmod>2018-06-15T14:57:30+08:00</lastmod>
+    <lastmod>2018-07-09T22:37:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -415,6 +450,13 @@
   </url>
   
   <url>
+    <loc>https://ijunjie.github.io/tags/philosophy/</loc>
+    <lastmod>2018-07-08T17:22:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/tags/politics/</loc>
     <lastmod>2018-06-20T20:44:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -423,21 +465,21 @@
   
   <url>
     <loc>https://ijunjie.github.io/post/</loc>
-    <lastmod>2018-06-20T20:44:14+08:00</lastmod>
+    <lastmod>2018-07-09T22:37:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ijunjie.github.io/categories/programming/</loc>
-    <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+    <lastmod>2018-07-09T22:04:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ijunjie.github.io/categories/reading/</loc>
-    <lastmod>2018-06-20T20:44:14+08:00</lastmod>
+    <lastmod>2018-07-08T17:22:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -458,7 +500,7 @@
   
   <url>
     <loc>https://ijunjie.github.io/</loc>
-    <lastmod>2018-06-20T20:44:14+08:00</lastmod>
+    <lastmod>2018-07-09T22:37:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

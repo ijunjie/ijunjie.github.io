@@ -6,10 +6,46 @@
     <description>Recent content in Posts on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 20 Jun 2018 20:44:14 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 Jul 2018 22:37:32 +0800</lastBuildDate>
     
 	<atom:link href="https://ijunjie.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>我曾在晴朗的天气里去过什刹海；也许是后海，我搞不清</title>
+      <link>https://ijunjie.github.io/post/life/houhai/</link>
+      <pubDate>Mon, 09 Jul 2018 22:37:32 +0800</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/life/houhai/</guid>
+      <description>每一个喜欢明净清澈的天空和水面的人都会从这些照片中获得新的印象。 （照片用手机拍摄；除分辨率未做其他处理；点击可放大） 2016 年 4 月 17 日下午，什刹海</description>
+    </item>
+    
+    <item>
+      <title>Apache Kylin 单实例部署</title>
+      <link>https://ijunjie.github.io/post/programming/kylin-setup/</link>
+      <pubDate>Mon, 09 Jul 2018 22:04:28 +0800</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/programming/kylin-setup/</guid>
+      <description>1. 部署方式概览 Apache Kylin ( 以下简称 Kylin ) 有四种部署方式（参考 Kylin 的部署）: 单实例 集群 读写分离 多环境部署 1.1 Single Instance, 单实例部署 在 Hadoop 集群的客户机 （或 Hadoop 集群的一个</description>
+    </item>
+    
+    <item>
+      <title>Theory of Levels: 层次论</title>
+      <link>https://ijunjie.github.io/post/reading/theory-of-levels/</link>
+      <pubDate>Sun, 08 Jul 2018 17:22:39 +0800</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/reading/theory-of-levels/</guid>
+      <description>马克思和恩格斯、马斯洛，甚至 Linus 都提出过自己的需求层次理论。 马克思和恩格斯 19 世纪，马克思和恩格斯把人的需要分成生存、享受和发展三个层次。人们的</description>
+    </item>
+    
+    <item>
+      <title>素描的意义</title>
+      <link>https://ijunjie.github.io/post/reading/sketch/</link>
+      <pubDate>Sat, 23 Jun 2018 10:21:30 +0800</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/reading/sketch/</guid>
+      <description>素描的独特之处 意大利文艺复兴时期的绘画作品前无古人，后无来者，凝聚着大师的全部智慧和技法。一个普通人要欣赏一幅文艺复兴时期的绘画作品，仅靠一</description>
+    </item>
     
     <item>
       <title>为什么要反对个人慈善</title>
@@ -39,12 +75,12 @@
     </item>
     
     <item>
-      <title>舍不得璀璨俗世</title>
+      <title>勇猛精进</title>
       <link>https://ijunjie.github.io/post/life/peking-five-years/</link>
       <pubDate>Fri, 15 Jun 2018 14:57:30 +0800</pubDate>
       
       <guid>https://ijunjie.github.io/post/life/peking-five-years/</guid>
-      <description>我从乡下跑到京城里，一转眼已经五年了。比鲁迅还少一年 😂😂😂 这几年来一度对自身价值发生过怀疑与绝望，也一度幻想过脱离职场自由地生活，或者从事某</description>
+      <description>我从乡下跑到京城里，一转眼已经五年了。比鲁迅还少一年。 这几年来一度对自身价值发生过怀疑与绝望，也一度幻想过脱离职场自由地生活，或者从事某种非</description>
     </item>
     
     <item>
@@ -153,42 +189,6 @@
       
       <guid>https://ijunjie.github.io/post/myworks/self-portrait/</guid>
       <description>具体时间忘却了，可能是 2017 年春。</description>
-    </item>
-    
-    <item>
-      <title>人物</title>
-      <link>https://ijunjie.github.io/post/myworks/portraits/</link>
-      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/myworks/portraits/</guid>
-      <description>霍普金斯 2017 年 2 月下旬某个晚上，临摹了一副汉尼拔，彼时居住在回龙观。 原图可能是《沉默地羔羊》中的： 金正恩 特朗普 一副潦草的特朗普画像。2017 年</description>
-    </item>
-    
-    <item>
-      <title>手绘凯尔特结及其他</title>
-      <link>https://ijunjie.github.io/post/myworks/celtic-knot/</link>
-      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/myworks/celtic-knot/</guid>
-      <description>手绘凯尔特结 钢笔画 不知什么动物 长颈鹿或餐叉 耳机 樱桃 猫 头骨 黑洞 几何 其他</description>
-    </item>
-    
-    <item>
-      <title>永远是这样</title>
-      <link>https://ijunjie.github.io/post/myworks/always-like-this/</link>
-      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/myworks/always-like-this/</guid>
-      <description>永远是这样 风后面是风 天空上面是天空 道路前面还是道路</description>
-    </item>
-    
-    <item>
-      <title>网关和点对点，谁是反模式？</title>
-      <link>https://ijunjie.github.io/post/programming/api-gw-p2p/</link>
-      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/api-gw-p2p/</guid>
-      <description>有的观点认为，点对点是反模式，也有人认为网关才是反模式。 李艳鹏在《分布式服务架构：原理、设计与实战》中认为，网关是反模式，因为网关会成为性能</description>
     </item>
     
   </channel>
