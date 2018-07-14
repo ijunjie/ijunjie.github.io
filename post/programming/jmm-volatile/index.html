@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-cn" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>浅谈 JMM 和 volatile - Wang Junjie</title>
+  <link rel="alternate" hreflang="zh-cn" href="https://ijunjie.github.io/" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Wang Junjie" />
+  <meta name="description" content="并发世界有两大阵营，共享内存和消息通信。前者以 JMM 为代表，后者以 Actor 模型为代表。本篇将整理总结 JMM 相关知识并全面梳理 volatile；关于 Actor 模型，" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.44" />
+
+
+<link rel="canonical" href="https://ijunjie.github.io/post/programming/jmm-volatile/" />
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+<link href="/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="浅谈 JMM 和 volatile" />
+<meta property="og:description" content="并发世界有两大阵营，共享内存和消息通信。前者以 JMM 为代表，后者以 Actor 模型为代表。本篇将整理总结 JMM 相关知识并全面梳理 volatile；关于 Actor 模型，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ijunjie.github.io/post/programming/jmm-volatile/" />
+
+
+
+<meta property="article:published_time" content="2018-06-03T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-06-03T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="浅谈 JMM 和 volatile">
+<meta itemprop="description" content="并发世界有两大阵营，共享内存和消息通信。前者以 JMM 为代表，后者以 Actor 模型为代表。本篇将整理总结 JMM 相关知识并全面梳理 volatile；关于 Actor 模型，">
+
+
+<meta itemprop="datePublished" content="2018-06-03T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-06-03T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="2314">
+
+
+
+<meta itemprop="keywords" content="arch,jvm," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="浅谈 JMM 和 volatile"/>
+<meta name="twitter:description" content="并发世界有两大阵营，共享内存和消息通信。前者以 JMM 为代表，后者以 Actor 模型为代表。本篇将整理总结 JMM 相关知识并全面梳理 volatile；关于 Actor 模型，"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Wang Junjie</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://ijunjie.github.io/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://ijunjie.github.io/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://ijunjie.github.io/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://ijunjie.github.io/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://ijunjie.github.io/about/">About</a>
+          
+        
+      </li>
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Wang Junjie
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://ijunjie.github.io/">Home</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://ijunjie.github.io/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://ijunjie.github.io/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://ijunjie.github.io/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://ijunjie.github.io/about/">About</a>
+          
+
+        
+
+      </li>
+    
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">浅谈 JMM 和 volatile</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 2018-06-03 </span>
+        <div class="post-category">
+            
+              <a href="/categories/programming/"> programming </a>
+            
+          </div>
+        <span class="more-meta"> 约 2314 字 </span>
+        <span class="more-meta"> 预计阅读 5 分钟 </span>
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#jmm">JMM</a>
+<ul>
+<li><a href="#main-memory-local-memory">Main Memory &amp; Local Memory</a></li>
+<li><a href="#三大特性-atomicity-visibility-ordering">三大特性：Atomicity, Visibility, Ordering</a></li>
+<li><a href="#happens-before-原则">happens-before 原则</a></li>
+</ul></li>
+<li><a href="#volatile">volatile</a>
+<ul>
+<li><a href="#volatile-的意义">volatile 的意义</a></li>
+<li><a href="#volatile-是通过内存屏障实现的">volatile 是通过内存屏障实现的</a></li>
+<li><a href="#应用场景">应用场景</a></li>
+<li><a href="#volatile-使用优化">volatile 使用优化</a></li>
+<li><a href="#jsr-133-对-volatile-的增强">JSR-133 对 volatile 的增强</a></li>
+<li><a href="#volatile-与锁">volatile 与锁</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<p>并发世界有两大阵营，共享内存和消息通信。前者以 JMM 为代表，后者以 Actor 模型为代表。本篇将整理总结 JMM 相关知识并全面梳理 volatile；关于 Actor 模型，后续会探讨。</p>
+
+<h2 id="jmm">JMM</h2>
+
+<p>Java 从 1.5 开始采用新的 JSR-133 JMM. JSR-133 主要修复了一些 bug, 增强了 volatile 和 final 等关键字的内存语义。</p>
+
+<p>JMM 主要有以下内容：</p>
+
+<ul>
+<li>逻辑划分：Main Memory 和 Local Memory</li>
+<li>三大特性：Atomicity, Visibility, Ordering</li>
+<li>happens-bofore 原则</li>
+</ul>
+
+<h3 id="main-memory-local-memory">Main Memory &amp; Local Memory</h3>
+
+<p>Java 的并发是通过共享内存实现的，确切地说这里的内存就是主内存，每个线程有自己的工作内存(Local Memory)，<strong>Local Memory 是逻辑上的概念，并不是真实存在的，对应于 CPU 高速缓存或者寄存器，保存了该线程使用的变量的主内存副本拷贝</strong>。CPU 高速缓存之间的一致性的问题是通过 MESI 协议解决的，另外还有 cpu false-sharing 问题，请参考笔者另一篇博文: <a href="https://ijunjie.github.io/post/arch/cpu-false-sharing/">CPU 伪共享问题</a>。</p>
+
+<p>线程只能直接操作工作内存中的变量，不同线程之间的变量值传递需要通过主内存来完成。</p>
+
+<p>Java 内存模型定义了 8 个操作来完成主内存和工作内存的交互操作。</p>
+
+<ul>
+<li>read：把一个变量的值从主内存传输到工作内存中</li>
+<li>load：在 read 之后执行，把 read 得到的值放入工作内存的变量副本中</li>
+<li>use：把工作内存中一个变量的值传递给执行引擎</li>
+<li>assign：把一个从执行引擎接收到的值赋给工作内存的变量</li>
+<li>store：把工作内存的一个变量的值传送到主内存中</li>
+<li>write：在 store 之后执行，把 store 得到的值放入主内存的变量中</li>
+<li>lock：作用于主内存的变量</li>
+<li>unlock</li>
+</ul>
+
+<h3 id="三大特性-atomicity-visibility-ordering">三大特性：Atomicity, Visibility, Ordering</h3>
+
+<p><strong>Atomicity</strong></p>
+
+<p>Java 内存模型保证了 read、load、use、assign、store、write、lock 和 unlock 操作具有原子性，例如对一个 int 类型的变量执行 assign 赋值操作，这个操作就是原子性的。但是 Java 内存模型允许虚拟机将没有被 volatile 修饰的 64 位数据（long，double）的读写操作划分为两次 32 位的操作来进行，即 load、store、read 和 write 操作可以不具备原子性。</p>
+
+<p>可以使用原子类和 synchronized 来保证原子性。</p>
+
+<p><strong>Visibility</strong></p>
+
+<p>可见性指当一个线程修改了共享变量的值，其它线程能够立即得知这个修改。Java 内存模型是通过在变量修改后将新值同步回主内存，在变量读取前从主内存刷新变量值来实现可见性的。</p>
+
+<ul>
+<li>volatile 可保证可见性。关于 volatile 后文会详述。</li>
+<li>synchronized 也能够保证可见性，对一个变量执行 unlock 操作之前，必须把变量值同步回主内存。</li>
+<li>final 关键字也能保证可见性：被 final 关键字修饰的字段在构造器中一旦初始化完成，并且没有发生 this 逃逸（其它线程可以通过 this 引用访问到初始化了一半的对象），那么其它线程就能看见 final 字段的值。</li>
+</ul>
+
+<p><strong>Ordering</strong></p>
+
+<p>有序性是指：在本线程内观察，所有操作都是有序的。在一个线程观察另一个线程，所有操作都是无序的，无序是因为发生了指令重排序。</p>
+
+<p>在 Java 内存模型中，允许编译器和处理器对指令进行重排序，重排序过程不会影响到单线程程序的执行，却会影响到多线程并发执行的正确性。</p>
+
+<p><strong>volatile 关键字通过添加内存屏障的方式来禁止指令重排</strong>，即重排序时不能把后面的指令放到内存屏障之前。</p>
+
+<p>也可以通过 synchronized 来保证有序性，它保证每个时刻只有一个线程执行同步代码，相当于是让线程顺序执行同步代码。</p>
+
+<h3 id="happens-before-原则">happens-before 原则</h3>
+
+<p>一般认为这个原则是针对 JMM 的有序性，但也可以理解为针对可见性。因为可见性和有序性是紧密相连的。</p>
+
+<p>happens-before 原则可以看作是 JVM 规范对开发者的承诺，用于增强开发者编写并发程序的信心。凡是不符合 happens-before 原则的，都有可能发生指令重排。</p>
+
+<p>共有 8 条原则，为了便于理解，笔者将其分为两组，线程和锁相关占了 5 条，剩余为对象终结原则、传递性和 volatile 等几个原则。</p>
+
+<p>第一组：</p>
+
+<ul>
+<li>Single Thread rule，在一个线程内，在程序前面的操作先行发生于后面的操作。</li>
+<li>Thread Start Rule，Thread 对象的 start() 方法调用先行发生于此线程的每一个动作。</li>
+<li>Thread Join Rule，join() 方法返回先行发生于 Thread 对象的结束。</li>
+<li>Thread Interruption Rule，对线程 interrupt() 方法的调用先行发生于被中断线程的代码检测到中断事件的发生，可以通过 Thread.interrupted() 方法检测到是否有中断发生。</li>
+<li>Monitor Lock Rule，一个 unlock 操作先行发生于后面对同一个锁的 lock 操作。</li>
+</ul>
+
+<p>第二组：</p>
+
+<ul>
+<li>Finalizer Rule，一个对象的初始化完成（构造函数执行结束）先行发生于它的 finalize() 方法的开始。</li>
+<li>Transitivity, 如果操作 A 先行发生于操作 B，操作 B 先行发生于操作 C，那么操作 A 先行发生于操作 C。</li>
+<li>Volatile Variable Rule，对一个 volatile 变量的写操作先行发生于后面对这个变量的读操作。</li>
+</ul>
+
+<h2 id="volatile">volatile</h2>
+
+<p>关于 volatile 有如下内容：</p>
+
+<ul>
+<li>volatile 的两个意义：可见性和有序性</li>
+<li>volatile 底层是通过内存屏障实现的</li>
+<li>应用场景：状态判断和 DCL</li>
+<li>volatile 的使用优化：cpu false-sharing 问题，字节填充解决方案等</li>
+<li>JSR-133 对 volatile 的语义增强</li>
+<li>volatile 与锁</li>
+</ul>
+
+<p>以上几个方面应该是比较全面的关于 volatile 的知识了。下面是每一点的简要讲解。</p>
+
+<h3 id="volatile-的意义">volatile 的意义</h3>
+
+<p>上文已提到 JMM 有三个特性：原子性、可见性、有序性。volatile 首先可以保证可见性。一个线程对变量的修改会回写到主存中，被另一个线程看到。其次，volatile 可以保证有序性，禁止指令重排，屏蔽 JVM 的优化。</p>
+
+<h3 id="volatile-是通过内存屏障实现的">volatile 是通过内存屏障实现的</h3>
+
+<p>volatile 关键字通过添加内存屏障的方式来禁止指令重排，即重排序时不能把后面的指令放到内存屏障之前。</p>
+
+<h3 id="应用场景">应用场景</h3>
+
+<p>主要用于状态判断和 DCL.</p>
+
+<p>DCL 之所以用 volatile 实际与单例模式没有实质关系。如果没有 volatile 且单例对象还有其他属性，则初始化的可见性得不到保证。一个线程对单例的初始化可能不会被另一个线程看到。</p>
+
+<h3 id="volatile-使用优化">volatile 使用优化</h3>
+
+<p>使用 volatile 时要注意 cpu false-sharing 问题。多个 CPU 核心的高速缓存之间通过 MESI 协议保证一致性。高速缓存以行为单位。当多个不同线程分别独立操作不同变量时，这些不同变量可能位于同一个高速缓存行中，一个变量的修改导致一个缓存行失效，影响另一个变量。这就是 cpu false-sharing 问题。这个问题是编程中真实存在的问题。</p>
+
+<p>解决方法有两个：一是通过填充字节确保 volatile 变量占用整个缓存行；二是使用 Java 8 的 Contended 注解，不要忘记使用 JVM 参数配合之。</p>
+
+<h3 id="jsr-133-对-volatile-的增强">JSR-133 对 volatile 的增强</h3>
+
+<p>旧的模型允许 volatile 和普通变量重排序，JSR-133 做了限制。</p>
+
+<h3 id="volatile-与锁">volatile 与锁</h3>
+
+<p>功能上，锁比 volatile 更强大；可伸缩性和执行性能上，volatile 更有优势。</p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Wang Junjie</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-06-03</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/arch/">arch</a>
+          
+          <a href="/tags/jvm/">jvm</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/reading/lenin/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">20世纪俄国三次革命所证实的一条基本规律</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/life/trump/">
+            <span class="next-text nav-default">特金会</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  <div class="post bg-white">
+      <div id="comments-gitment"></div>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js" crossorigin="anonymous"></script>
+      <script type="text/javascript">
+      const gitment = new Gitment({
+        id: 'jmm-volatile.md',
+        title: '浅谈 JMM 和 volatile',
+        link: decodeURI(location.href),
+        desc: '并发世界有两大阵营，共享内存和消息通信。前者以 JMM 为代表，后者以 Actor 模型为代表。本篇将整理总结 JMM 相关知识并全面梳理 volatile；关于 Actor 模型，',
+        owner: 'ijunjie',
+        repo: 'blog-gitment',
+        oauth: {
+          client_id: '1554b4f2b80abedeb1fe',
+          client_secret: '8c203d8374520b8871e4c0b1b309bcf77bd369fe'
+        }
+      })
+      gitment.render('comments-gitment')
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+    </div>
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wang-junjie@outlook.com" rel="me noopener" class="iconfont icon-email"
+        title="email" target="_blank">
+      </a>
+      <a href="https://github.com/ijunjie" rel="me noopener" class="iconfont icon-github"
+        title="github" target="_blank">
+      </a>
+  <a href="https://ijunjie.github.io/index.xml" rel="noopener" type="application/rss+xml" class="iconfont icon-rss"
+    title="rss" target="_blank">
+  </a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span><span class="author">Wang Junjie</span></span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+</body>
+</html>

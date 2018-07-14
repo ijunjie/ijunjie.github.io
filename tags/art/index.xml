@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Art on Wang Junjie</title>
+    <link>https://ijunjie.github.io/tags/art/</link>
+    <description>Recent content in Art on Wang Junjie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 23 Jun 2018 10:21:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://ijunjie.github.io/tags/art/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>素描的意义</title>
+      <link>https://ijunjie.github.io/post/reading/sketch/</link>
+      <pubDate>Sat, 23 Jun 2018 10:21:30 +0800</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/reading/sketch/</guid>
+      <description>素描的独特之处 意大利文艺复兴时期的绘画作品前无古人，后无来者，凝聚着大师的全部智慧和技法。一个普通人要欣赏一幅文艺复兴时期的绘画作品，仅靠一</description>
+    </item>
+    
+    <item>
+      <title>The Meaning of Art</title>
+      <link>https://ijunjie.github.io/post/reading/the-meaning-of-art/</link>
+      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/reading/the-meaning-of-art/</guid>
+      <description>最近在读《艺术的真谛》一书，中国人民大学出版社，2004 年 4 月第 1 版。作者在书中有很多关于艺术与美学的独到的见解，但也有很多问题阐述不够集中</description>
+    </item>
+    
+    <item>
+      <title>线条与透视</title>
+      <link>https://ijunjie.github.io/post/reading/chinese-painting-puzzle/</link>
+      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/reading/chinese-painting-puzzle/</guid>
+      <description>最近读了一本赫伯特·里德的 The Meaning of Art，中文译作“艺术的真谛”，这个翻译不信、不达、不雅，让人感觉很不爽。里面提到一些有趣的问题，比如接下来</description>
+    </item>
+    
+  </channel>
+</rss>

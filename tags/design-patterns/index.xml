@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design Patterns on Wang Junjie</title>
+    <link>https://ijunjie.github.io/tags/design-patterns/</link>
+    <description>Recent content in Design Patterns on Wang Junjie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 19 May 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://ijunjie.github.io/tags/design-patterns/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>浅谈设计模式</title>
+      <link>https://ijunjie.github.io/post/programming/design-patterns/</link>
+      <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/programming/design-patterns/</guid>
+      <description>推荐一个极好的设计模式学习网站 http://java-design-patterns.com/. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900+. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式</description>
+    </item>
+    
+    <item>
+      <title>动态代理和 AOP</title>
+      <link>https://ijunjie.github.io/post/programming/dynamic-proxy-aop/</link>
+      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/programming/dynamic-proxy-aop/</guid>
+      <description>JDK 动态代理创建时比较快，运行时较慢；CGlib 动态代理正好相反，创建时慢，运行时快。一般选择在系统初始化时，使用 CGlib 代理，并托管到 ApplicationContext 中。代理模</description>
+    </item>
+    
+    <item>
+      <title>openstack4j 中的依赖管理</title>
+      <link>https://ijunjie.github.io/post/programming/openstack4j-dependencies/</link>
+      <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/programming/openstack4j-dependencies/</guid>
+      <description>openstack4j 简介 openstack4j 是一个使用 Java 编写的开源 OpenStack SDK. 源码地址： https://github.com/ContainX/openstack4j.git 依赖管理 openstack4j 并没有采用第三方的 IoC 实现，如 Guice 等，而是使用很少的代码实现了简单、易用的依赖管理。 SPI SPI</description>
+    </item>
+    
+  </channel>
+</rss>
