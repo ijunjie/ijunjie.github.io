@@ -434,20 +434,20 @@
 </span><span class="cm"> */</span>
 <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">APIProvider</span> <span class="o">{</span>
 
-	<span class="cm">/**
-</span><span class="cm">	 * Called after the APIProvider is constructed.  This allows the provider to pre-initialize or bind any interface implementations if desired
-</span><span class="cm">	 */</span>
-	<span class="kt">void</span> <span class="nf">initialize</span><span class="o">();</span>
-	
-	<span class="cm">/**
-</span><span class="cm">	 * Gets the implementation for the specified interface type
-</span><span class="cm">	 *
-</span><span class="cm">	 * @param &lt;T&gt; the Openstack4j API type
-</span><span class="cm">	 * @param api the API interface
-</span><span class="cm">	 * @return the implementation for T
-</span><span class="cm">	 * @throws ApiNotFoundException if the API cannot be found
-</span><span class="cm">	 */</span>
-	<span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">T</span> <span class="nf">get</span><span class="o">(</span><span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">api</span><span class="o">);</span>
+    <span class="cm">/**
+</span><span class="cm">     * Called after the APIProvider is constructed.  This allows the provider to pre-initialize or bind any interface implementations if desired
+</span><span class="cm">     */</span>
+    <span class="kt">void</span> <span class="nf">initialize</span><span class="o">();</span>
+    
+    <span class="cm">/**
+</span><span class="cm">     * Gets the implementation for the specified interface type
+</span><span class="cm">     *
+</span><span class="cm">     * @param &lt;T&gt; the Openstack4j API type
+</span><span class="cm">     * @param api the API interface
+</span><span class="cm">     * @return the implementation for T
+</span><span class="cm">     * @throws ApiNotFoundException if the API cannot be found
+</span><span class="cm">     */</span>
+    <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">T</span> <span class="nf">get</span><span class="o">(</span><span class="n">Class</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">api</span><span class="o">);</span>
 <span class="o">}</span></code></pre></td></tr></table>
 </div>
 </div>
@@ -675,10 +675,10 @@
       <a href="https://github.com/ijunjie" rel="me noopener" class="iconfont icon-github"
         title="github" target="_blank">
       </a>
-  <a href="https://ijunjie.github.io/index.xml" rel="noopener" type="application/rss+xml" class="iconfont icon-rss"
+  <a href="https://ijunjie.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml" class="iconfont icon-rss"
     title="rss" target="_blank">
   </a>
-</div>
+  </div>
 
 <div class="copyright">
   <span class="power-by">
@@ -698,6 +698,7 @@
       <i class="iconfont icon-heart"></i>
     </span><span class="author">Wang Junjie</span></span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
