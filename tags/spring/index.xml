@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring on Wang Junjie</title>
+    <link>https://ijunjie.github.io/tags/spring/</link>
+    <description>Recent content in Spring on Wang Junjie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 29 Jul 2018 13:04:35 +0800</lastBuildDate>
+    
+	<atom:link href="https://ijunjie.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spring Thread Pool</title>
+      <link>https://ijunjie.github.io/post/programming/spring-thread-pool/</link>
+      <pubDate>Sun, 29 Jul 2018 13:04:35 +0800</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/programming/spring-thread-pool/</guid>
+      <description>Spring 的 ThreadPoolTaskExecutor 对 JDK 的 ThreadPoolExecutor 做了很多封装，使用较为简单。 一个显著区别是，Spring 的 ThreadPoolTaskExecutor 不能 shutdown，也不能 awaitTermination. 这是因为 ThreadPoolTaskExecutor 是公用的。 Spring 中配置线程池 Bean</description>
+    </item>
+    
+  </channel>
+</rss>

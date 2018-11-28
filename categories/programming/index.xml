@@ -6,10 +6,19 @@
     <description>Recent content in Programming on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 09 Jul 2018 22:04:28 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 29 Jul 2018 13:04:35 +0800</lastBuildDate>
     
 	<atom:link href="https://ijunjie.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring Thread Pool</title>
+      <link>https://ijunjie.github.io/post/programming/spring-thread-pool/</link>
+      <pubDate>Sun, 29 Jul 2018 13:04:35 +0800</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/programming/spring-thread-pool/</guid>
+      <description>Spring 的 ThreadPoolTaskExecutor 对 JDK 的 ThreadPoolExecutor 做了很多封装，使用较为简单。 一个显著区别是，Spring 的 ThreadPoolTaskExecutor 不能 shutdown，也不能 awaitTermination. 这是因为 ThreadPoolTaskExecutor 是公用的。 Spring 中配置线程池 Bean</description>
+    </item>
     
     <item>
       <title>Apache Kylin 单实例部署</title>
@@ -180,15 +189,6 @@
       
       <guid>https://ijunjie.github.io/post/programming/fp-paradigm/</guid>
       <description>当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&amp;hellip; (请自动脑补标签云图&amp;hellip;) 几年前我在在部门内部做了一次函数式编程</description>
-    </item>
-    
-    <item>
-      <title>openstack4j 中的依赖管理</title>
-      <link>https://ijunjie.github.io/post/programming/openstack4j-dependencies/</link>
-      <pubDate>Mon, 23 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/openstack4j-dependencies/</guid>
-      <description>openstack4j 简介 openstack4j 是一个使用 Java 编写的开源 OpenStack SDK. 源码地址： https://github.com/ContainX/openstack4j.git 依赖管理 openstack4j 并没有采用第三方的 IoC 实现，如 Guice 等，而是使用很少的代码实现了简单、易用的依赖管理。 SPI SPI</description>
     </item>
     
   </channel>

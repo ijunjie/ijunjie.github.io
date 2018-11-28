@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ijunjie.github.io/post/programming/spring-thread-pool/</loc>
+    <lastmod>2018-07-29T13:04:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/post/life/houhai/</loc>
     <lastmod>2018-07-09T22:37:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -465,14 +472,14 @@
   
   <url>
     <loc>https://ijunjie.github.io/post/</loc>
-    <lastmod>2018-07-09T22:37:32+08:00</lastmod>
+    <lastmod>2018-07-29T13:04:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ijunjie.github.io/categories/programming/</loc>
-    <lastmod>2018-07-09T22:04:28+08:00</lastmod>
+    <lastmod>2018-07-29T13:04:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -480,6 +487,13 @@
   <url>
     <loc>https://ijunjie.github.io/categories/reading/</loc>
     <lastmod>2018-07-08T17:22:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ijunjie.github.io/tags/spring/</loc>
+    <lastmod>2018-07-29T13:04:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -499,8 +513,15 @@
   </url>
   
   <url>
+    <loc>https://ijunjie.github.io/tags/threadpool/</loc>
+    <lastmod>2018-07-29T13:04:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ijunjie.github.io/</loc>
-    <lastmod>2018-07-09T22:37:32+08:00</lastmod>
+    <lastmod>2018-07-29T13:04:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
