@@ -17,7 +17,7 @@
       <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/recursive-list/</guid>
-      <description>使用模式匹配和递归实现 List，不考虑栈溢出的问题。 由于 Java 没有模式匹配，没有 sealed 关键字，也不支持协变，采用 FP 思想实现 List 有些不便，但好在新版 Java 的</description>
+      <description>使用模式匹配和递归实现 List，不考虑栈溢出的问题。 与 Scala 相比，Java 没有模式匹配，没有 sealed，不支持协变，只能利用 interface 的 static 和 default 关键字，</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@
       <pubDate>Thu, 26 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/fp-basic/</guid>
-      <description>本篇是《浅谈函数式编程》的下篇，主要讲解一些重要的函数式编程概念。上篇主要介绍编程范式： 浅谈函数式编程-上篇：编程范式 导读：阅读本篇前，请思</description>
+      <description>本篇是《浅谈函数式编程》的下篇，主要讲解一些重要的函数式编程概念。 导读 导读：阅读本篇前，请思考如下问题： 函数式编程中如何从形式上消除结构化编</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@
       <pubDate>Tue, 24 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/fp-paradigm/</guid>
-      <description>当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&amp;hellip; (请自动脑补标签云图&amp;hellip;) 几年前我在在部门内部做了一次函数式编程</description>
+      <description>当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&amp;hellip; 本篇是《浅谈函数式编程》的上篇，主要讲述编程范式，作为入门函数式编程必要的背</description>
     </item>
     
     <item>
@@ -62,7 +62,7 @@
       <pubDate>Sun, 22 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/ramda/</guid>
-      <description>Ramda是什么 Ramda的官方文档中文版：Ramda 简介 阮一峰也曾以他一贯的通俗易懂的风格写过一篇介绍： Ramda 函数库参考教程 柯里化 关于什么是柯</description>
+      <description>Ramda是什么 Ramda的官方文档中文版：Ramda 简介 阮一峰： Ramda 函数库参考教程 柯里化 爱上柯里化 为什么柯里化有帮助 正如其他FP语言一样，R</description>
     </item>
     
   </channel>

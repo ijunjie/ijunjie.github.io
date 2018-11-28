@@ -2,9 +2,9 @@
 <html lang="zh-cn" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>浅谈函数式编程（上）：编程范式 - Wang Junjie</title>
-  <link rel="alternate" hreflang="zh-cn" href="https://ijunjie.github.io/" />
+  
 
 <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -14,8 +14,6 @@
 
 
 <meta name="applicable-device" content="pc,mobile">
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 <meta name="theme-color" content="#f8f5ec" />
 <meta name="msapplication-navbutton-color" content="#f8f5ec">
@@ -25,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Wang Junjie" />
-  <meta name="description" content="当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&amp;hellip; (请自动脑补标签云图&amp;hellip;) 几年前我在在部门内部做了一次函数式编程" />
+  <meta name="description" content="当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&amp;hellip; 本篇是《浅谈函数式编程》的上篇，主要讲述编程范式，作为入门函数式编程必要的背" />
 
 
 
@@ -33,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.44" />
+<meta name="generator" content="Hugo 0.51" />
 
 
 <link rel="canonical" href="https://ijunjie.github.io/post/programming/fp-paradigm/" />
@@ -51,46 +49,33 @@
 
 
 
-<link href="/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+
+<link rel="stylesheet" href="/sass/jane.min.aaf3394fc81ccb6f6fe3fe458d1f5b61c39f151e44df83baaf1d7b3775a8b98d.css" integrity="sha256-qvM5T8gcy29v4/5FjR9bYcOfFR5E34O6rx17N3WouY0=" media="screen">
+
 
 
 
 
 <meta property="og:title" content="浅谈函数式编程（上）：编程范式" />
-<meta property="og:description" content="当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&hellip; (请自动脑补标签云图&hellip;) 几年前我在在部门内部做了一次函数式编程" />
+<meta property="og:description" content="当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&hellip; 本篇是《浅谈函数式编程》的上篇，主要讲述编程范式，作为入门函数式编程必要的背" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ijunjie.github.io/post/programming/fp-paradigm/" />
-
-
-
-<meta property="article:published_time" content="2018-04-24T00:00:00&#43;00:00"/>
-
+<meta property="og:url" content="https://ijunjie.github.io/post/programming/fp-paradigm/" /><meta property="article:published_time" content="2018-04-24T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-04-24T00:00:00&#43;00:00"/>
 
-
-
-
-
-
-
-
-
-
-
 <meta itemprop="name" content="浅谈函数式编程（上）：编程范式">
-<meta itemprop="description" content="当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&hellip; (请自动脑补标签云图&hellip;) 几年前我在在部门内部做了一次函数式编程">
+<meta itemprop="description" content="当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&hellip; 本篇是《浅谈函数式编程》的上篇，主要讲述编程范式，作为入门函数式编程必要的背">
 
 
 <meta itemprop="datePublished" content="2018-04-24T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-04-24T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="4425">
+<meta itemprop="wordCount" content="4324">
 
 
 
 <meta itemprop="keywords" content="fp," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="浅谈函数式编程（上）：编程范式"/>
-<meta name="twitter:description" content="当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&hellip; (请自动脑补标签云图&hellip;) 几年前我在在部门内部做了一次函数式编程"/>
+<meta name="twitter:description" content="当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&hellip; 本篇是《浅谈函数式编程》的上篇，主要讲述编程范式，作为入门函数式编程必要的背"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -233,7 +218,8 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     
-      <li class="menu-item">
+    
+        <li class="menu-item">
         
           
           
@@ -244,7 +230,7 @@
 
       </li>
     
-      <li class="menu-item">
+        <li class="menu-item">
         
           
           
@@ -255,7 +241,7 @@
 
       </li>
     
-      <li class="menu-item">
+        <li class="menu-item">
         
           
           
@@ -266,7 +252,7 @@
 
       </li>
     
-      <li class="menu-item">
+        <li class="menu-item">
         
           
           
@@ -277,7 +263,7 @@
 
       </li>
     
-      <li class="menu-item">
+        <li class="menu-item">
         
           
           
@@ -304,13 +290,21 @@
       <h1 class="post-title">浅谈函数式编程（上）：编程范式</h1>
       
       <div class="post-meta">
-        <span class="post-time"> 2018-04-24 </span>
+        <time datetime="2018-04-24" class="post-time">
+          2018-04-24
+        </time>
         <div class="post-category">
             <a href="https://ijunjie.github.io/categories/programming/"> programming </a>
             
           </div>
-        <span class="more-meta"> 约 4425 字 </span>
-        <span class="more-meta"> 预计阅读 9 分钟 </span>
+        <span class="more-meta"> 约 4324 字 </span>
+          <span class="more-meta"> 预计阅读 9 分钟 </span>
+
+        
+        
+
+        
+        
       </div>
     </header>
 
@@ -368,17 +362,22 @@
 <p>map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&hellip;</p>
 </blockquote>
 
-<p>(请自动脑补标签云图&hellip;)</p>
+<p>本篇是《浅谈函数式编程》的上篇，主要讲述编程范式，作为入门函数式编程必要的背景知识；下篇按照由浅入深的顺序介绍函数式编程的一些基本的概念。</p>
 
-<p>几年前我在在部门内部做了一次函数式编程的培训。本文便是在培训讲义的基础上整理修订而成。</p>
-
-<p>《浅谈函数式编程》分为上下两篇：上篇主要讲述编程范式，作为入门函数式编程必要的背景知识；下篇按照由浅入深的顺序介绍函数式编程的一些基本的概念。</p>
-
-<p>函数式编程中的很多概念比较抽象，不易理解；部分概念还会涉及到一些数学理论和PL领域的知识。因本人能力一般、水平有限，本文不会纠结于高深的理论，而是遵循实用的原则，以代码示例对一些概念做通俗易懂的解释，目的是使大家对函数式编程有正确的、基本的认识。</p>
+<p>函数式编程中的很多概念比较抽象，不易理解；部分概念还会涉及到一些数学理论和 PL 领域的知识。《浅谈函数式编程》将遵循实用的原则，以代码示例对一些常见概念做简明、通俗的解释，使大家对函数式编程有正确的、基本的认识。</p>
 
 <p>上篇编程范式部分主要参考了<strong>郑晖</strong>的《冒号课堂：编程范式与OOP思想》，电子工业出版社。这本书气象宏大，体例独特，有些观点可能具有争议性，但不可否认它是一本极富启发性的书。本文中关于编程范式的一些论述，基本采用了这本书中观点。</p>
 
-<p>导读：阅读本篇前，可以先思考如下问题：</p>
+<div class="shortcode-notice tip">
+  <div class="shortcode-notice-title tip">
+    
+      导读
+    
+  </div>
+  <p>阅读本篇前，可以先思考如下问题：</p>
+
+</div>
+
 
 <ol>
 <li>编程范式是什么，三大核心编程范式有哪些？</li>
@@ -393,7 +392,7 @@
 
 <h3 id="编程范式的地位">编程范式的地位</h3>
 
-<p>编程范式的地位经常受到忽视。在IT世界中，数据结构和算法、操作系统、网络、数据库、分布式系统、架构与设计无疑具有非常重要的地位。要在这些领域有所成就，离不开大量的编程实践。而在编程实践活动中，程序员总是自觉或不自觉地采用某种世界观和方法论，这种世界观和方法论实际就是<strong>编程范式</strong>。</p>
+<p>编程范式的地位经常受到忽视。在IT世界中，数据结构和算法、操作系统、网络、数据库、分布式系统、架构与设计无疑具有非常重要的地位。要在这些领域有所成就，离不开大量的编程实践。而<strong>在编程实践活动中，程序员总是自觉或不自觉地采用某种世界观和方法论，这种世界观和方法论实际就是编程范式</strong>。</p>
 
 <p>编程范式是编程的心法，体现了一个人的思维方式；不同编程范式在不同语言中体现为<strong>编程风格</strong>的不同。</p>
 
@@ -401,9 +400,16 @@
 
 <p>范式译自因为的 <code>paradigm</code>, 也译作“典范”、“范型”、“范例”。</p>
 
-<blockquote>
-<p>编程范式（programming paradigm）指的是计算机编程的基本风格或典范模式</p>
-</blockquote>
+<div class="shortcode-notice tip">
+  <div class="shortcode-notice-title tip">
+    
+      编程范式
+    
+  </div>
+  <p>编程范式（programming paradigm）指的是计算机编程的基本风格或典范模式</p>
+
+</div>
+
 
 <p>可以说，编程范式是构建虚拟世界的世界观和方法论。</p>
 
@@ -514,7 +520,7 @@
 
 <p>命令式编程的方法论：用变量存储数据，用语句执行命令。</p>
 
-<p>BTW，有没有非命令式的机器语言？理论上是有的。只能存在于非冯诺依曼机上，如数据流机、归约机。</p>
+<p>那么，有没有非命令式的机器语言？理论上是有的。只能存在于非冯诺依曼机上，如数据流机、归约机。</p>
 
 <h3 id="过程式编程">过程式编程</h3>
 
@@ -524,19 +530,31 @@
 
 <p>结构化编程（Structured Programming）是一种编程原则，是在过程式基础上发展起来的。</p>
 
-<blockquote>
-<p>结构化定理：任何程序都可以用<strong>顺序（concatenation）</strong>、<strong>选择（selection）</strong>和<strong>循环（repetition）</strong>三种<strong>基本控制结构</strong>来表示。</p>
-</blockquote>
+<div class="shortcode-notice tip">
+  <div class="shortcode-notice-title tip">
+    
+      结构化定理
+    
+  </div>
+  <p>结构化定理：任何程序都可以用<strong>顺序（concatenation）</strong>、<strong>选择（selection）</strong>和<strong>循环（repetition）</strong>三种<strong>基本控制结构</strong>来表示。</p>
 
-<p>结构化定理具有非常重要的意义。稍微具备计算机编程基础的人对此都不会感到陌生。</p>
+</div>
 
-<p>结构化编程还有一个SESE原则，即Single Entry, Single Exit. 顺序、选择、循环每个基本结构都要满足这个单入口、单出口的原则。（这个原则实际上是模拟了电路设计。）</p>
 
-<p>结构化编程的总结：</p>
+<p>结构化定理具有非常重要的意义。具备计算机编程基础的人对此都不会感到陌生。</p>
 
-<blockquote>
-<p>微观上要求循规蹈矩，采用顺序、选择和循环；宏观上要求自顶向下设计，通过模块化将复杂系统分解为多个子系统，最终分解为三种基本结构。</p>
-</blockquote>
+<p>结构化编程还有一个 SESE 原则，即Single Entry, Single Exit. 顺序、选择、循环每个基本结构都要满足这个单入口、单出口的原则。（这个原则实际上是模拟了电路设计。）</p>
+
+<div class="shortcode-notice tip">
+  <div class="shortcode-notice-title tip">
+    
+      结构化编程
+    
+  </div>
+  <p>微观上要求循规蹈矩，采用顺序、选择和循环；宏观上要求自顶向下设计，通过模块化将复杂系统分解为多个子系统，最终分解为三种基本结构。</p>
+
+</div>
+
 
 <h2 id="声明式编程">声明式编程</h2>
 
@@ -582,7 +600,16 @@
 <li>从编程语言上看，这两种范式相互影响、相互渗透；近年来偏向命令式的语言逐渐开始支持声明特性</li>
 </ul>
 
-<p>BTW，广义的声明式语言其实很常见，如SQL，HTML，SVG，CSS，但他们并非图灵完备，不具有通用性。然而从工程角度看图灵完备与否，对工程本身意义不大。</p>
+<div class="shortcode-notice tip">
+  <div class="shortcode-notice-title tip">
+    
+      声明式语言
+    
+  </div>
+  <p>广义的声明式语言其实很常见，如SQL，HTML，SVG，CSS，但他们并非图灵完备，不具有通用性。然而从工程角度看图灵完备与否，对工程本身意义不大。</p>
+
+</div>
+
 
 <p>下面通过一个简单的 Python 的例子，演示命令式和声明式的特点。</p>
 
@@ -703,7 +730,18 @@
 
 <p>不知识是否留意到，上面的图中 OOP 哪里去了？</p>
 
-<p>答案是 OOP 和它们不在一个范畴，简单讲，没什么关系。严格讲，是<strong>正交</strong>的关系。（数学上把两个相互垂直的向量称作正交。在计算机领域，两个组件如果互相没有什么影响，就可以称作是正交的。）</p>
+<p>答案是 OOP 和它们不在一个范畴，简单讲，没什么关系。严格讲，是<strong>正交</strong>的关系。</p>
+
+<div class="shortcode-notice tip">
+  <div class="shortcode-notice-title tip">
+    
+      正交
+    
+  </div>
+  <p>数学上把两个相互垂直的向量称作正交。在计算机领域，两个组件如果互相没有什么影响，就可以称作是正交的。</p>
+
+</div>
+
 
 <p>纯粹的OOP是不存在的，必须结合其他范式而存在。OOP虽然是从命令式发展而来，但这只是历史事实（可能带有某种历史上的必然性），但OOP的思想并不是跟命令式绑定的，也可以应用到函数式编程。</p>
 
@@ -808,10 +846,6 @@
 </blockquote>
 
 
-<hr />
-
-<p>续： <a href="https://ijunjie.github.io/post/fp/fp-basic/">浅谈函数式编程-下篇：核心概念</a></p>
-
     </div>
 
     
@@ -832,6 +866,7 @@
   </p>
 </div>
 
+
     
     
 
@@ -845,7 +880,15 @@
       <nav class="post-nav">
         
           <a class="prev" href="/post/programming/fp-basic/">
-            <i class="iconfont icon-left"></i>
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
             <span class="prev-text nav-default">浅谈函数式编程（下）：核心概念</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
@@ -853,11 +896,24 @@
           <a class="next" href="/post/programming/openstack4j-dependencies/">
             <span class="next-text nav-default">openstack4j 中的依赖管理</span>
             <span class="prev-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
           </a>
       </nav>
     </footer>
   </article>
+
+  
+  
+  
+  
 
   
   
@@ -869,14 +925,14 @@
 
   <div class="post bg-white">
       <div id="comments-gitment"></div>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="/lib/gitment/gitment-0.0.3.min.css">
+        <script src="/lib/gitment/gitment-0.0.3.min.js"></script>
       <script type="text/javascript">
       const gitment = new Gitment({
         id: 'fp-paradigm.md',
         title: '浅谈函数式编程（上）：编程范式',
         link: decodeURI(location.href),
-        desc: '当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator\x26hellip; (请自动脑补标签云图\x26hellip;) 几年前我在在部门内部做了一次函数式编程',
+        desc: '当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator\x26hellip; 本篇是《浅谈函数式编程》的上篇，主要讲述编程范式，作为入门函数式编程必要的背',
         owner: 'ijunjie',
         repo: 'blog-gitment',
         oauth: {
@@ -890,6 +946,10 @@
     </div>
 
   
+  
+    
+
+
 
         </div>
       </div>
@@ -897,16 +957,41 @@
 
     <footer id="footer" class="footer">
       <div class="social-links">
-      <a href="mailto:wang-junjie@outlook.com" rel="me noopener" class="iconfont icon-email"
-        title="email" target="_blank">
-      </a>
-      <a href="https://github.com/ijunjie" rel="me noopener" class="iconfont icon-github"
-        title="github" target="_blank">
-      </a>
-  <a href="https://ijunjie.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml" class="iconfont icon-rss"
-    title="rss" target="_blank">
+  
+  
+    <a href="mailto:wang-junjie@outlook.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="https://github.com/ijunjie" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="https://ijunjie.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
   </a>
-  </div>
+  
+</div>
 
 <div class="copyright">
   <span class="power-by">
@@ -923,20 +1008,48 @@
       2017 -
     2018
     <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span><span class="author">Wang Junjie</span></span>
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        Wang Junjie
+        
+      </span></span>
+
+  
+  
 </div>
 
     </footer>
 
     <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
     </div>
   </div>
   
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw="></script>
+
 
 
 
@@ -947,6 +1060,14 @@
     <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
     <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
   
+
+
+
+
+
+
+
+
 
 
 
