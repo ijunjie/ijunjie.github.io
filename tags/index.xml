@@ -50,7 +50,7 @@
     <item>
       <title>Docker</title>
       <link>https://ijunjie.github.io/tags/docker/</link>
-      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/tags/docker/</guid>
       <description></description>
@@ -102,11 +102,38 @@
     </item>
     
     <item>
+      <title>Javascript</title>
+      <link>https://ijunjie.github.io/tags/javascript/</link>
+      <pubDate>Fri, 30 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Jvm</title>
       <link>https://ijunjie.github.io/tags/jvm/</link>
       <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/tags/jvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jwt</title>
+      <link>https://ijunjie.github.io/tags/jwt/</link>
+      <pubDate>Fri, 30 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/tags/jwt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>K8s</title>
+      <link>https://ijunjie.github.io/tags/k8s/</link>
+      <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/tags/k8s/</guid>
       <description></description>
     </item>
     
@@ -161,24 +188,6 @@
       <pubDate>Sun, 29 Jul 2018 13:04:35 +0800</pubDate>
       
       <guid>https://ijunjie.github.io/tags/spring/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tech Books</title>
-      <link>https://ijunjie.github.io/tags/tech-books/</link>
-      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/tags/tech-books/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Threadpool</title>
-      <link>https://ijunjie.github.io/tags/threadpool/</link>
-      <pubDate>Sun, 29 Jul 2018 13:04:35 +0800</pubDate>
-      
-      <guid>https://ijunjie.github.io/tags/threadpool/</guid>
       <description></description>
     </item>
     
