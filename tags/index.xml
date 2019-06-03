@@ -6,49 +6,13 @@
     <description>Recent content in Tags on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 01 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ijunjie.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Antithesis</title>
-      <link>https://ijunjie.github.io/tags/antithesis/</link>
-      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/tags/antithesis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Arch</title>
-      <link>https://ijunjie.github.io/tags/arch/</link>
-      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/tags/arch/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Art</title>
-      <link>https://ijunjie.github.io/tags/art/</link>
-      <pubDate>Sat, 23 Jun 2018 10:21:30 +0800</pubDate>
-      
-      <guid>https://ijunjie.github.io/tags/art/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Design Patterns</title>
-      <link>https://ijunjie.github.io/tags/design-patterns/</link>
-      <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/tags/design-patterns/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
+      <title>docker</title>
       <link>https://ijunjie.github.io/tags/docker/</link>
       <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
       
@@ -57,79 +21,7 @@
     </item>
     
     <item>
-      <title>Education</title>
-      <link>https://ijunjie.github.io/tags/education/</link>
-      <pubDate>Wed, 20 Jun 2018 20:22:14 +0800</pubDate>
-      
-      <guid>https://ijunjie.github.io/tags/education/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fp</title>
-      <link>https://ijunjie.github.io/tags/fp/</link>
-      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/tags/fp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Handwriting</title>
-      <link>https://ijunjie.github.io/tags/handwriting/</link>
-      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/tags/handwriting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>History</title>
-      <link>https://ijunjie.github.io/tags/history/</link>
-      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/tags/history/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Japanese</title>
-      <link>https://ijunjie.github.io/tags/japanese/</link>
-      <pubDate>Fri, 25 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/tags/japanese/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javascript</title>
-      <link>https://ijunjie.github.io/tags/javascript/</link>
-      <pubDate>Fri, 30 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jvm</title>
-      <link>https://ijunjie.github.io/tags/jvm/</link>
-      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/tags/jvm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jwt</title>
-      <link>https://ijunjie.github.io/tags/jwt/</link>
-      <pubDate>Fri, 30 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/tags/jwt/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>K8s</title>
+      <title>k8s</title>
       <link>https://ijunjie.github.io/tags/k8s/</link>
       <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
       
@@ -138,16 +30,43 @@
     </item>
     
     <item>
-      <title>Kubernetes</title>
-      <link>https://ijunjie.github.io/tags/kubernetes/</link>
-      <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
+      <title>javascript</title>
+      <link>https://ijunjie.github.io/tags/javascript/</link>
+      <pubDate>Fri, 30 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ijunjie.github.io/tags/kubernetes/</guid>
+      <guid>https://ijunjie.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Kylin</title>
+      <title>jwt</title>
+      <link>https://ijunjie.github.io/tags/jwt/</link>
+      <pubDate>Fri, 30 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/tags/jwt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spring</title>
+      <link>https://ijunjie.github.io/tags/spring/</link>
+      <pubDate>Sun, 29 Jul 2018 13:04:35 +0800</pubDate>
+      
+      <guid>https://ijunjie.github.io/tags/spring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>threadpool</title>
+      <link>https://ijunjie.github.io/tags/threadpool/</link>
+      <pubDate>Sun, 29 Jul 2018 13:04:35 +0800</pubDate>
+      
+      <guid>https://ijunjie.github.io/tags/threadpool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kylin</title>
       <link>https://ijunjie.github.io/tags/kylin/</link>
       <pubDate>Mon, 09 Jul 2018 22:04:28 +0800</pubDate>
       
@@ -156,38 +75,65 @@
     </item>
     
     <item>
-      <title>Painting</title>
-      <link>https://ijunjie.github.io/tags/painting/</link>
-      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      <title>arch</title>
+      <link>https://ijunjie.github.io/tags/arch/</link>
+      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ijunjie.github.io/tags/painting/</guid>
+      <guid>https://ijunjie.github.io/tags/arch/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Philosophy</title>
-      <link>https://ijunjie.github.io/tags/philosophy/</link>
-      <pubDate>Sun, 08 Jul 2018 17:22:39 +0800</pubDate>
+      <title>fp</title>
+      <link>https://ijunjie.github.io/tags/fp/</link>
+      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ijunjie.github.io/tags/philosophy/</guid>
+      <guid>https://ijunjie.github.io/tags/fp/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Politics</title>
-      <link>https://ijunjie.github.io/tags/politics/</link>
-      <pubDate>Wed, 20 Jun 2018 20:44:14 +0800</pubDate>
+      <title>jvm</title>
+      <link>https://ijunjie.github.io/tags/jvm/</link>
+      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ijunjie.github.io/tags/politics/</guid>
+      <guid>https://ijunjie.github.io/tags/jvm/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Spring</title>
-      <link>https://ijunjie.github.io/tags/spring/</link>
-      <pubDate>Sun, 29 Jul 2018 13:04:35 +0800</pubDate>
+      <title>tech books</title>
+      <link>https://ijunjie.github.io/tags/tech-books/</link>
+      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ijunjie.github.io/tags/spring/</guid>
+      <guid>https://ijunjie.github.io/tags/tech-books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design patterns</title>
+      <link>https://ijunjie.github.io/tags/design-patterns/</link>
+      <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/tags/design-patterns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>antithesis</title>
+      <link>https://ijunjie.github.io/tags/antithesis/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/tags/antithesis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://ijunjie.github.io/tags/kubernetes/</link>
+      <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/tags/kubernetes/</guid>
       <description></description>
     </item>
     

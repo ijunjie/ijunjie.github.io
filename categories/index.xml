@@ -6,39 +6,13 @@
     <description>Recent content in Categories on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Mon, 03 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ijunjie.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Life</title>
-      <link>https://ijunjie.github.io/categories/life/</link>
-      <pubDate>Mon, 09 Jul 2018 22:37:32 +0800</pubDate>
-      
-      <guid>https://ijunjie.github.io/categories/life/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Literature</title>
-      <link>https://ijunjie.github.io/categories/literature/</link>
-      <pubDate>Fri, 25 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/categories/literature/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Myworks</title>
-      <link>https://ijunjie.github.io/categories/myworks/</link>
-      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/categories/myworks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programming</title>
+      <title>programming</title>
       <link>https://ijunjie.github.io/categories/programming/</link>
       <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
       
@@ -47,11 +21,11 @@
     </item>
     
     <item>
-      <title>Reading</title>
-      <link>https://ijunjie.github.io/categories/reading/</link>
-      <pubDate>Sun, 08 Jul 2018 17:22:39 +0800</pubDate>
+      <title>literature</title>
+      <link>https://ijunjie.github.io/categories/literature/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ijunjie.github.io/categories/reading/</guid>
+      <guid>https://ijunjie.github.io/categories/literature/</guid>
       <description></description>
     </item>
     

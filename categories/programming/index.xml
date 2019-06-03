@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programming on Wang Junjie</title>
+    <title>programming on Wang Junjie</title>
     <link>https://ijunjie.github.io/categories/programming/</link>
-    <description>Recent content in Programming on Wang Junjie</description>
+    <description>Recent content in programming on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 03 Dec 2018 00:00:00 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/k8s-windows/</guid>
-      <description>Docker for Windows 内置一个单节点 Kubernetes 集群，可以用于本地测试开发。 1. 安装 docker for windows 最新版 前提条件：打开 BIOS 中的虚拟化选项。 注意，安装 docker for windows 使用 hyper-v 做虚拟化，会导致 virtualbox</description>
+      <description>更新：请参考 https://github.com/AliyunContainerService/k8s-for-docker-desktop 1. 安装 docker for windows 打开 BIOS 中的虚拟化选项。 注意，开启 hyper-v 可能会导致 virtualbox 和 vmware 不可用。 2. 配置 docker 环境 如需启用 docker host，打开 General ”Expose daemon on</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Fri, 30 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/jwt-decode/</guid>
-      <description>Javascript 解析 JWT 的 payload 部分, 提取自 auth0/jwt-decode. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 let payload_decode = utf8_token =&amp;gt; { // validation if (typeof utf8_token !== &amp;#39;string&amp;#39;)</description>
+      <description>Javascript 解析 JWT 的 payload 部分, 提取自 auth0/jwt-decode. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 let payload_decode = utf8_token =&amp;gt; { // validation if (typeof utf8_token !== &amp;#39;string&amp;#39;) throw</description>
     </item>
     
     <item>
@@ -53,11 +53,11 @@
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/docker-machine/</guid>
-      <description>关于 Docker Machine 的一些实践总结。 Docker Machine 用于解决多主机环境部署 docker 的效率和一致性问题。 创建 machine 要求能够无密码登录远程主机，所以需要先通过 ssh-copy-id 将 ssh key 拷贝到目标机</description>
+      <description>Docker Machine 用于解决多主机环境部署 docker 的效率和一致性问题。 创建 machine 要求能够无密码登录远程主机，所以需要先通过 ssh-copy-id 将 ssh key 拷贝到目标机器。 往普通的 Linux 中部署 do</description>
     </item>
     
     <item>
-      <title>浅谈 JMM 和 volatile</title>
+      <title>JMM 和 volatile</title>
       <link>https://ijunjie.github.io/post/programming/jmm-volatile/</link>
       <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
       
@@ -66,12 +66,12 @@
     </item>
     
     <item>
-      <title>聊聊分布式事务</title>
+      <title>分布式事务 memo</title>
       <link>https://ijunjie.github.io/post/programming/distributed-transaction/</link>
       <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/distributed-transaction/</guid>
-      <description>丢个链接闪人：https://www.cnblogs.com/savorboard/p/distributed-system-transac</description>
+      <description>分布式理论 CAP BASE 分布式事务 2PC (两阶段提交) 和 XA 协议 TCC（补偿事务） 本地消息表（异步确保）。一种非常经典的实现，避免了分布式事务，实现了最终一</description>
     </item>
     
     <item>
@@ -89,7 +89,7 @@
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/java-books/</guid>
-      <description>说一说我读过的 Java 并发和分布式方面的书。 并发相关书籍 并发编程有本经典的书叫 Java Concurrency In Practice, 这里就不说了，这里只说近几年一些比较新的书。 《Java 并发编</description>
+      <description>一些 Java 并发和分布式方面的书。 并发相关书籍 并发编程经典 Java Concurrency In Practice 就不说了，只说国内一些比较新的书。 《Java 并发编程的艺术》- 方腾飞、魏鹏、程晓</description>
     </item>
     
     <item>
@@ -98,16 +98,7 @@
       <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/js-books/</guid>
-      <description>JavaScript 是我最喜爱的语言之一。以前读过几本不错的书籍，在这里推荐一下。 《JavaScript 语言精髓与编程实践 》- 周爱民 是一本绿皮的书。推荐的这几</description>
-    </item>
-    
-    <item>
-      <title>网关和点对点，谁是反模式？</title>
-      <link>https://ijunjie.github.io/post/programming/api-gw-p2p/</link>
-      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/api-gw-p2p/</guid>
-      <description>有的观点认为，点对点是反模式，也有人认为网关才是反模式。 李艳鹏在《分布式服务架构：原理、设计与实战》中认为，网关是反模式，因为网关会成为性能</description>
+      <description>一些 JavaScript 不错的书籍。 《JavaScript 语言精髓与编程实践 》- 周爱民 一本绿皮的书。很有深度、很透彻的一本书。值得精读，可以对 JavaScript 语言有全面、深</description>
     </item>
     
     <item>
@@ -116,20 +107,11 @@
       <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/cpu-false-sharing/</guid>
-      <description>不知是谁最初把 false sharing 翻译成“伪共享”，翻译得莫名其妙，不知所谓。实际意思应该是“错误的共享”。 最近在读的几本书都提到了 CPU 伪共享问题。这里尝试做</description>
+      <description>false sharing 实际意思是“错误的共享”。 CPU 伪共享 当多线程修改互相独立的变量时，如果这些变量共享同一个缓存行，就会无意中影响彼此的性能，这就是伪共享。伪</description>
     </item>
     
     <item>
-      <title>Docker 基础知识拾遗</title>
-      <link>https://ijunjie.github.io/post/programming/docker-omissions-make-up/</link>
-      <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/docker-omissions-make-up/</guid>
-      <description>一、镜像的分层结构 可写容器层。容器启动时，一个可写层被加载到镜像的顶部。所有对容器的改动，只会发生在容器层。 叠加文件系统，如果不同层中有一个</description>
-    </item>
-    
-    <item>
-      <title>Docker 基础知识整理</title>
+      <title>Docker 基础知识学习笔记</title>
       <link>https://ijunjie.github.io/post/programming/docker-notes/</link>
       <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
       
@@ -138,12 +120,21 @@
     </item>
     
     <item>
+      <title>Docker 拾遗</title>
+      <link>https://ijunjie.github.io/post/programming/docker-omissions-make-up/</link>
+      <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/programming/docker-omissions-make-up/</guid>
+      <description>一、镜像的分层结构 可写容器层。容器启动时，一个可写层被加载到镜像的顶部。所有对容器的改动，只会发生在容器层。 叠加文件系统，如果不同层中有一个</description>
+    </item>
+    
+    <item>
       <title>浅谈设计模式</title>
       <link>https://ijunjie.github.io/post/programming/design-patterns/</link>
       <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/design-patterns/</guid>
-      <description>推荐一个极好的设计模式学习网站 http://java-design-patterns.com/. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900+. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式</description>
+      <description>一个设计模式学习网站 http://java-design-patterns.com/. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900+. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式就远不止这</description>
     </item>
     
     <item>
@@ -161,7 +152,7 @@
       <pubDate>Fri, 04 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/from-virtualization/</guid>
-      <description>这是一份笔者整理的云计算技术发展简史，主要关注虚拟化、分布式、云计算和容器技术的起源和发展。 20 世纪 30 ~ 40 年代：早期计算机时代 上世纪 30 ~ 40 年代</description>
+      <description>云计算技术发展简史，关注虚拟化、分布式、云计算和容器技术的起源和发展。 20 世纪 30 ~ 40 年代：早期计算机时代 上世纪 30 ~ 40 年代，是早期计算机时代。 1936</description>
     </item>
     
     <item>
@@ -179,7 +170,7 @@
       <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/kubernetes-practice/</guid>
-      <description>Rinor Maloku 在 Kubernetes and everything else in Practice 一文中全面、细致地讲述了一个微服务应用的开发、构建，并部署到 Kubernetes 的过程。全文洋洋洒洒分为十一篇，并配有精美的动态演示图，实为</description>
+      <description>Rinor Maloku 在 Kubernetes and everything else in Practice 一文中全面、细致地讲述了一个微服务应用的开发、构建，并部署到 Kubernetes 的过程。DockOne 提供了中文版：三小时学会Kuberne</description>
     </item>
     
     <item>
@@ -188,7 +179,16 @@
       <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/factorial/</guid>
-      <description>一般的递归都要显式地调用递归函数，那么匿名函数如何实现递归调用？ 这里用 Javascript 匿名函数 + 尾递归实现一个求阶乘的例子，代码如下： 1 2 3 4 5 6 7 8 9 let</description>
+      <description>一般的递归都要显式地调用递归函数，那么匿名函数如何实现递归调用？ 这里用 Javascript 匿名函数 + 尾递归实现一个求阶乘的例子，代码如下： 1 2 3 4 5 6 7 8 let factorial</description>
+    </item>
+    
+    <item>
+      <title>函数式编程那些事（下）：核心概念</title>
+      <link>https://ijunjie.github.io/post/programming/fp-basic/</link>
+      <pubDate>Thu, 26 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/programming/fp-basic/</guid>
+      <description>导读 思考： 函数式编程如何消除显式的选择和循环？ map, filter, reduce 如何实现整洁代码？ 什么是纯函数？什么是副作用？ 柯里化有什么意义？ 什么是闭包？ flatmap 和 monad 有什么</description>
     </item>
     
   </channel>

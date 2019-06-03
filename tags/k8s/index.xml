@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>K8s on Wang Junjie</title>
+    <title>k8s on Wang Junjie</title>
     <link>https://ijunjie.github.io/tags/k8s/</link>
-    <description>Recent content in K8s on Wang Junjie</description>
+    <description>Recent content in k8s on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 03 Dec 2018 00:00:00 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/k8s-windows/</guid>
-      <description>Docker for Windows 内置一个单节点 Kubernetes 集群，可以用于本地测试开发。 1. 安装 docker for windows 最新版 前提条件：打开 BIOS 中的虚拟化选项。 注意，安装 docker for windows 使用 hyper-v 做虚拟化，会导致 virtualbox</description>
+      <description>更新：请参考 https://github.com/AliyunContainerService/k8s-for-docker-desktop 1. 安装 docker for windows 打开 BIOS 中的虚拟化选项。 注意，开启 hyper-v 可能会导致 virtualbox 和 vmware 不可用。 2. 配置 docker 环境 如需启用 docker host，打开 General ”Expose daemon on</description>
     </item>
     
   </channel>

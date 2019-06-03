@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jvm on Wang Junjie</title>
+    <title>jvm on Wang Junjie</title>
     <link>https://ijunjie.github.io/tags/jvm/</link>
-    <description>Recent content in Jvm on Wang Junjie</description>
+    <description>Recent content in jvm on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 03 Jun 2018 00:00:00 +0000</lastBuildDate>
@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>浅谈 JMM 和 volatile</title>
+      <title>JMM 和 volatile</title>
       <link>https://ijunjie.github.io/post/programming/jmm-volatile/</link>
       <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
       

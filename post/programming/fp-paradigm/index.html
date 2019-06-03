@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>浅谈函数式编程（上）：编程范式 - Wang Junjie</title>
+  <title>函数式编程那些事（上）：编程范式 - Wang Junjie</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Wang Junjie" />
-  <meta name="description" content="当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&amp;hellip; 本篇是《浅谈函数式编程》的上篇，主要讲述编程范式，作为入门函数式编程必要的背" />
+  <meta name="description" content="当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&amp;hellip; 推荐一本关于编程范式的书，郑晖的《冒号课堂：编程范式与OOP思想》，电子工业" />
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.51" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
 <link rel="canonical" href="https://ijunjie.github.io/post/programming/fp-paradigm/" />
@@ -50,32 +50,33 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.aaf3394fc81ccb6f6fe3fe458d1f5b61c39f151e44df83baaf1d7b3775a8b98d.css" integrity="sha256-qvM5T8gcy29v4/5FjR9bYcOfFR5E34O6rx17N3WouY0=" media="screen">
+<link rel="stylesheet" href="/sass/jane.min.19ae5a432863a072ec64433bb1020bd6d3401129f87d6f2ad5af3bcfd84168a1.css" integrity="sha256-Ga5aQyhjoHLsZEM7sQIL1tNAESn4fW8q1a87z9hBaKE=" media="screen" crossorigin="anonymous">
 
 
 
 
 
-<meta property="og:title" content="浅谈函数式编程（上）：编程范式" />
-<meta property="og:description" content="当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&hellip; 本篇是《浅谈函数式编程》的上篇，主要讲述编程范式，作为入门函数式编程必要的背" />
+<meta property="og:title" content="函数式编程那些事（上）：编程范式" />
+<meta property="og:description" content="当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&hellip; 推荐一本关于编程范式的书，郑晖的《冒号课堂：编程范式与OOP思想》，电子工业" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ijunjie.github.io/post/programming/fp-paradigm/" /><meta property="article:published_time" content="2018-04-24T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://ijunjie.github.io/post/programming/fp-paradigm/" />
+<meta property="article:published_time" content="2018-04-24T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-04-24T00:00:00&#43;00:00"/>
 
-<meta itemprop="name" content="浅谈函数式编程（上）：编程范式">
-<meta itemprop="description" content="当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&hellip; 本篇是《浅谈函数式编程》的上篇，主要讲述编程范式，作为入门函数式编程必要的背">
+<meta itemprop="name" content="函数式编程那些事（上）：编程范式">
+<meta itemprop="description" content="当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&hellip; 推荐一本关于编程范式的书，郑晖的《冒号课堂：编程范式与OOP思想》，电子工业">
 
 
 <meta itemprop="datePublished" content="2018-04-24T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-04-24T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="4324">
+<meta itemprop="wordCount" content="4069">
 
 
 
 <meta itemprop="keywords" content="fp," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="浅谈函数式编程（上）：编程范式"/>
-<meta name="twitter:description" content="当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&hellip; 本篇是《浅谈函数式编程》的上篇，主要讲述编程范式，作为入门函数式编程必要的背"/>
+<meta name="twitter:title" content="函数式编程那些事（上）：编程范式"/>
+<meta name="twitter:description" content="当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&hellip; 推荐一本关于编程范式的书，郑晖的《冒号课堂：编程范式与OOP思想》，电子工业"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -287,7 +288,7 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">浅谈函数式编程（上）：编程范式</h1>
+      <h1 class="post-title">函数式编程那些事（上）：编程范式</h1>
       
       <div class="post-meta">
         <time datetime="2018-04-24" class="post-time">
@@ -297,7 +298,7 @@
             <a href="https://ijunjie.github.io/categories/programming/"> programming </a>
             
           </div>
-        <span class="more-meta"> 约 4324 字 </span>
+        <span class="more-meta"> 约 4069 字 </span>
           <span class="more-meta"> 预计阅读 9 分钟 </span>
 
         
@@ -362,11 +363,7 @@
 <p>map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&hellip;</p>
 </blockquote>
 
-<p>本篇是《浅谈函数式编程》的上篇，主要讲述编程范式，作为入门函数式编程必要的背景知识；下篇按照由浅入深的顺序介绍函数式编程的一些基本的概念。</p>
-
-<p>函数式编程中的很多概念比较抽象，不易理解；部分概念还会涉及到一些数学理论和 PL 领域的知识。《浅谈函数式编程》将遵循实用的原则，以代码示例对一些常见概念做简明、通俗的解释，使大家对函数式编程有正确的、基本的认识。</p>
-
-<p>上篇编程范式部分主要参考了<strong>郑晖</strong>的《冒号课堂：编程范式与OOP思想》，电子工业出版社。这本书气象宏大，体例独特，有些观点可能具有争议性，但不可否认它是一本极富启发性的书。本文中关于编程范式的一些论述，基本采用了这本书中观点。</p>
+<p>推荐一本关于编程范式的书，<strong>郑晖</strong>的《冒号课堂：编程范式与OOP思想》，电子工业出版社。</p>
 
 <div class="shortcode-notice tip">
   <div class="shortcode-notice-title tip">
@@ -374,10 +371,11 @@
       导读
     
   </div>
-  <p>阅读本篇前，可以先思考如下问题：</p>
+  
 
-</div>
+<p>思考：</p>
 
+<p></div></p>
 
 <ol>
 <li>编程范式是什么，三大核心编程范式有哪些？</li>
@@ -406,10 +404,11 @@
       编程范式
     
   </div>
-  <p>编程范式（programming paradigm）指的是计算机编程的基本风格或典范模式</p>
+  
 
-</div>
+<p>编程范式（programming paradigm）指的是计算机编程的基本风格或典范模式</p>
 
+<p></div></p>
 
 <p>可以说，编程范式是构建虚拟世界的世界观和方法论。</p>
 
@@ -536,10 +535,11 @@
       结构化定理
     
   </div>
-  <p>结构化定理：任何程序都可以用<strong>顺序（concatenation）</strong>、<strong>选择（selection）</strong>和<strong>循环（repetition）</strong>三种<strong>基本控制结构</strong>来表示。</p>
+  
 
-</div>
+<p>结构化定理：任何程序都可以用<strong>顺序（concatenation）</strong>、<strong>选择（selection）</strong>和<strong>循环（repetition）</strong>三种<strong>基本控制结构</strong>来表示。</p>
 
+<p></div></p>
 
 <p>结构化定理具有非常重要的意义。具备计算机编程基础的人对此都不会感到陌生。</p>
 
@@ -551,10 +551,11 @@
       结构化编程
     
   </div>
-  <p>微观上要求循规蹈矩，采用顺序、选择和循环；宏观上要求自顶向下设计，通过模块化将复杂系统分解为多个子系统，最终分解为三种基本结构。</p>
+  
 
-</div>
+<p>微观上要求循规蹈矩，采用顺序、选择和循环；宏观上要求自顶向下设计，通过模块化将复杂系统分解为多个子系统，最终分解为三种基本结构。</p>
 
+<p></div></p>
 
 <h2 id="声明式编程">声明式编程</h2>
 
@@ -606,10 +607,11 @@
       声明式语言
     
   </div>
-  <p>广义的声明式语言其实很常见，如SQL，HTML，SVG，CSS，但他们并非图灵完备，不具有通用性。然而从工程角度看图灵完备与否，对工程本身意义不大。</p>
+  
 
-</div>
+<p>广义的声明式语言其实很常见，如SQL，HTML，SVG，CSS，但他们并非图灵完备，不具有通用性。然而从工程角度看图灵完备与否，对工程本身意义不大。</p>
 
+<p></div></p>
 
 <p>下面通过一个简单的 Python 的例子，演示命令式和声明式的特点。</p>
 
@@ -738,10 +740,11 @@
       正交
     
   </div>
-  <p>数学上把两个相互垂直的向量称作正交。在计算机领域，两个组件如果互相没有什么影响，就可以称作是正交的。</p>
+  
 
-</div>
+<p>数学上把两个相互垂直的向量称作正交。在计算机领域，两个组件如果互相没有什么影响，就可以称作是正交的。</p>
 
+<p></div></p>
 
 <p>纯粹的OOP是不存在的，必须结合其他范式而存在。OOP虽然是从命令式发展而来，但这只是历史事实（可能带有某种历史上的必然性），但OOP的思想并不是跟命令式绑定的，也可以应用到函数式编程。</p>
 
@@ -889,7 +892,7 @@
 </svg>
 
             </i>
-            <span class="prev-text nav-default">浅谈函数式编程（下）：核心概念</span>
+            <span class="prev-text nav-default">函数式编程那些事（下）：核心概念</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         
@@ -919,6 +922,8 @@
   
 
   
+
+  
   
 
   
@@ -926,17 +931,15 @@
   
 
   
-  
+
     
-
-
 
         </div>
       </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="social-links">
+      <div class="icon-links">
   
   
     <a href="mailto:wang-junjie@outlook.com" rel="me noopener" class="iconfont"
@@ -970,7 +973,7 @@
 </svg>
 
   </a>
-  
+   
 </div>
 
 <div class="copyright">
@@ -986,7 +989,7 @@
     &copy;
     
       2017 -
-    2018
+    2019
     <span class="heart">
       
       <i class="iconfont">
@@ -1004,6 +1007,8 @@
       </span></span>
 
   
+  
+
   
 </div>
 
@@ -1028,7 +1033,7 @@
 
 
 
-<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw="></script>
+<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw=" crossorigin="anonymous"></script>
 
 
 

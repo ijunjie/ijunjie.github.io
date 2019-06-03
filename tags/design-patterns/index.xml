@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Design Patterns on Wang Junjie</title>
+    <title>design patterns on Wang Junjie</title>
     <link>https://ijunjie.github.io/tags/design-patterns/</link>
-    <description>Recent content in Design Patterns on Wang Junjie</description>
+    <description>Recent content in design patterns on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 19 May 2018 00:00:00 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/design-patterns/</guid>
-      <description>推荐一个极好的设计模式学习网站 http://java-design-patterns.com/. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900+. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式</description>
+      <description>一个设计模式学习网站 http://java-design-patterns.com/. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900+. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式就远不止这</description>
     </item>
     
     <item>

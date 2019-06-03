@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Wang Junjie" />
-  <meta name="description" content="推荐一个极好的设计模式学习网站 http://java-design-patterns.com/. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900&#43;. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式" />
+  <meta name="description" content="一个设计模式学习网站 http://java-design-patterns.com/. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900&#43;. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式就远不止这" />
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.51" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
 <link rel="canonical" href="https://ijunjie.github.io/post/programming/design-patterns/" />
@@ -50,32 +50,33 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.aaf3394fc81ccb6f6fe3fe458d1f5b61c39f151e44df83baaf1d7b3775a8b98d.css" integrity="sha256-qvM5T8gcy29v4/5FjR9bYcOfFR5E34O6rx17N3WouY0=" media="screen">
+<link rel="stylesheet" href="/sass/jane.min.19ae5a432863a072ec64433bb1020bd6d3401129f87d6f2ad5af3bcfd84168a1.css" integrity="sha256-Ga5aQyhjoHLsZEM7sQIL1tNAESn4fW8q1a87z9hBaKE=" media="screen" crossorigin="anonymous">
 
 
 
 
 
 <meta property="og:title" content="浅谈设计模式" />
-<meta property="og:description" content="推荐一个极好的设计模式学习网站 http://java-design-patterns.com/. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900&#43;. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式" />
+<meta property="og:description" content="一个设计模式学习网站 http://java-design-patterns.com/. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900&#43;. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式就远不止这" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ijunjie.github.io/post/programming/design-patterns/" /><meta property="article:published_time" content="2018-05-19T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://ijunjie.github.io/post/programming/design-patterns/" />
+<meta property="article:published_time" content="2018-05-19T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-05-19T00:00:00&#43;00:00"/>
 
 <meta itemprop="name" content="浅谈设计模式">
-<meta itemprop="description" content="推荐一个极好的设计模式学习网站 http://java-design-patterns.com/. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900&#43;. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式">
+<meta itemprop="description" content="一个设计模式学习网站 http://java-design-patterns.com/. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900&#43;. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式就远不止这">
 
 
 <meta itemprop="datePublished" content="2018-05-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-05-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="3112">
+<meta itemprop="wordCount" content="3054">
 
 
 
 <meta itemprop="keywords" content="design patterns," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="浅谈设计模式"/>
-<meta name="twitter:description" content="推荐一个极好的设计模式学习网站 http://java-design-patterns.com/. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900&#43;. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式"/>
+<meta name="twitter:description" content="一个设计模式学习网站 http://java-design-patterns.com/. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900&#43;. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式就远不止这"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -297,7 +298,7 @@
             <a href="https://ijunjie.github.io/categories/programming/"> programming </a>
             
           </div>
-        <span class="more-meta"> 约 3112 字 </span>
+        <span class="more-meta"> 约 3054 字 </span>
           <span class="more-meta"> 预计阅读 7 分钟 </span>
 
         
@@ -353,15 +354,13 @@
     <div class="post-content">
       
 
-<p>推荐一个极好的设计模式学习网站 <a href="http://java-design-patterns.com/">http://java-design-patterns.com/</a>. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900+. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式就远不止这 23 种。</p>
+<p>一个设计模式学习网站 <a href="http://java-design-patterns.com/">http://java-design-patterns.com/</a>. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900+. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式就远不止这 23 种。</p>
 
 <p>设计模式的价值在于其思想，而不是模式本身。应该重点从目的而不是结构来认识和学习设计模式。很多设计模式并不是定式，实际使用中有很多变化。</p>
 
 <p>GOF 的设计模式已经出版二十多年了，<strong>有的模式早已内化为语言特性</strong>，因此在今天看来有的模式仿佛有过度设计之嫌，因为这些年来编程语言和软件工程处于不断发展变化中。</p>
 
 <p><strong>设计模式的道理千条万絮，归根结底就是一句话，抽象的艺术。</strong></p>
-
-<p>本篇对 23 种设计模式中常用的一些做粗浅的总结。其他一些模式，后续可能会补充到本文，也可能再也不补充，看心情。</p>
 
 <h2 id="分类">分类</h2>
 
@@ -676,7 +675,7 @@ interface Subject {
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/programming/docker-notes/">
+          <a class="prev" href="/post/programming/docker-omissions-make-up/">
             
             <i class="iconfont">
               <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -686,7 +685,7 @@ interface Subject {
 </svg>
 
             </i>
-            <span class="prev-text nav-default">Docker 基础知识整理</span>
+            <span class="prev-text nav-default">Docker 拾遗</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         
@@ -716,6 +715,8 @@ interface Subject {
   
 
   
+
+  
   
 
   
@@ -723,17 +724,15 @@ interface Subject {
   
 
   
-  
+
     
-
-
 
         </div>
       </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="social-links">
+      <div class="icon-links">
   
   
     <a href="mailto:wang-junjie@outlook.com" rel="me noopener" class="iconfont"
@@ -767,7 +766,7 @@ interface Subject {
 </svg>
 
   </a>
-  
+   
 </div>
 
 <div class="copyright">
@@ -783,7 +782,7 @@ interface Subject {
     &copy;
     
       2017 -
-    2018
+    2019
     <span class="heart">
       
       <i class="iconfont">
@@ -801,6 +800,8 @@ interface Subject {
       </span></span>
 
   
+  
+
   
 </div>
 
@@ -825,7 +826,7 @@ interface Subject {
 
 
 
-<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw="></script>
+<script type="text/javascript" src="/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw=" crossorigin="anonymous"></script>
 
 
 
