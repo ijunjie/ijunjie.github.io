@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Wang Junjie</title>
@@ -6,108 +6,14 @@
     <description>Recent content in Posts on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 03 Dec 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://ijunjie.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Windows 配置 docker 和 k8s 开发环境</title>
-      <link>https://ijunjie.github.io/post/programming/k8s-windows/</link>
-      <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/k8s-windows/</guid>
-      <description>更新：请参考 https://github.com/AliyunContainerService/k8s-for-docker-desktop 1. 安装 docker for windows 打开 BIOS 中的虚拟化选项。 注意，开启 hyper-v 可能会导致 virtualbox 和 vmware 不可用。 2. 配置 docker 环境 如需启用 docker host，打开 General ”Expose daemon on</description>
-    </item>
-    
-    <item>
-      <title>Javascript 解析 JWT</title>
-      <link>https://ijunjie.github.io/post/programming/jwt-decode/</link>
-      <pubDate>Fri, 30 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/jwt-decode/</guid>
-      <description>Javascript 解析 JWT 的 payload 部分, 提取自 auth0/jwt-decode. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 let payload_decode = utf8_token =&amp;gt; { // validation if (typeof utf8_token !== &amp;#39;string&amp;#39;) throw</description>
-    </item>
-    
-    <item>
-      <title>Spring Thread Pool</title>
-      <link>https://ijunjie.github.io/post/programming/spring-thread-pool/</link>
-      <pubDate>Sun, 29 Jul 2018 13:04:35 +0800</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/spring-thread-pool/</guid>
-      <description>Spring 的 ThreadPoolTaskExecutor 对 JDK 的 ThreadPoolExecutor 做了很多封装，使用较为简单。 一个显著区别是，Spring 的 ThreadPoolTaskExecutor 不能 shutdown，也不能 awaitTermination. 这是因为 ThreadPoolTaskExecutor 是公用的。 Spring 中配置线程池 Bean</description>
-    </item>
-    
-    <item>
-      <title>Apache Kylin 单实例部署</title>
-      <link>https://ijunjie.github.io/post/programming/kylin-setup/</link>
-      <pubDate>Mon, 09 Jul 2018 22:04:28 +0800</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/kylin-setup/</guid>
-      <description>1. 部署方式概览 Apache Kylin ( 以下简称 Kylin ) 有四种部署方式（参考 Kylin 的部署）: 单实例 集群 读写分离 多环境部署 1.1 Single Instance, 单实例部署 在 Hadoop 集群的客户机 （或 Hadoop 集群的一个</description>
-    </item>
-    
-    <item>
-      <title>Docker Machine</title>
-      <link>https://ijunjie.github.io/post/programming/docker-machine/</link>
-      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/docker-machine/</guid>
-      <description>Docker Machine 用于解决多主机环境部署 docker 的效率和一致性问题。 创建 machine 要求能够无密码登录远程主机，所以需要先通过 ssh-copy-id 将 ssh key 拷贝到目标机器。 往普通的 Linux 中部署 do</description>
-    </item>
-    
-    <item>
-      <title>JMM 和 volatile</title>
-      <link>https://ijunjie.github.io/post/programming/jmm-volatile/</link>
-      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/jmm-volatile/</guid>
-      <description>并发世界有两大阵营，共享内存和消息通信。前者以 JMM 为代表，后者以 Actor 模型为代表。本篇将整理总结 JMM 相关知识并全面梳理 volatile；关于 Actor 模型，</description>
-    </item>
-    
-    <item>
-      <title>分布式事务 memo</title>
-      <link>https://ijunjie.github.io/post/programming/distributed-transaction/</link>
-      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/distributed-transaction/</guid>
-      <description>分布式理论 CAP BASE 分布式事务 2PC (两阶段提交) 和 XA 协议 TCC（补偿事务） 本地消息表（异步确保）。一种非常经典的实现，避免了分布式事务，实现了最终一</description>
-    </item>
-    
-    <item>
-      <title>递归实现 List</title>
-      <link>https://ijunjie.github.io/post/programming/recursive-list/</link>
-      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/recursive-list/</guid>
-      <description>使用模式匹配和递归实现 List，不考虑栈溢出的问题。 与 Scala 相比，Java 没有模式匹配，没有 sealed，不支持协变，只能利用 interface 的 static 和 default 关键字，</description>
-    </item>
-    
+    <lastBuildDate>Tue, 29 May 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://ijunjie.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一些 Java 和分布式方面的书</title>
       <link>https://ijunjie.github.io/post/programming/java-books/</link>
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/java-books/</guid>
-      <description>一些 Java 并发和分布式方面的书。 并发相关书籍 并发编程经典 Java Concurrency In Practice 就不说了，只说国内一些比较新的书。 《Java 并发编程的艺术》- 方腾飞、魏鹏、程晓</description>
-    </item>
-    
-    <item>
-      <title>一些 JavaScript 方面的书</title>
-      <link>https://ijunjie.github.io/post/programming/js-books/</link>
-      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/js-books/</guid>
-      <description>一些 JavaScript 不错的书籍。 《JavaScript 语言精髓与编程实践 》- 周爱民 一本绿皮的书。很有深度、很透彻的一本书。值得精读，可以对 JavaScript 语言有全面、深</description>
-    </item>
-    
-    <item>
-      <title>CPU 伪共享问题</title>
-      <link>https://ijunjie.github.io/post/programming/cpu-false-sharing/</link>
-      <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/cpu-false-sharing/</guid>
-      <description>false sharing 实际意思是“错误的共享”。 CPU 伪共享 当多线程修改互相独立的变量时，如果这些变量共享同一个缓存行，就会无意中影响彼此的性能，这就是伪共享。伪</description>
+      <description>一些 Java 并发和分布式方面的书。 并发相关书籍 并发编程经典 Java Concurrency In Practice就不说了，只说国内一些比较新的书。 《Java 并发编程的艺术》- 方腾</description>
     </item>
     
     <item>
@@ -129,24 +35,6 @@
     </item>
     
     <item>
-      <title>浅谈设计模式</title>
-      <link>https://ijunjie.github.io/post/programming/design-patterns/</link>
-      <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/design-patterns/</guid>
-      <description>一个设计模式学习网站 http://java-design-patterns.com/. 截至 2018 年5 月份，这个 repo 在 github 的 stars 已超过 10,900+. 这个 repo 涉及的设计模式已经远远超出了 GOF 的 23 种设计模式。当然，本来设计模式就远不止这</description>
-    </item>
-    
-    <item>
-      <title>动态代理和 AOP</title>
-      <link>https://ijunjie.github.io/post/programming/dynamic-proxy-aop/</link>
-      <pubDate>Mon, 14 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/dynamic-proxy-aop/</guid>
-      <description>JDK 动态代理创建时比较快，运行时较慢；CGlib 动态代理正好相反，创建时慢，运行时快。一般选择在系统初始化时，使用 CGlib 代理，并托管到 ApplicationContext 中。代理模</description>
-    </item>
-    
-    <item>
       <title>云计算技术简史</title>
       <link>https://ijunjie.github.io/post/programming/from-virtualization/</link>
       <pubDate>Fri, 04 May 2018 00:00:00 +0000</pubDate>
@@ -156,39 +44,30 @@
     </item>
     
     <item>
-      <title>正确理解 ArrayList 和 LinkedList</title>
-      <link>https://ijunjie.github.io/post/programming/list-comparison/</link>
-      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/list-comparison/</guid>
-      <description>关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法。比如 “ArrayList 查询快，LinkedList 增删快”，这种说法过于笼统，不严谨，实际情</description>
-    </item>
-    
-    <item>
-      <title>北京地名之对仗</title>
-      <link>https://ijunjie.github.io/post/literature/antithesis/</link>
-      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/literature/antithesis/</guid>
-      <description>北京有很多地名具有对仗关系，兹列举如下： 二字组： 海淀 —— 江亭，江亭即陶然亭，是康熙年间江藻所建，所以也称为“江亭”。 秀水 —— 香山 后海 —— 前门</description>
-    </item>
-    
-    <item>
-      <title>一个 Kubernetes 微服务应用示例</title>
-      <link>https://ijunjie.github.io/post/programming/kubernetes-practice/</link>
-      <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/kubernetes-practice/</guid>
-      <description>Rinor Maloku 在 Kubernetes and everything else in Practice 一文中全面、细致地讲述了一个微服务应用的开发、构建，并部署到 Kubernetes 的过程。DockOne 提供了中文版：三小时学会Kuberne</description>
-    </item>
-    
-    <item>
       <title>匿名函数的递归调用</title>
       <link>https://ijunjie.github.io/post/programming/factorial/</link>
       <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/factorial/</guid>
       <description>一般的递归都要显式地调用递归函数，那么匿名函数如何实现递归调用？ 这里用 Javascript 匿名函数 + 尾递归实现一个求阶乘的例子，代码如下： 1 2 3 4 5 6 7 8 let factorial</description>
+    </item>
+    
+    <item>
+      <title>函数式编程那些事（下）：核心概念</title>
+      <link>https://ijunjie.github.io/post/programming/fp-basic/</link>
+      <pubDate>Thu, 26 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/programming/fp-basic/</guid>
+      <description>函数式编程如何消除显式的选择和循环？ map, filter, reduce 如何实现整洁代码？ 什么是纯函数？什么是副作用？ 柯里化有什么意义？ 什么是闭包？ flatmap 和 monad 有什么联系？ 函数</description>
+    </item>
+    
+    <item>
+      <title>函数式编程那些事（上）：编程范式</title>
+      <link>https://ijunjie.github.io/post/programming/fp-paradigm/</link>
+      <pubDate>Tue, 24 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ijunjie.github.io/post/programming/fp-paradigm/</guid>
+      <description>当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&amp;hellip; 推荐一本关于编程范式的书，郑晖的《冒号课堂：编程范式与OOP思想》，电子工业</description>
     </item>
     
   </channel>

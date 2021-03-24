@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>arch on Wang Junjie</title>
@@ -6,54 +6,14 @@
     <description>Recent content in arch on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 13 Jun 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://ijunjie.github.io/tags/arch/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Docker Machine</title>
-      <link>https://ijunjie.github.io/post/programming/docker-machine/</link>
-      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/docker-machine/</guid>
-      <description>Docker Machine 用于解决多主机环境部署 docker 的效率和一致性问题。 创建 machine 要求能够无密码登录远程主机，所以需要先通过 ssh-copy-id 将 ssh key 拷贝到目标机器。 往普通的 Linux 中部署 do</description>
-    </item>
-    
-    <item>
-      <title>JMM 和 volatile</title>
-      <link>https://ijunjie.github.io/post/programming/jmm-volatile/</link>
-      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/jmm-volatile/</guid>
-      <description>并发世界有两大阵营，共享内存和消息通信。前者以 JMM 为代表，后者以 Actor 模型为代表。本篇将整理总结 JMM 相关知识并全面梳理 volatile；关于 Actor 模型，</description>
-    </item>
-    
-    <item>
-      <title>分布式事务 memo</title>
-      <link>https://ijunjie.github.io/post/programming/distributed-transaction/</link>
-      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/distributed-transaction/</guid>
-      <description>分布式理论 CAP BASE 分布式事务 2PC (两阶段提交) 和 XA 协议 TCC（补偿事务） 本地消息表（异步确保）。一种非常经典的实现，避免了分布式事务，实现了最终一</description>
-    </item>
-    
+    <lastBuildDate>Tue, 29 May 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://ijunjie.github.io/tags/arch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一些 Java 和分布式方面的书</title>
       <link>https://ijunjie.github.io/post/programming/java-books/</link>
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/java-books/</guid>
-      <description>一些 Java 并发和分布式方面的书。 并发相关书籍 并发编程经典 Java Concurrency In Practice 就不说了，只说国内一些比较新的书。 《Java 并发编程的艺术》- 方腾飞、魏鹏、程晓</description>
-    </item>
-    
-    <item>
-      <title>CPU 伪共享问题</title>
-      <link>https://ijunjie.github.io/post/programming/cpu-false-sharing/</link>
-      <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/cpu-false-sharing/</guid>
-      <description>false sharing 实际意思是“错误的共享”。 CPU 伪共享 当多线程修改互相独立的变量时，如果这些变量共享同一个缓存行，就会无意中影响彼此的性能，这就是伪共享。伪</description>
+      <description>一些 Java 并发和分布式方面的书。 并发相关书籍 并发编程经典 Java Concurrency In Practice就不说了，只说国内一些比较新的书。 《Java 并发编程的艺术》- 方腾</description>
     </item>
     
     <item>
@@ -81,15 +41,6 @@
       
       <guid>https://ijunjie.github.io/post/programming/from-virtualization/</guid>
       <description>云计算技术发展简史，关注虚拟化、分布式、云计算和容器技术的起源和发展。 20 世纪 30 ~ 40 年代：早期计算机时代 上世纪 30 ~ 40 年代，是早期计算机时代。 1936</description>
-    </item>
-    
-    <item>
-      <title>一个 Kubernetes 微服务应用示例</title>
-      <link>https://ijunjie.github.io/post/programming/kubernetes-practice/</link>
-      <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/kubernetes-practice/</guid>
-      <description>Rinor Maloku 在 Kubernetes and everything else in Practice 一文中全面、细致地讲述了一个微服务应用的开发、构建，并部署到 Kubernetes 的过程。DockOne 提供了中文版：三小时学会Kuberne</description>
     </item>
     
   </channel>

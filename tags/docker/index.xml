@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>docker on Wang Junjie</title>
@@ -6,29 +6,7 @@
     <description>Recent content in docker on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 03 Dec 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://ijunjie.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Windows 配置 docker 和 k8s 开发环境</title>
-      <link>https://ijunjie.github.io/post/programming/k8s-windows/</link>
-      <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/k8s-windows/</guid>
-      <description>更新：请参考 https://github.com/AliyunContainerService/k8s-for-docker-desktop 1. 安装 docker for windows 打开 BIOS 中的虚拟化选项。 注意，开启 hyper-v 可能会导致 virtualbox 和 vmware 不可用。 2. 配置 docker 环境 如需启用 docker host，打开 General ”Expose daemon on</description>
-    </item>
-    
-    <item>
-      <title>Docker Machine</title>
-      <link>https://ijunjie.github.io/post/programming/docker-machine/</link>
-      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/docker-machine/</guid>
-      <description>Docker Machine 用于解决多主机环境部署 docker 的效率和一致性问题。 创建 machine 要求能够无密码登录远程主机，所以需要先通过 ssh-copy-id 将 ssh key 拷贝到目标机器。 往普通的 Linux 中部署 do</description>
-    </item>
-    
+    <lastBuildDate>Sat, 19 May 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://ijunjie.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker 基础知识学习笔记</title>
       <link>https://ijunjie.github.io/post/programming/docker-notes/</link>

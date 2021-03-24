@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>fp on Wang Junjie</title>
@@ -6,29 +6,7 @@
     <description>Recent content in fp on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 03 Jun 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://ijunjie.github.io/tags/fp/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>递归实现 List</title>
-      <link>https://ijunjie.github.io/post/programming/recursive-list/</link>
-      <pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/recursive-list/</guid>
-      <description>使用模式匹配和递归实现 List，不考虑栈溢出的问题。 与 Scala 相比，Java 没有模式匹配，没有 sealed，不支持协变，只能利用 interface 的 static 和 default 关键字，</description>
-    </item>
-    
-    <item>
-      <title>正确理解 ArrayList 和 LinkedList</title>
-      <link>https://ijunjie.github.io/post/programming/list-comparison/</link>
-      <pubDate>Wed, 02 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/list-comparison/</guid>
-      <description>关于 ArrayList 和 LinkedList 的比较，网上流传着很多不准确的说法。比如 “ArrayList 查询快，LinkedList 增删快”，这种说法过于笼统，不严谨，实际情</description>
-    </item>
-    
+    <lastBuildDate>Fri, 27 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://ijunjie.github.io/tags/fp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>匿名函数的递归调用</title>
       <link>https://ijunjie.github.io/post/programming/factorial/</link>
@@ -44,7 +22,7 @@
       <pubDate>Thu, 26 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/fp-basic/</guid>
-      <description>导读 思考： 函数式编程如何消除显式的选择和循环？ map, filter, reduce 如何实现整洁代码？ 什么是纯函数？什么是副作用？ 柯里化有什么意义？ 什么是闭包？ flatmap 和 monad 有什么</description>
+      <description>函数式编程如何消除显式的选择和循环？ map, filter, reduce 如何实现整洁代码？ 什么是纯函数？什么是副作用？ 柯里化有什么意义？ 什么是闭包？ flatmap 和 monad 有什么联系？ 函数</description>
     </item>
     
     <item>
@@ -54,15 +32,6 @@
       
       <guid>https://ijunjie.github.io/post/programming/fp-paradigm/</guid>
       <description>当我们谈论函数式编程时，我们在谈论什么？ map, flatmap, closure,filter, reduce, functor, monoid, monad, currying, lambda, cps, predicate, y-combinator&amp;hellip; 推荐一本关于编程范式的书，郑晖的《冒号课堂：编程范式与OOP思想》，电子工业</description>
-    </item>
-    
-    <item>
-      <title>Ramda：一个精致的Javascript函数式编程库</title>
-      <link>https://ijunjie.github.io/post/programming/ramda/</link>
-      <pubDate>Sun, 22 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/ramda/</guid>
-      <description>Ramda是什么 Ramda的官方文档中文版：Ramda 简介 阮一峰： Ramda 函数库参考教程 柯里化 爱上柯里化 为什么柯里化有帮助 正如其他FP语言一样，R</description>
     </item>
     
   </channel>

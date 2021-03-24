@@ -7,7 +7,7 @@
   
 
 <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"/>
 
 <meta name="MobileOptimized" content="width"/>
 <meta name="HandheldFriendly" content="true"/>
@@ -31,10 +31,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.82.0" />
 
 
 <link rel="canonical" href="https://ijunjie.github.io/post/programming/from-virtualization/" />
+
+
 
 
 
@@ -50,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.19ae5a432863a072ec64433bb1020bd6d3401129f87d6f2ad5af3bcfd84168a1.css" integrity="sha256-Ga5aQyhjoHLsZEM7sQIL1tNAESn4fW8q1a87z9hBaKE=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.f7440b5c0d223f47a09bf5853465434e6f91d80a591c2f8d2d5e8220e5db0580.css" integrity="sha256-90QLXA0iP0egm/WFNGVDTm&#43;R2ApZHC&#43;NLV6CIOXbBYA=" media="screen" crossorigin="anonymous">
 
 
 
@@ -59,22 +61,15 @@
 <meta property="og:title" content="云计算技术简史" />
 <meta property="og:description" content="云计算技术发展简史，关注虚拟化、分布式、云计算和容器技术的起源和发展。 20 世纪 30 ~ 40 年代：早期计算机时代 上世纪 30 ~ 40 年代，是早期计算机时代。 1936" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ijunjie.github.io/post/programming/from-virtualization/" />
-<meta property="article:published_time" content="2018-05-04T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2018-05-04T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://ijunjie.github.io/post/programming/from-virtualization/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2018-05-04T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2018-05-04T00:00:00&#43;00:00" />
 
 <meta itemprop="name" content="云计算技术简史">
-<meta itemprop="description" content="云计算技术发展简史，关注虚拟化、分布式、云计算和容器技术的起源和发展。 20 世纪 30 ~ 40 年代：早期计算机时代 上世纪 30 ~ 40 年代，是早期计算机时代。 1936">
-
-
-<meta itemprop="datePublished" content="2018-05-04T00:00:00&#43;00:00" />
+<meta itemprop="description" content="云计算技术发展简史，关注虚拟化、分布式、云计算和容器技术的起源和发展。 20 世纪 30 ~ 40 年代：早期计算机时代 上世纪 30 ~ 40 年代，是早期计算机时代。 1936"><meta itemprop="datePublished" content="2018-05-04T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-05-04T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="1272">
-
-
-
-<meta itemprop="keywords" content="arch," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="arch," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="云计算技术简史"/>
 <meta name="twitter:description" content="云计算技术发展简史，关注虚拟化、分布式、云计算和容器技术的起源和发展。 20 世纪 30 ~ 40 年代：早期计算机时代 上世纪 30 ~ 40 年代，是早期计算机时代。 1936"/>
 
@@ -141,6 +136,8 @@
         
       </li>
     
+
+    
   </ul>
 </nav>
 
@@ -202,6 +199,8 @@
     </div>
     </div>
 </div>
+
+  
 
   
 
@@ -275,6 +274,10 @@
 
       </li>
     
+
+    
+    
+
     
   </ul>
 </nav>
@@ -315,95 +318,64 @@
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#20-世纪-30-40-年代-早期计算机时代">20 世纪 30 ~ 40 年代：早期计算机时代</a></li>
-<li><a href="#20-世纪-50-60-年代-大型机的时代">20 世纪 50 ~ 60 年代：大型机的时代</a></li>
-<li><a href="#20-世纪-70-90-年代-pc崛起-小型机发展-网络诞生的时代">20 世纪 70 ~ 90 年代：PC崛起、小型机发展、网络诞生的时代</a></li>
-<li><a href="#2001-2009-年-早期虚拟化时代-公有云起步">2001 ~ 2009 年：早期虚拟化时代、公有云起步</a></li>
-<li><a href="#2010-年至今-虚拟化成熟的时代-公有云爆发式增长">2010 年至今：虚拟化成熟的时代、公有云爆发式增长</a></li>
-<li><a href="#2013-年至今-容器化的时代">2013 年至今：容器化的时代</a></li>
-<li><a href="#2015-年至今-云原生时代">2015 年至今：云原生时代</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#20-世纪-30--40-年代早期计算机时代">20 世纪 30 ~ 40 年代：早期计算机时代</a></li>
+    <li><a href="#20-世纪-50--60-年代大型机的时代">20 世纪 50 ~ 60 年代：大型机的时代</a></li>
+    <li><a href="#20-世纪-70--90-年代pc崛起小型机发展网络诞生的时代">20 世纪 70 ~ 90 年代：PC崛起、小型机发展、网络诞生的时代</a></li>
+    <li><a href="#2001--2009-年早期虚拟化时代公有云起步">2001 ~ 2009 年：早期虚拟化时代、公有云起步</a></li>
+    <li><a href="#2010-年至今虚拟化成熟的时代公有云爆发式增长">2010 年至今：虚拟化成熟的时代、公有云爆发式增长</a></li>
+    <li><a href="#2013-年至今容器化的时代">2013 年至今：容器化的时代</a></li>
+    <li><a href="#2015-年至今云原生时代">2015 年至今：云原生时代</a></li>
+  </ul>
 </nav>
   </div>
 </div>
 
     
     <div class="post-content">
-      
-
-<p>云计算技术发展简史，关注虚拟化、分布式、云计算和容器技术的起源和发展。</p>
-
-<h2 id="20-世纪-30-40-年代-早期计算机时代">20 世纪 30 ~ 40 年代：早期计算机时代</h2>
-
+      <p>云计算技术发展简史，关注虚拟化、分布式、云计算和容器技术的起源和发展。</p>
+<h2 id="20-世纪-30--40-年代早期计算机时代">20 世纪 30 ~ 40 年代：早期计算机时代</h2>
 <p>上世纪 30 ~ 40 年代，是早期计算机时代。</p>
-
 <ul>
 <li>1936 年，图灵在一篇论文中提出了“图灵机”理论，奠定了现代计算机理论基础。</li>
 <li>1939 年，第一台现代计算机诞生，具备二进制、内存、I/O 和计算单元。</li>
 <li>1946 年，被广泛承认的第一台计算机 ENIAC 诞生。</li>
 </ul>
-
-<h2 id="20-世纪-50-60-年代-大型机的时代">20 世纪 50 ~ 60 年代：大型机的时代</h2>
-
+<h2 id="20-世纪-50--60-年代大型机的时代">20 世纪 50 ~ 60 年代：大型机的时代</h2>
 <p>上世纪 50 ~ 60 年代，是大型机的时代。</p>
-
 <ul>
 <li>1964 年，第一台 IBM 大型机 SYSTEM/360 诞生。大型机支撑了美国登月这样的大型工程，直至今日，大型机仍然服务于金融行业的关键业务领域。</li>
 <li>值得注意的是，50 年代末，<strong>虚拟化</strong>技术的研究也开始起步，主要目的是对昂贵的大型机进行分区，以提高利用率。</li>
 </ul>
-
-<h2 id="20-世纪-70-90-年代-pc崛起-小型机发展-网络诞生的时代">20 世纪 70 ~ 90 年代：PC崛起、小型机发展、网络诞生的时代</h2>
-
+<h2 id="20-世纪-70--90-年代pc崛起小型机发展网络诞生的时代">20 世纪 70 ~ 90 年代：PC崛起、小型机发展、网络诞生的时代</h2>
 <p><strong>PC 崛起的时代</strong>：1978 年，Intel 推出 8086 中央处理器，标志着 X86 的诞生。在廉价 PC 的冲击下，<strong>虚拟化技术陷入长期停滞状态</strong>，从 20 世纪 80 年代直到 20 世纪末，虚拟化技术几乎没有进展。</p>
-
 <p><strong>小型机的时代</strong>：以 RISC CPU 为架构的<strong>小型 UNIX 服务器</strong>快速发展。在与 X86 多年对抗中，RISC 芯片厂商大多退出了历史舞台，如今只剩下 Power 和 ARM.</p>
-
 <p><strong>网络诞生和互联网起步的时代</strong>：</p>
-
 <ul>
 <li>1980 年，以太网和 TCP/IP 诞生。</li>
 <li>1984 年，Sun 公司联合创始人 John Cage 最早提出了云计算的概念——“网络即计算机”。</li>
 <li>1989 年，第一个 Web 服务器和客户机诞生。</li>
 <li>90 年代初，互联网诞生。</li>
 </ul>
-
-<h2 id="2001-2009-年-早期虚拟化时代-公有云起步">2001 ~ 2009 年：早期虚拟化时代、公有云起步</h2>
-
+<h2 id="2001--2009-年早期虚拟化时代公有云起步">2001 ~ 2009 年：早期虚拟化时代、公有云起步</h2>
 <p>2001 ~ 2009 年，受 PC 冲击而一度停滞不前的虚拟化技术重新得到重视。虚拟化一方面将集中的计算资源拆分，另一方面将分散的计算资源<strong>池化</strong>，以达到提高利用率、降低成本的目的。</p>
-
 <p>VMware，Xen，KVM 分别于 2001、2003、2007年发布了各自的商用服务器虚拟化解决方案，由此形成三足鼎立的局面。21 世纪的第一个十年间，<strong>VM 的观念深入人心</strong>。</p>
-
 <p>与此同时，公有云服务也迅速起步：</p>
-
 <ul>
 <li>2006 年，Amazon 推出 AWS 云计算平台</li>
 <li>2007 年，Amazon 推出 EC2 和 S3 服务</li>
 <li>2008 年，谷歌推出 GCE 服务</li>
 <li>2009 年，PaaS 平台的开创者 Heroku 诞生。IaaS、PaaS 和 SaaS 三层服务模式成为共识。</li>
 </ul>
-
-<h2 id="2010-年至今-虚拟化成熟的时代-公有云爆发式增长">2010 年至今：虚拟化成熟的时代、公有云爆发式增长</h2>
-
+<h2 id="2010-年至今虚拟化成熟的时代公有云爆发式增长">2010 年至今：虚拟化成熟的时代、公有云爆发式增长</h2>
 <p>2010 年，OpenStack 诞生，推动了开源 IaaS 的流行。很多厂商基于 OpenStack 做了二次开发，帮助一些数据中心改造为虚拟化平台。</p>
-
 <p>2015 年到 2017 年，AWS、Azure、Aliyun、GCE 四大公有云巨头逐渐形成。</p>
-
-<h2 id="2013-年至今-容器化的时代">2013 年至今：容器化的时代</h2>
-
+<h2 id="2013-年至今容器化的时代">2013 年至今：容器化的时代</h2>
 <p>以 VM 为核心的虚拟机技术有一些缺点，如云服务商锁定导致客户业务难以迁移、跨云部署困难；虚拟机过于重量级，不够轻便，不利于扩展等。</p>
-
 <p><strong>2013 年，Docker 技术发布，从此拉开了容器技术的大幕</strong>。 实际上 Docker 的容器技术并不是新技术，而是对由来已久的内核隔离技术如LXC、cgroups等进行了更好的封装和整合，并定义了标准镜像格式。</p>
-
 <p>在 Docker 之前，容器技术只有少数有技术实力的公司在使用。Docker 出现后，以其简单易用、标准化的优势迅速使容器在普罗大众之间流行开来。</p>
-
-<h2 id="2015-年至今-云原生时代">2015 年至今：云原生时代</h2>
-
+<h2 id="2015-年至今云原生时代">2015 年至今：云原生时代</h2>
 <p>容器化的影响至今还在持续中。容器化将重塑人们的开发模式。</p>
-
 <p>2017 年，Kubernetes 相继打败 Swarm 和老牌集群管理系统 Mesos，成为无可争议的最流行的容器编排系统。</p>
 
     </div>
@@ -417,7 +389,10 @@
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
-    <span class="item-content">2018-05-04</span>
+    <span class="item-content">
+      2018-05-04
+      
+    </span>
   </p>
   
   <p class="copyright-item">
@@ -439,7 +414,7 @@
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/programming/dynamic-proxy-aop/">
+          <a class="prev" href="/post/programming/docker-omissions-make-up/">
             
             <i class="iconfont">
               <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -449,12 +424,12 @@
 </svg>
 
             </i>
-            <span class="prev-text nav-default">动态代理和 AOP</span>
+            <span class="prev-text nav-default">Docker 拾遗</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         
-          <a class="next" href="/post/programming/list-comparison/">
-            <span class="next-text nav-default">正确理解 ArrayList 和 LinkedList</span>
+          <a class="next" href="/post/programming/factorial/">
+            <span class="next-text nav-default">匿名函数的递归调用</span>
             <span class="prev-text nav-mobile">下一篇</span>
             
             <i class="iconfont">
@@ -490,6 +465,8 @@
   
 
     
+
+  
 
         </div>
       </div>
@@ -546,7 +523,7 @@
     &copy;
     
       2017 -
-    2019
+    2021
     <span class="heart">
       
       <i class="iconfont">
@@ -597,11 +574,19 @@
 
 
 
+
+
+
+
+
+
   
     <script type="text/javascript" src="/js/load-photoswipe.js"></script>
     <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
     <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
   
+
+
 
 
 

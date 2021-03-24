@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tech books on Wang Junjie</title>
@@ -6,27 +6,14 @@
     <description>Recent content in tech books on Wang Junjie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 29 May 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://ijunjie.github.io/tags/tech-books/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 29 May 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://ijunjie.github.io/tags/tech-books/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一些 Java 和分布式方面的书</title>
       <link>https://ijunjie.github.io/post/programming/java-books/</link>
       <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://ijunjie.github.io/post/programming/java-books/</guid>
-      <description>一些 Java 并发和分布式方面的书。 并发相关书籍 并发编程经典 Java Concurrency In Practice 就不说了，只说国内一些比较新的书。 《Java 并发编程的艺术》- 方腾飞、魏鹏、程晓</description>
-    </item>
-    
-    <item>
-      <title>一些 JavaScript 方面的书</title>
-      <link>https://ijunjie.github.io/post/programming/js-books/</link>
-      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ijunjie.github.io/post/programming/js-books/</guid>
-      <description>一些 JavaScript 不错的书籍。 《JavaScript 语言精髓与编程实践 》- 周爱民 一本绿皮的书。很有深度、很透彻的一本书。值得精读，可以对 JavaScript 语言有全面、深</description>
+      <description>一些 Java 并发和分布式方面的书。 并发相关书籍 并发编程经典 Java Concurrency In Practice就不说了，只说国内一些比较新的书。 《Java 并发编程的艺术》- 方腾</description>
     </item>
     
   </channel>

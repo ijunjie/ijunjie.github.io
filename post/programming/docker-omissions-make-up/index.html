@@ -7,7 +7,7 @@
   
 
 <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"/>
 
 <meta name="MobileOptimized" content="width"/>
 <meta name="HandheldFriendly" content="true"/>
@@ -31,10 +31,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.82.0" />
 
 
 <link rel="canonical" href="https://ijunjie.github.io/post/programming/docker-omissions-make-up/" />
+
+
 
 
 
@@ -50,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.19ae5a432863a072ec64433bb1020bd6d3401129f87d6f2ad5af3bcfd84168a1.css" integrity="sha256-Ga5aQyhjoHLsZEM7sQIL1tNAESn4fW8q1a87z9hBaKE=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.f7440b5c0d223f47a09bf5853465434e6f91d80a591c2f8d2d5e8220e5db0580.css" integrity="sha256-90QLXA0iP0egm/WFNGVDTm&#43;R2ApZHC&#43;NLV6CIOXbBYA=" media="screen" crossorigin="anonymous">
 
 
 
@@ -59,22 +61,15 @@
 <meta property="og:title" content="Docker 拾遗" />
 <meta property="og:description" content="一、镜像的分层结构 可写容器层。容器启动时，一个可写层被加载到镜像的顶部。所有对容器的改动，只会发生在容器层。 叠加文件系统，如果不同层中有一个" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ijunjie.github.io/post/programming/docker-omissions-make-up/" />
-<meta property="article:published_time" content="2018-05-19T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2018-05-19T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://ijunjie.github.io/post/programming/docker-omissions-make-up/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2018-05-19T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2018-05-19T00:00:00&#43;00:00" />
 
 <meta itemprop="name" content="Docker 拾遗">
-<meta itemprop="description" content="一、镜像的分层结构 可写容器层。容器启动时，一个可写层被加载到镜像的顶部。所有对容器的改动，只会发生在容器层。 叠加文件系统，如果不同层中有一个">
-
-
-<meta itemprop="datePublished" content="2018-05-19T00:00:00&#43;00:00" />
+<meta itemprop="description" content="一、镜像的分层结构 可写容器层。容器启动时，一个可写层被加载到镜像的顶部。所有对容器的改动，只会发生在容器层。 叠加文件系统，如果不同层中有一个"><meta itemprop="datePublished" content="2018-05-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-05-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1923">
-
-
-
-<meta itemprop="keywords" content="arch,docker," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="wordCount" content="1924">
+<meta itemprop="keywords" content="arch,docker," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Docker 拾遗"/>
 <meta name="twitter:description" content="一、镜像的分层结构 可写容器层。容器启动时，一个可写层被加载到镜像的顶部。所有对容器的改动，只会发生在容器层。 叠加文件系统，如果不同层中有一个"/>
 
@@ -141,6 +136,8 @@
         
       </li>
     
+
+    
   </ul>
 </nav>
 
@@ -202,6 +199,8 @@
     </div>
     </div>
 </div>
+
+  
 
   
 
@@ -275,6 +274,10 @@
 
       </li>
     
+
+    
+    
+
     
   </ul>
 </nav>
@@ -298,7 +301,7 @@
             <a href="https://ijunjie.github.io/categories/programming/"> programming </a>
             
           </div>
-        <span class="more-meta"> 约 1923 字 </span>
+        <span class="more-meta"> 约 1924 字 </span>
           <span class="more-meta"> 预计阅读 4 分钟 </span>
 
         
@@ -315,260 +318,223 @@
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#一-镜像的分层结构">一、镜像的分层结构</a></li>
-<li><a href="#二-容器的资源限额">二、容器的资源限额</a>
-<ul>
-<li><a href="#cpu-限额">CPU 限额</a></li>
-<li><a href="#内存限额">内存限额</a></li>
-<li><a href="#block-io-限额">Block IO 限额</a>
-<ul>
-<li><a href="#优先级设置">优先级设置</a></li>
-<li><a href="#具体设置">具体设置</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#三-容器限额实验">三、容器限额实验</a>
-<ul>
-<li><a href="#测试-cpu-限额">测试 CPU 限额</a></li>
-<li><a href="#测试内存限额">测试内存限额</a></li>
-<li><a href="#测试-block-io-限额">测试 Block IO 限额</a></li>
-</ul></li>
-<li><a href="#四-单机容器网络">四、单机容器网络</a>
-<ul>
-<li><a href="#bridge">bridge</a></li>
-<li><a href="#dns-server">DNS Server</a></li>
-<li><a href="#joined-容器">joined 容器</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#一镜像的分层结构">一、镜像的分层结构</a></li>
+    <li><a href="#二容器的资源限额">二、容器的资源限额</a>
+      <ul>
+        <li><a href="#cpu-限额">CPU 限额</a></li>
+        <li><a href="#内存限额">内存限额</a></li>
+        <li><a href="#block-io-限额">Block IO 限额</a></li>
+      </ul>
+    </li>
+    <li><a href="#三容器限额实验">三、容器限额实验</a>
+      <ul>
+        <li><a href="#测试-cpu-限额">测试 CPU 限额</a></li>
+        <li><a href="#测试内存限额">测试内存限额</a></li>
+        <li><a href="#测试-block-io-限额">测试 Block IO 限额</a></li>
+      </ul>
+    </li>
+    <li><a href="#四单机容器网络">四、单机容器网络</a>
+      <ul>
+        <li><a href="#bridge">bridge</a></li>
+        <li><a href="#dns-server">DNS Server</a></li>
+        <li><a href="#joined-容器">joined 容器</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
 
     
     <div class="post-content">
-      
-
-<h2 id="一-镜像的分层结构">一、镜像的分层结构</h2>
-
+      <h2 id="一镜像的分层结构">一、镜像的分层结构</h2>
 <ul>
 <li>可写容器层。容器启动时，一个可写层被加载到镜像的顶部。所有对容器的改动，只会发生在容器层。</li>
 <li>叠加文件系统，如果不同层中有一个相同路径的文件，比如 /a，上层的 /a 会覆盖下层的 /a，也就是说用户只能访问到上层中的文件 /a。在容器层中，用户看到的是一个叠加之后的文件系统。</li>
 <li>Copy-On-Write, 只有当需要修改时才复制一份数据，这种特性被称作 Copy-on-Write。容器层保存的是镜像变化的部分，不会对镜像本身进行任何修改。
-
 <ul>
 <li>添加文件：在容器中创建文件时，新文件被添加到容器层中。</li>
 <li>读取文件：在容器中读取某个文件时，Docker 会从上往下依次在各镜像层中查找此文件。一旦找到，立即将其复制到容器层，然后打开并读入内存。</li>
 <li>修改文件：在容器中修改已存在的文件时，Docker 会从上往下依次在各镜像层中查找此文件。一旦找到，立即将其复制到容器层，然后修改之。</li>
 <li>删除文件：在容器中删除文件时，Docker 也是从上往下依次在镜像层中查找此文件。找到后，会在容器层中记录下此删除操作。</li>
-</ul></li>
 </ul>
-
-<h2 id="二-容器的资源限额">二、容器的资源限额</h2>
-
+</li>
+</ul>
+<h2 id="二容器的资源限额">二、容器的资源限额</h2>
 <h3 id="cpu-限额">CPU 限额</h3>
-
 <p>默认设置下，所有容器可以平等地使用 host CPU 资源并且没有限制。通过 cpu share 可以设置容器使用 CPU 的优先级。</p>
-
 <ul>
 <li>通过 -c 或 &ndash;cpu-shares 设置容器使用 CPU 的权重，默认为 1024</li>
 </ul>
-
 <p>如在 host 中启动了两个容器：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">docker run --name &#34;container_A&#34; -c 1024 ubuntu
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">docker run --name &#34;container_A&#34; -c 1024 ubuntu
 
-docker run --name &#34;container_B&#34; -c 512 ubuntu</pre></td></tr></table>
+docker run --name &#34;container_B&#34; -c 512 ubuntu
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>container_A 的 cpu share 1024，是 container_B 的两倍。当两个容器都需要 CPU 资源时，container_A 可以得到的 CPU 是 container_B 的两倍。</p>
-
+</div><p>container_A 的 cpu share 1024，是 container_B 的两倍。当两个容器都需要 CPU 资源时，container_A 可以得到的 CPU 是 container_B 的两倍。</p>
 <p>需要特别注意的是，这种按权重分配 CPU 只会发生在 CPU 资源紧张的情况下。如果 container_A 处于空闲状态，这时，为了充分利用 CPU 资源，container_B 也可以分配到全部可用的 CPU。</p>
-
 <h3 id="内存限额">内存限额</h3>
-
 <p>容器可使用的内存包括两部分：物理内存和 swap, 默认都为 -1</p>
-
 <ul>
 <li><code>-m</code> 或 <code>--memory</code>：设置内存的使用限额，例如 100M, 2G。</li>
 <li><code>--memory-swap</code>：设置 内存+swap 的使用限额。 &ndash;memory-swap 默认为 momory 的两倍。</li>
 </ul>
-
 <p>例如 <code>-m 200M --memory-swap=300M</code></p>
-
 <h3 id="block-io-限额">Block IO 限额</h3>
-
 <p>默认情况下，所有容器能平等地读写磁盘。</p>
-
 <h4 id="优先级设置">优先级设置</h4>
-
 <ul>
 <li>可以通过设置 &ndash;blkio-weight 参数来改变容器 block IO 的优先级。<code>--blkio-weight</code> 设置的是相对权重值，<strong>默认为 500</strong>.</li>
 </ul>
-
 <p>设置container_A 读写磁盘的带宽是 container_B 的两倍：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">docker run -it --name container_A --blkio-weight 600 ubuntu   
-    
-docker run -it --name container_B --blkio-weight 300 ubuntu</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">docker run -it --name container_A --blkio-weight 600 ubuntu   
+	
+docker run -it --name container_B --blkio-weight 300 ubuntu
+</code></pre></td></tr></table>
 </div>
-</div>
-<h4 id="具体设置">具体设置</h4>
-
+</div><h4 id="具体设置">具体设置</h4>
 <p>限制 bps 和 iops. bps 是 byte per second，每秒读写的数据量。iops 是 io per second，每秒 IO 的次数。可通过以下参数控制容器的 bps 和 iops：</p>
-
 <ul>
 <li>&ndash;device-read-bps，限制读某个设备的 bps。</li>
 <li>&ndash;device-write-bps，限制写某个设备的 bps。</li>
 <li>&ndash;device-read-iops，限制读某个设备的 iops。</li>
 <li>&ndash;device-write-iops，限制写某个设备的 iops。</li>
 </ul>
-
-<h2 id="三-容器限额实验">三、容器限额实验</h2>
-
+<h2 id="三容器限额实验">三、容器限额实验</h2>
 <p>progrium/stress 镜像的使用</p>
-
 <h3 id="测试-cpu-限额">测试 CPU 限额</h3>
-
 <ol>
-<li><p>启动 container_A, <code>cpu_share</code> 设置为 1024</p>
+<li>
+<p>启动 container_A, <code>cpu_share</code> 设置为 1024</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">docker run --name container_A -it -c 1024 progrium/stress --cpu 1</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">docker run --name container_A -it -c 1024 progrium/stress --cpu 1
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><code>--cpu</code> 用来设置工作线程的数量。因为当前 host 只有 1 颗 CPU，所以一个工作线程就能将 CPU 压满。</p></li>
-
-<li><p>启动 container_B, <code>cpu_share</code> 设置为 512：</p>
+</div><p><code></code>&ndash;cpu` 用来设置工作线程的数量。因为当前 host 只有 1 颗 CPU，所以一个工作线程就能将 CPU 压满。</p>
+</li>
+<li>
+<p>启动 container_B, <code>cpu_share</code> 设置为 512：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">docker run --name container_B -it -c 512 progrium/stress --cpu 1</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">docker run --name container_B -it -c 512 progrium/stress --cpu 1
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>在 host 中执行 <code>top</code>, 可以看到两个容器分别使用了 66.3% 和 33.3% 左右。</p></li>
-
-<li><p>此时暂停 container_A, 可以观察到 container_B 在 container_A 空闲的情况下能够用满整颗 CPU.</p></li>
+</div><p>`</p>
+<p>在 host 中执行 <code>top</code>, 可以看到两个容器分别使用了 66.3% 和 33.3% 左右。</p>
+</li>
+<li>
+<p>此时暂停 container_A, 可以观察到 container_B 在 container_A 空闲的情况下能够用满整颗 CPU.</p>
+</li>
 </ol>
-
 <h3 id="测试内存限额">测试内存限额</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">docker run -it -m 200M --memory-swap=300M progrium/stress --vm 1 --vm-bytes 280M</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">docker run -it -m 200M --memory-swap=300M progrium/stress --vm 1 --vm-bytes 280M
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><code>--vm 1</code>：启动 1 个内存工作线程。</p>
-
+</div><p><code>--vm 1</code>：启动 1 个内存工作线程。</p>
 <p><code>--vm-bytes 280M</code>：每个线程分配 280M 内存。</p>
-
 <p>因为 280M 在可分配的范围（300M）内，所以工作线程能够正常工作，其过程是：</p>
-
 <ol>
-<li><p>分配 280M 内存。</p></li>
-
-<li><p>释放 280M 内存。</p></li>
-
-<li><p>再分配 280M 内存。</p></li>
-
-<li><p>再释放 280M 内存。</p></li>
+<li>
+<p>分配 280M 内存。</p>
+</li>
+<li>
+<p>释放 280M 内存。</p>
+</li>
+<li>
+<p>再分配 280M 内存。</p>
+</li>
+<li>
+<p>再释放 280M 内存。</p>
+</li>
 </ol>
-
 <p>一直循环&hellip;&hellip;</p>
-
 <h3 id="测试-block-io-限额">测试 Block IO 限额</h3>
-
 <p>限制容器写 <code>/dev/sda</code> 的速率为 30 MB/s</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">docker run -it --device-write-bps /dev/sda:30MB ubuntu</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">docker run -it --device-write-bps /dev/sda:30MB ubuntu
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>通过 dd 测试在容器中写磁盘的速度。因为容器的文件系统是在 host /dev/sda 上的，在容器中写文件相当于对 host /dev/sda 进行写操作。另外，oflag=direct 指定用 direct IO 方式写文件，这样 &ndash;device-write-bps 才能生效。</p>
+</div><p>通过 dd 测试在容器中写磁盘的速度。因为容器的文件系统是在 host /dev/sda 上的，在容器中写文件相当于对 host /dev/sda 进行写操作。另外，oflag=direct 指定用 direct IO 方式写文件，这样 &ndash;device-write-bps 才能生效。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">docker run -it --device-write-bps /dev/sda:30MB ubuntu</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">docker run -it --device-write-bps /dev/sda:30MB ubuntu
+</code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">time dd if=/dev/zero of=test.out bs=1M count=800 oflag=direct</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">time dd if=/dev/zero of=test.out bs=1M count=800 oflag=direct
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>结果表明 bps 没有超过 30 MB/s 的限速。</p>
-
-<h2 id="四-单机容器网络">四、单机容器网络</h2>
-
+</div><p>结果表明 bps 没有超过 30 MB/s 的限速。</p>
+<h2 id="四单机容器网络">四、单机容器网络</h2>
 <h3 id="bridge">bridge</h3>
-
 <p>Docker 安装时会创建一个 命名为 docker0 的 linux bridge。如果不指定 <code>--network</code>，创建的容器默认都会挂到 docker0 上。</p>
-
 <p>使用 <code>docker network create --driver bridge mynet</code> 创建自定义网络。使用 <code>brctl show</code> 查看发现新增一个网桥。</p>
-
 <p>创建网络时可以指定 <code>--subnet</code> 和 <code>--gateway</code> 参数。</p>
-
 <p>可以通过 <code>--ip</code> 指定容器的 IP，前提是网络使用 <code>--subnet</code>创建。</p>
-
 <p>为 container 增加一个某个网络的网卡：</p>
-
 <p><code>docker netwrok connect &lt;net-name&gt; &lt;container-id&gt;</code></p>
-
 <h3 id="dns-server">DNS Server</h3>
-
 <p>从 Docker 1.10 版本开始，docker daemon 实现了一个内嵌的 DNS server，使容器可以直接通过<strong>容器名</strong>通信。方法很简单，只要在启动时用 <code>--name</code> 为容器命名就可以了。</p>
-
 <p><strong>只能在 user-defined 网络中使用。也就是说，默认的 bridge 网络是无法使用 DNS 的。</strong></p>
-
 <h3 id="joined-容器">joined 容器</h3>
-
 <p>joined 容器非常特别，它可以使两个或多个容器共享一个网络栈，共享网卡和配置信息，joined 容器之间可以通过 127.0.0.1 直接通信。例如，创建一个 httpd 容器，名字为 web1：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">docker run -d -it --name=web1 httpd</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">docker run -d -it --name=web1 httpd
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>然后创建 <code>busybox</code> 容器并通过 <code>--network=container:web1</code> 指定 jointed 容器为 web1. 格式为 <code>--network=container:&lt;container-name&gt;</code></p>
+</div><p>然后创建 <code>busybox</code> 容器并通过 <code>--network=container:web1</code> 指定 jointed 容器为 web1. 格式为 <code>--network=container:&lt;container-name&gt;</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">docker run -it --network=container:web1 busybox</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">docker run -it --network=container:web1 busybox
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>busybox 和 web1 的网卡 mac 地址与 IP 完全一样，它们共享了相同的网络栈。</p>
+</div><p>busybox 和 web1 的网卡 mac 地址与 IP 完全一样，它们共享了相同的网络栈。</p>
 
     </div>
 
@@ -581,7 +547,10 @@ docker run -it --name container_B --blkio-weight 300 ubuntu</pre></td></tr></tab
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
-    <span class="item-content">2018-05-19</span>
+    <span class="item-content">
+      2018-05-19
+      
+    </span>
   </p>
   
   <p class="copyright-item">
@@ -618,8 +587,8 @@ docker run -it --name container_B --blkio-weight 300 ubuntu</pre></td></tr></tab
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         
-          <a class="next" href="/post/programming/design-patterns/">
-            <span class="next-text nav-default">浅谈设计模式</span>
+          <a class="next" href="/post/programming/from-virtualization/">
+            <span class="next-text nav-default">云计算技术简史</span>
             <span class="prev-text nav-mobile">下一篇</span>
             
             <i class="iconfont">
@@ -655,6 +624,8 @@ docker run -it --name container_B --blkio-weight 300 ubuntu</pre></td></tr></tab
   
 
     
+
+  
 
         </div>
       </div>
@@ -711,7 +682,7 @@ docker run -it --name container_B --blkio-weight 300 ubuntu</pre></td></tr></tab
     &copy;
     
       2017 -
-    2019
+    2021
     <span class="heart">
       
       <i class="iconfont">
@@ -762,11 +733,19 @@ docker run -it --name container_B --blkio-weight 300 ubuntu</pre></td></tr></tab
 
 
 
+
+
+
+
+
+
   
     <script type="text/javascript" src="/js/load-photoswipe.js"></script>
     <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
     <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
   
+
+
 
 
 
